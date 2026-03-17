@@ -1,12 +1,12 @@
 {
   "name": "article-check-claude",
   "version": "1.0.0",
-  "description": "Cloudflare Worker for checking articles in pull requests",
+  "description": "Cloudflare Worker for checking articles",
   "main": "index.js",
   "scripts": {
-    "dev": "wrangler dev",
-    "publish": "wrangler publish"
+    "start": "wrangler dev"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "child_process": "^1.0.2"
+  }
 }
