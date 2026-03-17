@@ -3,52 +3,33 @@ addEventListener('fetch', event => {
 })
 
 async function handleRequest(request) {
-  // Parse the request body
-  const body = await request.json();
+  const { headers } = request
+  if (headers.get('X-GitHub-Event') !== 'pull_request') {
+    return new Response('Not a pull request event', { status: 400 })
+  }
 
-  // Check if the request is a pull request event
-  if (body.action === 'opened' || body.action === 'edited') {
-    const prNumber = body.number;
-    const repoName = body.repository.name;
-    const owner = body.repository.owner.login;
+  const body = await request.json()
+  const { pull_request } = body
+  const { head } = pull_request
+  const { sha } = head
 
-    // Fetch the pull request details
-    const prDetails = await fetch(`https://api.github.com/repos/${owner}/${repoName}/pulls/${prNumber}`, {
+  try {
+    const response = await fetch(`https://api.github.com/repos/1712n/dn-institute/contents/tools/article_check.py?ref=${sha}`, {
       headers: {
         'Authorization': `token ${GITHUB_TOKEN}`,
         'Accept': 'application/vnd.github.v3+json'
       }
-    });
+    })
+    const file = await response.json()
+    const content = atob(file.content)
 
-    const prData = await prDetails.json();
-    const articleContent = prData.body; // Assuming the article content is in the PR body
+    const { execSync } = require('child_process')
+    execSync('python -m pip install --upgrade pip')
+    execSync('pip install -r requirements.txt')
+    const result = execSync(`python -c "${content}"`)
 
-    // Perform article check (dummy check for demonstration)
-    const isValid = await checkArticle(articleContent);
-
-    // Comment on the pull request with the result
-    await commentOnPR(owner, repoName, prNumber, isValid);
-
-    return new Response('Article check completed', { status: 200 });
+    return new Response(result, { status: 200 })
+  } catch (error) {
+    return new Response(error.message, { status: 500 })
   }
-
-  return new Response('Not a pull request event', { status: 200 });
-}
-
-async function checkArticle(content) {
-  // Dummy article check logic
-  return content.length > 100;
-}
-
-async function commentOnPR(owner, repoName, prNumber, isValid) {
-  const comment = isValid ? 'Article meets the guidelines.' : 'Article does not meet the guidelines.';
-  await fetch(`https://api.github.com/repos/${owner}/${repoName}/issues/${prNumber}/comments`, {
-    method: 'POST',
-    headers: {
-      'Authorization': `token ${GITHUB_TOKEN}`,
-      'Accept': 'application/vnd.github.v3+json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ body: comment })
-  });
 }
