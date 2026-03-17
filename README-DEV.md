@@ -24,12 +24,20 @@ Use `true` or `false` as values.
 
 ## See also
 
-# AI Product Development Kit
+# Development Setup for Market Sentiment Analysis AI Product
 
-Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the steps below to get started.
+## Prerequisites
+- Node.js and npm installed on your machine.
+- Twitter Developer account and Bearer Token.
 
-## 🌱 Setting Up Your Environment
+## Setup Steps
+1. Clone the repository: `git clone https://github.com/1712n/dn-institute.git`
+2. Navigate to the AI product directory: `cd dn-institute`
+3. Install dependencies: `npm install`
+4. Create a `.env` file based on `.env.example` and add your Twitter Bearer Token.
+5. Run the application: `npm start`
+6. Access the dashboard at `http://localhost:3000`
 
-1. **Clone the Repository:**
-   
+## Testing
+Run tests using `npm test`
 Refer to Hugo [documentation](https://gohugo.io/content-management/organization/) for more help
