@@ -24,16 +24,12 @@ Use `true` or `false` as values.
 
 ## See also
 
-# Market Sentiment Analysis Product Development
+# AI Product Development Kit
 
-Welcome to the development repository for the Market Sentiment Analysis product. This project aims to leverage AI to analyze market sentiment from social media and news articles, providing valuable insights for investors.
+Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the steps below to get started.
 
-## 🌰 Project Overview
+## 🌱 Setting Up Your Environment
 
-The Market Sentiment Analysis product will use natural language processing (NLP) techniques to analyze text data from various sources, including social media platforms and news websites. The goal is to identify trends and sentiment in the market, helping investors make informed decisions.
-
-## 🌰 Getting Started
-
-1. **Clone the Repository**
+1. **Clone the Repository:**
    
 Refer to Hugo [documentation](https://gohugo.io/content-management/organization/) for more help
