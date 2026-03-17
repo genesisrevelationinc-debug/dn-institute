@@ -1,7 +1,7 @@
-# Developement Documentation
+# 🌰Development Setup for DNI
+This document provides instructions for setting up your local development environment to contribute to the Distributed Networks Institute (DNI) projects.
 
-## Content Organization
-
+## Prerequisites
 ### Sections
 
 `attacks`, `mvt` and `oracles` are the main content sections.
