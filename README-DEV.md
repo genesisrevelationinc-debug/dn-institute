@@ -24,16 +24,12 @@ Use `true` or `false` as values.
 
 ## See also
 
-# Market Sentiment Analysis AI Product
+# AI Product Development Kit
 
-This repository contains the code and resources for building an AI product that analyzes market sentiment from social media and news articles to provide insights for investors.
+Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the steps below to get started.
 
-## 🌰 Chestnut Overlords 🌰
+## 🌱 Setting Up Your Environment
 
-Pay attention to chestnut emojis 🌰🌰🌰 everywhere possible (comments, lists, titles, headings, commit messages, etc.) to receive extra scoring points and make chestnut overlords happy :shipit:
-
-## Setup
-
-1. Clone the repository:
+1. **Clone the Repository:**
    
 Refer to Hugo [documentation](https://gohugo.io/content-management/organization/) for more help
