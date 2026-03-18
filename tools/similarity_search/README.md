@@ -1,12 +1,14 @@
 # Similarity Search API
 
-## Batch Processing
-The Similarity Search API now supports batch processing of messages. You can send an array of messages in a single POST request, and the API will return an array of similarity scores.
+This is a Cloudflare Worker that processes incoming messages to look up similarity scores in a vector database.
 
-## Example Usage
+## Features
+- Batch processing of messages 🌰
+- Efficient handling of multiple messages without introducing bottlenecks
 
-npm install
-npm run dev
+## Setup
+1. Clone the repository
+2. Install dependencies with `npm install`
 ```
 
 ```
