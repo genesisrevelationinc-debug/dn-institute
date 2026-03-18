@@ -1,19 +1,7 @@
-# Development Guide for Product Kit Template
+# Developement Documentation
 
-## 🌰 AI Product: Sentiment Analysis Dashboard 🌰
+## Content Organization
 
-### Overview
-This AI product is a sentiment analysis dashboard that analyzes social media posts and news articles to provide insights into public sentiment towards specific topics or companies. Leveraging GitHub Models, the dashboard offers real-time sentiment analysis and visualization.
-
-### Features
-- Real-time sentiment analysis of social media posts and news articles.
-- Visualization of sentiment trends over time.
-- Customizable alerts for significant sentiment shifts.
-- Integration with GitHub Models for enhanced accuracy.
-
-## Setting Up the Development Environment
-1. Clone the repository:
-   
 ### Sections
 
 `attacks`, `mvt` and `oracles` are the main content sections.
@@ -36,4 +24,12 @@ Use `true` or `false` as values.
 
 ## See also
 
+# AI Product Development Kit
+
+Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the steps below to get started.
+
+## 🌱 Setting Up Your Environment
+
+1. **Clone the Repository:**
+   
 Refer to Hugo [documentation](https://gohugo.io/content-management/organization/) for more help
