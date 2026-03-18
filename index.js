@@ -1,11 +1,15 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const sentimentAnalysis = require('./sentimentAnalysis');
 
-app.get('/', (req, res) => {
-  res.send('Welcome to the AI Product Development Kit!');
+app.use(express.json());
+
+app.post('/analyze', (req, res) => {
+  const text = req.body.text;
+  const result = sentimentAnalysis.analyze(text);
+  res.json(result);
 });
 
-app.listen(port, () => {
-  console.log(`AI Product Kit app listening at http://localhost:${port}`);
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
 });
