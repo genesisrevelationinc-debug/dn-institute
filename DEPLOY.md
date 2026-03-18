@@ -1,13 +1,13 @@
 # Deployment Guide for Your AI Product
 
-This guide will help you deploy your AI product using the Product Development Kit.
+This guide will help you deploy your AI product using GitHub Pages.
 
 ## Prerequisites
 
-- Node.js and npm installed on your machine.
-- A GitHub account.
+- A GitHub account
+- Node.js and npm installed
 
 ## Steps to Deploy
 
-1. **Build the Product**
+1. **Build Your Product**
    
