@@ -1,0 +1,19 @@
+🌳 **Generate a financial health report for the following period:**
+
+🌳 **Timeframe:** {{timeframe}}
+
+🌳 **Analysis:**
+Analyze the financial health of the market, including revenue, expenses, and profitability.
+Discuss any financial risks or opportunities identified.
+
+🌳 **Financial Metrics:**
+Provide a detailed breakdown of key financial metrics.
+Explain the significance of these metrics in the context of the market.
+
+🌳 **Structure:**
+- Introduction
+- Financial health summary
+- Key financial metrics
+- Conclusion and recommendations
+
+🌰🌰🌰
