@@ -1,4 +1,5 @@
 requests
-json
+pandas
 transformers
 torch
+datasets
