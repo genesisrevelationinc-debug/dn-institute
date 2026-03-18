@@ -1,5 +1,10 @@
-name = "qa-bot"
+name = "qa-bot-worker"
 type = "javascript"
 account_id = "your_account_id"
 workers_dev = true
-route = "https://yourdomain.workers.dev/*"
+route = ""
+zone_id = ""
+kv_namespaces = []
+durable_objects = []
+site = {}
+triggers = []
