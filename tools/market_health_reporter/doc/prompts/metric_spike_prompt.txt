@@ -1,9 +1,9 @@
-🌳 **Metric Spike Report for {{network_name}}** 🌳
+🌳 **Metric Spike Report**
 
-📊 **Metric:** {{metric_name}}
+Please generate a detailed report on the following metric spike:
 
-🔍 **Observation:** A significant spike has been detected in the {{metric_name}} metric.
-
-🔍 **Analysis:** Conduct a thorough analysis to identify the potential causes of this spike. Consider external factors, internal changes, and any recent events that might have influenced the metric.
-
-💡 **Implications:** Discuss the implications of this spike for the overall health and resilience of {{network_name}}. Provide recommendations for mitigating any negative effects and maintaining network stability.
+🌰 **Metric:** [Metric Name]
+🌰 **Time Period:** [Start Date] to [End Date]
+🌰 **Description:** [Brief description of the metric and its significance]
+🌰 **Analysis:** Provide an in-depth analysis of the potential causes and implications of the spike.
+🌰 **Recommendations:** Suggest actionable recommendations based on your analysis.
