@@ -1,9 +1,9 @@
-🌳 **Metrics Data Interpretation**
+🌳 Interpret the following market data:
 
-Please interpret the following metrics data:
+🌳 **Data:** {{market_data}}
+🌳 **Context:** {{context}}
 
-🌰 **Metrics:** [List of metrics]
-🌰 **Time Period:** [Start Date] to [End Date]
-🌰 **Trends:** Describe the trends observed in the metrics data.
-🌰 **Insights:** Provide any insights or conclusions you can derive from the data.
-🌰 **Visualizations:** Suggest any visualizations that would help in understanding the data better.
+🌳 **Interpretation:**
+🌳 - Explain the data in the context provided.
+🌳 - Discuss any implications for market participants.
+🌳 - Suggest potential actions or considerations.
