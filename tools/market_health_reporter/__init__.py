@@ -1,3 +1,2 @@
 from .reporter import MarketHealthReporter
-from transformers import RagTokenizer, RagRetriever, RagTokenForGeneration
-import torch
+from .reporter import RagTokenizer, RagRetriever, RagTokenForGeneration, torch
