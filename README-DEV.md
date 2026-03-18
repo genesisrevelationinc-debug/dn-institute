@@ -26,14 +26,10 @@ Use `true` or `false` as values.
 
 # AI Product Development Kit
 
-Welcome to the AI Product Development Kit! This repository is a template for building and deploying an AI product. The goal is to create a meaningful and unique AI solution that leverages GitHub Models and integrates with social media for enhanced functionality.
+Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the steps below to get started.
 
-## 🌱 Project Overview
+## 🌱 Setting Up Your Environment
 
-Our AI product focuses on **Market Sentiment Analysis**. It analyzes social media and news articles to provide investors with valuable insights into market trends and sentiment. This project aims to enhance decision-making processes in the financial industry.
-
-## 🛠 Setup
-
-1. **Clone the Repository**
+1. **Clone the Repository:**
    
 Refer to Hugo [documentation](https://gohugo.io/content-management/organization/) for more help
