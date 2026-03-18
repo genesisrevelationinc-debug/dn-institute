@@ -9,9 +9,7 @@
 [file] LICENSE
 [file] README-DEV.md
 [file] README.md
+[file] index.js
 [dir] archetypes
 [dir] assets
-[dir] static
-[dir] themes
-[dir] tools
-[file] yarn.lock
+[dir] challenge
