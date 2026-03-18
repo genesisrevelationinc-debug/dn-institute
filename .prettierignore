@@ -1,5 +1,6 @@
-# Hugo 
-public/
+node_modules
+.env
+.vscode
 resources/
 static/
 themes/
@@ -17,6 +18,4 @@ package-lock.json
 
 # Edge Cases
 layouts/partials/docs/menu-heading.html
-node_modules/
-*.log
 layouts/taxonomy/terms.html
