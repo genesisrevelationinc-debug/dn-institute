@@ -1,5 +1,7 @@
 requests
-pandas
-transformers
+json
 torch
+transformers
 datasets
+faiss-cpu
+sentence-transformers
