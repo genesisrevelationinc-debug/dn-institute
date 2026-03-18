@@ -1,9 +1,21 @@
-🌳 **Metric Spike Report for {{network_name}}** 🌳
+🌳 **Generate a detailed report on the following metric spike:**
 
-📊 **Metric:** {{metric_name}}
+🌳 **Metric:** {{metric_name}}
+🌳 **Timeframe:** {{timeframe}}
+🌳 **Value:** {{value}}
 
-🔍 **Observation:** A significant spike has been detected in the {{metric_name}} metric.
+🌳 **Interpretation:**
+Provide a detailed interpretation of the spike in the context of the market health.
+Consider external factors that might have influenced the spike.
 
-🔍 **Analysis:** Conduct a thorough analysis to identify the potential causes of this spike. Consider external factors, internal changes, and any recent events that might have influenced the metric.
+🌳 **Actionable Insights:**
+Suggest actionable insights or recommendations based on your analysis.
+Ensure the insights are practical and can be implemented by stakeholders.
 
-💡 **Implications:** Discuss the implications of this spike for the overall health and resilience of {{network_name}}. Provide recommendations for mitigating any negative effects and maintaining network stability.
+🌳 **Structure:**
+- Introduction
+- Description of the spike
+- Analysis of the spike
+- Conclusion and recommendations
+
+🌰🌰🌰
