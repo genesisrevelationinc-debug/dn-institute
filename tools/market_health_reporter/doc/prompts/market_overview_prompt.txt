@@ -1,9 +1,9 @@
 🌳 Generate an overview of the current market health:
 
-🌳 **Market Indicators:** {{market_indicators}}
-🌳 **Trends:** {{trends}}
-🌳 **Insights:** {{insights}}
+🌳 **Timeframe:** {{timeframe}}
+🌳 **Metrics:** {{metrics}}
 
-🌳 **Recommendations:**
-🌳 - Suggest strategies for market participants.
-🌳 - Highlight key areas of focus for stakeholders.
+🌳 **Overview:**
+🌳 - Summarize key metrics and trends.
+🌳 - Highlight any significant spikes or dips.
+🌳 - Provide insights into market conditions.
