@@ -22,17 +22,25 @@
     "@splidejs/splide": "^4.1.4"
   }
 {
-  "name": "ai-product-kit",
+  "name": "ai-product-template",
   "version": "1.0.0",
   "description": "A template for building and deploying AI products",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "build": "echo 'Building the product...'",
+    "deploy": "echo 'Deploying the product...'"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "nodemon": "^2.0.20"
-  }
+    "axios": "^1.1.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1712n/product-kit-template.git"
+  },
+  "author": "Your Name",
+  "license": "MIT"
 }
 }
