@@ -1,0 +1,6 @@
+[tool.poetry]
+name = "market_health_reporter"
+version = "0.1.0"
+dependencies = ["chart.js"]
+description = "Market Health Reporter Tool"
+authors = ["Your Name <you@example.com>"]
