@@ -1,19 +1,9 @@
-🌳 **Generate a comprehensive market health overview for the following period:**
+🌳 Generate an overview of the current market health:
 
-🌳 **Timeframe:** {{timeframe}}
+🌳 **Market Indicators:** {{market_indicators}}
+🌳 **Trends:** {{trends}}
 
-🌳 **Overview:**
-Provide a detailed overview of the market health, including key metrics and trends.
-Highlight any significant spikes or dips in the metrics.
-
-🌳 **Key Metrics and Trends:**
-Discuss the key metrics and trends observed during the timeframe.
-Explain the significance of these metrics and trends in the context of the market.
-
-🌳 **Structure:**
-- Introduction
-- Market health summary
-- Key metrics and trends
-- Conclusion and outlook
-
-🌰🌰🌰
+🌳 **Insights:**
+🌳 - Summarize key market movements.
+🌳 - Highlight any significant changes or anomalies.
+🌳 - Offer insights into future market directions.
