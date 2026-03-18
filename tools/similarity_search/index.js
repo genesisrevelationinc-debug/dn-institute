@@ -1,6 +1,6 @@
  event.respondWith(handleRequest(event.request))
 async function processBatch(messages) {
-  const results = await Promise.all(messages.map(msg => searchSimilarity(msg)));
+  const results = await Promise.all(messages.map(message => searchSimilarity(message)));
   return results;
 }
  if (request.method === 'POST') {
@@ -9,7 +9,10 @@ async function processBatch(messages) {
     return new Response(JSON.stringify(results), { status: 200 });
  }
  return new Response('Method Not Allowed', { status: 405 });
- // Assuming this function interacts with Cloudflare Vectorize to find similarity
- // This is a placeholder for the actual implementation
- const similarityScore = await someVectorizeCall(message);
- return { message, similarityScore };
+async function searchSimilarity(message) {
+ // Assuming vectorizeSearch is a function that interacts with Cloudflare Vectorize
+ const vectorizeSearch = async (msg) => {
+   // Mock implementation for demonstration
+   return { message: msg, similarity: Math.random() };
+ };
+ return await vectorizeSearch(message);
