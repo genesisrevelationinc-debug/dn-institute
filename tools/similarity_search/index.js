@@ -1,32 +1,54 @@
-// 🌰 Import necessary modules 🌰
+// 🌰 Chestnut overlord :shipit:
+
 import { Vectorize } from '@cloudflare/workers-ai';
 
-// 🌰 Initialize Vectorize client 🌰
+// Initialize Vectorize client
 const vectorize = new Vectorize({
-  binding: 'your_vectorize_binding',
+  projectID: 'your-project-id',
+  namespace: 'your-namespace',
 });
 
-// 🌰 Function to handle single message similarity search 🌰
-async function searchSimilarity(message) {
-  const results = await vectorize.query({
-    vector: message,
-    topK: 5,
-  });
+// Function to handle batch processing
+async function handleBatch(messages) {
+  const results = await Promise.all(
+    messages.map(async (message) => {
+      const response = await vectorize.query({
+        vector: message.vector,
+        topK: 5,
+      });
+      return response;
+    })
+  );
   return results;
 }
 
-// 🌰 Function to handle batch message similarity search 🌰
-async function searchSimilarityBatch(messages) {
-  const batchResults = await Promise.all(messages.map(searchSimilarity));
-  return batchResults;
-}
+export default {
+  async fetch(request) {
+    const { method, body } = request;
 
-// 🌰 Main handler function 🌰
-export async function handleRequest(request) {
-  const { messages } = await request.json();
-  if (Array.isArray(messages)) {
-    return new Response(JSON.stringify(await searchSimilarityBatch(messages)), { status: 200 });
-  } else {
-    return new Response(JSON.stringify(await searchSimilarity(messages)), { status: 200 });
-  }
-}
+    if (method !== 'POST' && method !== 'PUT') {
+      return new Response('Method Not Allowed', { status: 405 });
+    }
+
+      return new Response('Bad Request', { status: 400 });
+    }
+
+    const { message, messages } = parsedBody;
+
+    if (!message && !messages) {
+      return new Response('Bad Request', { status: 400 });
+    }
+
+    if (messages) {
+      const batchResults = await handleBatch(messages);
+      return new Response(JSON.stringify(batchResults), { status: 200 });
+    }
+
+    const response = await vectorize.query({
+      vector: message.vector,
+      topK: 5,
+    });
+
+    return new Response(JSON.stringify(response), { status: 200 });
+  },
+};
