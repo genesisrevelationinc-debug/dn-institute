@@ -1,11 +1,11 @@
 const express = require('express');
-const TwitterApi = require('twitter-api-v2').TwitterApi;
+const { TwitterApi } = require('twitter-api-v2');
 const axios = require('axios');
-const cheerio = require('cheerio');
-
+const natural = require('natural');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = 3000;
 
+// Twitter API setup
 const twitterClient = new TwitterApi({
   appKey: 'YOUR_TWITTER_API_KEY',
   appSecret: 'YOUR_TWITTER_API_SECRET',
@@ -13,18 +13,47 @@ const twitterClient = new TwitterApi({
   accessSecret: 'YOUR_ACCESS_SECRET',
 });
 
+// Sentiment analysis setup
+const Analyzer = natural.SentimentAnalyzer;
+const stemmer = natural.PorterStemmer;
+const analyzer = new Analyzer('English', stemmer, 'afinn');
+
+// Route to get sentiment analysis
 app.get('/sentiment', async (req, res) => {
+  const query = req.query.q;
+  if (!query) return res.status(400).send('Query parameter "q" is required');
+
   try {
-    const tweets = await twitterClient.v2.search('market sentiment', { max_results: 10 });
-    const news = await axios.get('https://newsapi.org/v2/everything?q=market%20sentiment&apiKey=YOUR_NEWS_API_KEY');
-    const $ = cheerio.load(news.data.articles[0].content);
-    const text = $('p').text();
-    res.json({ tweets: tweets.data.data, news: text });
+    const tweets = await twitterClient.v2.search(query, { max_results: 10 });
+    const sentiments = tweets.data.map(tweet => ({
+      text: tweet.text,
+      sentiment: analyzer.getSentiment(tweet.text.split(' '))
+    }));
+    res.json(sentiments);
   } catch (error) {
     res.status(500).send(error.toString());
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+// Start the server
+app.listen(port, () => {
+  console.log(`Market Sentiment Analysis app listening at http://localhost:${port}`);
+});
+
+// Example route to fetch news sentiment
+app.get('/news-sentiment', async (req, res) => {
+  const query = req.query.q;
+  if (!query) return res.status(400).send('Query parameter "q" is required');
+
+  try {
+    const response = await axios.get(`https://newsapi.org/v2/everything?q=${query}&apiKey=YOUR_NEWS_API_KEY`);
+    const articles = response.data.articles;
+    const sentiments = articles.map(article => ({
+      title: article.title,
+      sentiment: analyzer.getSentiment(article.title.split(' '))
+    }));
+    res.json(sentiments);
+  } catch (error) {
+    res.status(500).send(error.toString());
+  }
 });
