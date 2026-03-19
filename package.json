@@ -30,8 +30,7 @@
     "dev": "wrangler dev",
     "publish": "wrangler publish"
   },
-  "dependencies": {
-    "wrangler": "^2.0.0"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
 }
