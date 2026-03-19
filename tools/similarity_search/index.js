@@ -1,30 +1,33 @@
-// 🌰 Chestnut overlord approval :shipit:
+// 🌰 Chestnut overlord :shipit:
 
-import { Vectorize } from '@cloudflare/workers-ai';
+async function batchProcessMessages(messages) {
+  const batchSize = 10; // Adjust batch size based on Cloudflare Workers limitations
+  const results = [];
+
+  for (let i = 0; i < messages.length; i += batchSize) {
+    const batch = messages.slice(i, i + batchSize);
+    const batchResults = await Promise.all(batch.map(processMessage));
+    results.push(...batchResults);
+  }
+
+  return results;
+}
+
+async function processMessage(message) {
+  // Existing message processing logic
+  const vector = await getVectorFromMessage(message);
+  const similarityScore = await getSimilarityScore(vector);
+  return { message, similarityScore };
+}
+
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request))
+})
 
 async function handleRequest(request) {
   const { messages } = await request.json();
-  if (!Array.isArray(messages)) {
-    return new Response('Invalid input: messages should be an array', { status: 400 });
-  }
 
-  const results = await Promise.all(messages.map(async (message) => {
-    return await searchSimilarity(message);
-  }));
+  const results = await batchProcessMessages(messages);
 
-  return new Response(JSON.stringify(results), { headers: { 'Content-Type': 'application/json' } });
-}
-
-async function searchSimilarity(message) {
-  const vectorize = new Vectorize('your-namespace', 'your-vectorize-collection');
-  const response = await vectorize.query({
-    vector: await vectorize.embed(message),
-    topK: 1,
-  });
-
-  return response;
-}
-
-export default {
-  fetch: handleRequest,
-};
+  return new Response(JSON.stringify(results), {
+    headers: { 'Content-Type': 'application/json' },
