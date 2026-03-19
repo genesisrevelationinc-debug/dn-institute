@@ -1,7 +1,8 @@
 {
   "semi": false,
-  "endOfLine": "lf",
-  "trailingComma": "none",
+  "singleQuote": true,
+  "trailingComma": "all"
+}
   "overrides": [
     {
       "files": ["*.html"],
