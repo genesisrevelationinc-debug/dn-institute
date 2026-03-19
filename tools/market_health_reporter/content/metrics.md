@@ -1,10 +1,9 @@
 ---
-title: "Market Metrics 🌰"
-date: 2023-10-01
-description: "Dynamic chart of market metrics."
+title: "Market Health Metrics 🌰🌰🌰"
+description: "Automated reports with metrics spikes and their interpretation."
 metricData:
-  labels: ["2023-09-01", "2023-09-02", "2023-09-03", "2023-09-04", "2023-09-05"]
+  labels: ["2023-10-01", "2023-10-02", "2023-10-03", "2023-10-04", "2023-10-05"]
   values: [10, 20, 15, 25, 30]
 ---
 
-{{ partial "metrics.html" . }}
+# Market Health Metrics
