@@ -39,7 +39,7 @@ async function checkArticle(sha) {
   const results = files.map(file => ({
     name: file.name,
     status: 'checked', // This should be determined by the actual check logic
-    message: 'Article meets guidelines' // This should be a detailed message from the check logic
+    message: 'Article meets guidelines' // This should be determined by the actual check logic
   }))
 
   return { results }
