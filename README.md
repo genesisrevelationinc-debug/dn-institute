@@ -32,16 +32,14 @@ We are happy to train anyone willing to learn our tools. Show initiative by cont
 ### 🎖️ Veterans
 
 Our diverse community includes military veterans from a wide variety of backgrounds. If you are in the process of getting out of the U.S. military, check out our SkillBridge program. Whether you qualify as eligible U.S. military personnel, or served in the armed forces of another country, solve one of the challenges and/or reach out to [@jhirschkorn](https://github.com/jhirschkorn).
-    run: |
-      python tools/qa_bot.py
+- To be alerted whenever we create new tasks, please click "👁 Watch" and "☆ Star" in the upper right corner.
 
-### Cloudflare Workers QA Bot
+## 🌱 Giving Back
 
-The QA Bot is now also available as a Cloudflare Worker. To deploy:
+### 🛠️ Infrastructure
 
-1. Install Wrangler CLI: `npm install -g @cloudflare/wrangler`
-2. Configure Wrangler: `wrangler config`
-3. Deploy the worker: `npm run publish`
+- Migrated the QA bot from GitHub Actions to a webhook-based serverless solution using Cloudflare Workers.
+- [PR Link](https://github.com/1712n/dn-institute/pull/your_pr_number)
 
 ### 🔬 Research
 
