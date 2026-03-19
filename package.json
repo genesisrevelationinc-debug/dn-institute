@@ -7,14 +7,12 @@
   },
   "scripts": {
     "format": "prettier *** --write --cache --cache-location .prettiercache --ignore-unknown --no-error-on-unmatched-pattern",
-    "type": "module"
-  },
-  "scripts": {
     "test": "vitest",
-    "test:watch": "vitest --watch"
+    "build": "wrangler build",
+    "deploy": "wrangler publish"
   },
   "devDependencies": {
-    "vitest": "^0.29.0"
+    "vitest": "^0.24.0"
   }
 }
   },
