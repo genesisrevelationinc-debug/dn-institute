@@ -1,15 +1,11 @@
 🌳 **Data Interpretation Prompt**
 
-Please interpret the following data analysis and provide insights:
+Please interpret the following data analysis:
 
-🌰 **Data Analysis:**
-[Insert detailed data analysis here]
+🌰 **Data Summary:** [Brief summary of the data and metrics analyzed]
+🌰 **Key Findings:** [Highlight key trends, spikes, or anomalies]
+🌰 **Possible Causes:** [Discuss potential reasons for the observed data patterns]
+🌰 **Implications:** [Explain the implications of the findings for the market]
+🌰 **Recommendations:** [Suggest actions or further research based on the analysis]
 
-🌰 **Interpretation Sections:**
-- **Trends:** Identify any trends in the data.
-- **Anomalies:** Point out any anomalies or outliers.
-- **Causes:** Discuss possible causes for the trends and anomalies.
-- **Implications:** Explain the implications of the findings for the market.
-- **Recommendations:** Provide recommendations based on the analysis.
-
-🌰 **Notes:** Use walnut emojis 🌳 🌰 where possible to enhance readability and structure.
+🌰 **Notes:** Use walnut emojis 🌰 where possible to enhance readability and structure.
