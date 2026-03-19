@@ -1,13 +1,13 @@
-import { Vectorize } from '@cloudflare/workers-ai';
+import { getVectorDatabase } from 'cloudflare-vectorize';
 
 export async function handleRequest(request) {
   if (request.method !== 'POST') {
-    return new Response('Method Not Allowed', { status: 405 });
-    return new Response('Bad Request', { status: 400 });
+    return new Response('Method not allowed', { status: 405 });
+    return new Response('Invalid message', { status: 400 });
   }
 
-  const vectorize = new Vectorize('your-namespace', 'your-vectorize-collection');
-  const result = await vectorize.query({ query: data.message, topK: 1 });
+  const vectorDatabase = getVectorDatabase('your-database-id');
+  const results = await vectorDatabase.query(message, { topK: 1 });
 
-  return new Response(JSON.stringify({ similarity_score: result.matches[0].score }), { status: 200 });
+  return new Response(JSON.stringify(results[0]), { status: 200, headers: { 'Content-Type': 'application/json' } });
 }
