@@ -1,5 +1,15 @@
 ---
-title:  Distributed Networks Institute (DNI)
+title: "Welcome to Your AI Product"
+date: 2023-10-01
+draft: false
+---
+
+# Introduction
+
+Welcome to the home page of your AI product! This page serves as an introduction to the product and its capabilities. 🌰🌰🌰
+
+## About Us
+Distributed Networks Institute (DNI) is a non-profit organization dedicated to enhancing the resilience and financial health of distributed networks through scientific, engineering, and educational efforts. 🌰🌰🌰
 layout: "home"
 ---
 
