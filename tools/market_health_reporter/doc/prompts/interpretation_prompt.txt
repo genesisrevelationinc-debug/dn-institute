@@ -1,9 +1,10 @@
-🌳 Interpret the following market data:
+🌳 **Data Interpretation**
 
-🌳 **Data:** {{market_data}}
-🌳 **Context:** {{context}}
+Please interpret the following data and provide insights:
 
-🌳 **Interpretation:**
-🌳 - Explain the data in the context provided.
-🌳 - Discuss any implications for market participants.
-🌳 - Suggest potential actions or considerations.
+🌰 **Data Description:** [Brief description of the data and its context]
+🌰 **Sections to Include:**
+- **Summary:** Provide a summary of the data.
+- **Analysis:** Conduct a detailed analysis of the data.
+- **Interpretation:** Interpret the data, discussing possible causes and implications.
+🌰 **Conclusion:** Summarize the findings and provide recommendations for action.
