@@ -29,8 +29,10 @@ describe('Similarity Search API', () => {
     });
 
     const response = await handleRequest(request);
+    const result = await response.json();
 
     expect(response.status).toBe(400);
+    expect(result).toHaveProperty('error', 'Invalid JSON input');
   });
 
   it('should return a 400 error for missing message field', async () => {
@@ -43,7 +45,9 @@ describe('Similarity Search API', () => {
     });
 
     const response = await handleRequest(request);
+    const result = await response.json();
 
     expect(response.status).toBe(400);
+    expect(result).toHaveProperty('error', 'Message field is required');
   });
 });
