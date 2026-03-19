@@ -1,11 +1,10 @@
-🌳 **Data Interpretation Prompt**
+🌳 **Data Interpretation for {{network_name}}**
 
-Please interpret the following data analysis:
+📊 **Data Provided:**
+Review the provided data and metrics for {{network_name}}.
 
-🌰 **Data Summary:** [Brief summary of the data and metrics analyzed]
-🌰 **Key Findings:** [Highlight key trends, spikes, or anomalies]
-🌰 **Possible Causes:** [Discuss potential reasons for the observed data patterns]
-🌰 **Implications:** [Explain the implications of the findings for the market]
-🌰 **Recommendations:** [Suggest actions or further research based on the analysis]
+🔍 **Explanation:**
+Provide a clear and concise explanation of what the data means for the network's health, including any potential implications.
 
-🌰 **Notes:** Use walnut emojis 🌰 where possible to enhance readability and structure.
+💡 **Insights:**
+Offer additional insights or observations that can help stakeholders understand the network's current state.
