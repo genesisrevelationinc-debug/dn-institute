@@ -1,35 +1,30 @@
-// 🌰 Chestnut overlord :shipit:
+// 🌰 Chestnut overlord approval :shipit:
 
 import { Vectorize } from '@cloudflare/workers-ai';
 
-// Initialize Vectorize client
-const vectorize = new Vectorize({
-  projectID: 'your-project-id',
-  namespace: 'your-namespace',
-});
+async function handleRequest(request) {
+  const { messages } = await request.json();
+  if (!Array.isArray(messages)) {
+    return new Response('Invalid input: messages should be an array', { status: 400 });
+  }
 
-// Function to handle batch processing
-async function handleBatch(messages) {
   const results = await Promise.all(messages.map(async (message) => {
-    const response = await vectorize.query({
-      query: message,
-      topK: 1,
-    });
-    return response.matches[0] || null;
+    return await searchSimilarity(message);
   }));
-  return results;
+
+  return new Response(JSON.stringify(results), { headers: { 'Content-Type': 'application/json' } });
+}
+
+async function searchSimilarity(message) {
+  const vectorize = new Vectorize('your-namespace', 'your-vectorize-collection');
+  const response = await vectorize.query({
+    vector: await vectorize.embed(message),
+    topK: 1,
+  });
+
+  return response;
 }
 
 export default {
-  async fetch(request) {
-    const { method, body } = request;
-
-    if (method === 'POST') {
-      const { messages } = await body.json();
-      const results = await handleBatch(messages);
-      return new Response(JSON.stringify(results), { status: 200 });
-    }
-
-    return new Response('Method Not Allowed', { status: 405 });
-  },
+  fetch: handleRequest,
 };
