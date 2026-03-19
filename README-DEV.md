@@ -24,12 +24,16 @@ Use `true` or `false` as values.
 
 ## See also
 
-# AI Product Development Kit
+# Development Setup for Market Sentiment Analysis 🌰
 
-Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the steps below to get started.
+## Prerequisites 🌰
+- Node.js and npm installed on your machine.
+- Access to a GitHub account.
 
-## 🌱 Setting Up Your Environment
-
-1. **Clone the Repository:**
-   
+## Steps to Set Up 🌰
+1. Clone the repository: `git clone https://github.com/1712n/dn-institute.git`
+2. Navigate to the AI product directory: `cd dn-institute`
+3. Install dependencies: `npm install`
+4. Run the application: `npm start`
+5. Access the dashboard at `http://localhost:3000`
 Refer to Hugo [documentation](https://gohugo.io/content-management/organization/) for more help
