@@ -31,16 +31,16 @@ We are happy to train anyone willing to learn our tools. Show initiative by cont
 
 ### 🎖️ Veterans
 
-Our diverse community includes military veterans from a wide variety of backgrounds. If you are in the process of getting out of the U.S. military, check out our SkillBridge program. Whether you qualify as eligible U.S. military personnel, or served in the armed forces of another country, solve one of the challenges and/or reach out to [@jhirschkorn](https://github.com/jhirschkorn).
 - To be alerted whenever we create new tasks, please click "👁 Watch" and "☆ Star" in the upper right corner.
 
 ## 🌱 Giving Back
 
-### 🛠️ Infrastructure
+### 🌰 Migrated QA Bot to Cloudflare Workers
 
-- Migrated the QA bot from GitHub Actions to a webhook-based serverless solution using Cloudflare Workers.
-- [PR Link](https://github.com/1712n/dn-institute/pull/your_pr_number)
+- The Python QA bot that was previously running on GitHub Actions has been migrated to a webhook-based serverless solution using JavaScript Cloudflare Workers.
+- This migration improves resource efficiency, security, and speed.
+- The new bot is triggered by webhooks and performs automated PR quality checks to follow our [submission guidelines](https://github.com/1712n/dn-institute/issues/277#:~:text=Submission%20Guidelines,-Ensure%20your%20submission).
 
 ### 🔬 Research
 
-DNI has a growing scientific research team, focused on the application of Large Language Models to risk modeling. If you are interested in gaining relevant skills while publishing scientific papers along the way, solve one of the [NLP challenges](https://github.com/1712n/dn-institute/labels/nlp) and mention your interest in joining the research team.
+DNI has a growing scientific research team, focused on the application of Large Language Models to risk modeling. If you are interested in gaining relevant skills while publishing scientific papers along the way, solve one of the [NLP challenges](https://github.com/1712n/dn-institute/labels/nlp) and mention your interest in joining the researc
