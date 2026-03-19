@@ -7,11 +7,7 @@ export async function handleRequest(request) {
   }
 
   const vectorize = new Vectorize('your-namespace', 'your-vectorize-collection');
-  const { message } = await request.json();
-  const result = await vectorize.query(message);
+  const result = await vectorize.query({ query: data.message, topK: 1 });
 
-  // Simulate a similarity score calculation
-  const similarityScore = result.matches[0].score;
-
-  return new Response(JSON.stringify({ similarity_score: similarityScore }), {
-    headers: { 'Content-Type': 'application/json' },
+  return new Response(JSON.stringify({ similarity_score: result.matches[0].score }), { status: 200 });
+}
