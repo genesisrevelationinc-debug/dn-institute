@@ -3,10 +3,11 @@
 Please create a structured report for the market health analysis:
 
 🌰 **Report Sections:**
-- **Executive Summary:** A brief overview of the key findings.
+- **Executive Summary:** High-level overview of the key findings.
 - **Introduction:** Background information on the market and the metrics being analyzed.
-- **Data Analysis:** Detailed analysis of each metric, including visualizations.
-- **Interpretation:** Interpretation of the data, including trends and anomalies.
-- **Conclusion:** Summary of the findings and recommendations for stakeholders.
+- **Data Analysis:** Detailed analysis of the metrics, including visualizations.
+- **Interpretation:** Interpretation of the data, discussing trends and anomalies.
+- **Conclusion:** Summary of the findings and recommendations for action.
+- **Appendices:** Any additional data or references.
 
-🌰 **Notes:** Use walnut emojis 🌳 🌰 where possible to enhance readability and structure.
+🌰 **Notes:** Use walnut emojis 🌰 where possible to enhance readability and structure.
