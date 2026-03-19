@@ -1,19 +1,17 @@
 [tool.poetry]
 name = "product-kit-template"
 version = "1.0.0"
-description = "AI Product: Sentiment Analysis Dashboard"
-authors = ["Distributed Networks Institute"]
+description = "A template for building and deploying AI products using the Product Development Kit."
+keywords = ["AI", "product", "development", "kit", "template"]
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+repository = "https://github.com/1712n/product-kit-template"
+homepage = "https://github.com/1712n/product-kit-template"
+documentation = "https://github.com/1712n/product-kit-template"
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.8"
-flask = "^2.0.1"
-transformers = "^4.11.3"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-packages = [
     { include = "tools/payout_calc" },
     { include = "tools/article_checker" },
     { include = "tools/market_health_reporter" },
