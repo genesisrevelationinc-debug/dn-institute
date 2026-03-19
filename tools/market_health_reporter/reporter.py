@@ -4,24 +4,30 @@ from transformers import RagTokenizer, RagRetriever, RagTokenForGeneration
 import torch
 class MarketHealthReporter:
     def __init__(self, api_key, base_url="https://api.dn.institute/market-health"):
-        response = requests.get(url, headers=self.headers)
-        return response.json()
-
-    def initialize_rag(self):
+        self.base_url = base_url
+    def setup_rag(self):
         self.tokenizer = RagTokenizer.from_pretrained("facebook/rag-token-nq")
         self.retriever = RagRetriever.from_pretrained("facebook/rag-token-nq", index_name="exact", use_dummy_dataset=True)
         self.model = RagTokenForGeneration.from_pretrained("facebook/rag-token-nq", retriever=self.retriever)
 
     def generate_report_with_rag(self, query):
         input_dict = self.tokenizer.prepare_seq2seq_batch([query], return_tensors="pt")
-        generated_ids = self.model.generate(input_dict["input_ids"])
+        generated_ids = self.model.generate(input_dict["input_ids"], num_beams=2, max_length=128)
         return self.tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
 
-    def generate_report(self, metric_id):
-        metric_data = self.get_metric_data(metric_id)
-        report = f"Metric ID: {metric_id}\n"
-        report += "Generated Report:\n"
-        if not hasattr(self, 'model'):
-            self.initialize_rag()
-        report += self.generate_report_with_rag(f"Generate a market health report for metric ID {metric_id} based on the following data: {metric_data}")
+    def fetch_metrics(self, network):
+        response = requests.get(f"{self.base_url}/metrics/{network}", headers={"Authorization": f"Bearer {self.api_key}"})
+        if response.status_code == 200:
+        return None
+    def generate_report(self, network):
+        self.setup_rag()
+        metrics = self.fetch_metrics(network)
+        if not metrics:
+            return "No metrics found for the specified network."
+        report = f"Market Health Report for {network}:\n"
+        for metric, value in metrics.items():
+            report += f"- {metric}: {value}\n"
+            interpretation = self.generate_report_with_rag(f"Explain the metric {metric} with value {value} in the context of {network}.")
+            report += f"  Interpretation: {interpretation}\n"
         return report
+if __name__ == "__main__":
