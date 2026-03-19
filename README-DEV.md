@@ -1,16 +1,5 @@
-# AI Product Development Kit
+# Developement Documentation
 
-Welcome to the AI Product Development Kit! This kit is designed to help you build and deploy your own AI product. Whether you're a seasoned developer or just starting out, this kit provides a solid foundation to get you started. 🌰🌰🌰
-
-## Getting Started
-
-1. **Clone the Repository**: Start by cloning the [Product Development Kit](https://github.com/1712n/product-kit-template) repository.
-2. **Explore the Template**: Familiarize yourself with the structure and components of the template.
-3. **Customize and Extend**: Modify the template to fit your unique use case. Play with variables, prompts, and leverage [GitHub Models](https://docs.github.com/en/github-models/use-github-models) for additional functionality.
-4. **Deploy Your Product**: Once you're satisfied with your product, deploy it and share it with the world!
-
-# Development Setup
-## Prerequisites
 ## Content Organization
 
 ### Sections
@@ -35,4 +24,12 @@ Use `true` or `false` as values.
 
 ## See also
 
+# AI Product Development Kit
+
+Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the steps below to get started.
+
+## 🌱 Setting Up Your Environment
+
+1. **Clone the Repository:**
+   
 Refer to Hugo [documentation](https://gohugo.io/content-management/organization/) for more help
