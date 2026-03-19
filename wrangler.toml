@@ -5,6 +5,5 @@ workers_dev = true
 route = ""
 zone_id = ""
 
-[site]
-  bucket = "./public"
-  entry-point = "workers-site"
+[vars]
+CLAUDE_API_KEY = "your_claude_api_key"
