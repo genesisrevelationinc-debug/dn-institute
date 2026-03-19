@@ -1,9 +1,10 @@
-🌳 **Network Overview for {{network_name}}** 🌳
+🌳 **Network Overview for {{network_name}}**
 
-📊 **Key Metrics:** Summarize the current status of key metrics for {{network_name}}.
+📊 **Key Metrics:**
+Provide a summary of key metrics for {{network_name}}, including recent trends and any notable changes.
 
-📅 **Recent Events:** Highlight any recent changes, events, or developments that may impact the network's performance.
+🔍 **Trends:**
+Analyze recent trends in the network's performance and highlight any significant developments.
 
-🔍 **Health Status:** Provide an analysis of the current health status of {{network_name}}, identifying any areas of concern or strength.
-
-💡 **Recommendations:** Offer recommendations for maintaining or improving the network's health and resilience.
+💡 **Insights:**
+Offer insights into the overall health and potential future directions of {{network_name}}.
