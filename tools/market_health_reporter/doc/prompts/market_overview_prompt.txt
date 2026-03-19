@@ -1,9 +1,14 @@
-🌳 Generate an overview of the current market health:
+🌳 **Market Overview Report**
 
-🌳 **Market Indicators:** {{market_indicators}}
-🌳 **Trends:** {{trends}}
+Please generate a comprehensive market overview report:
 
-🌳 **Insights:**
-🌳 - Summarize key market movements.
-🌳 - Highlight any significant changes or anomalies.
-🌳 - Offer insights into future market directions.
+🌰 **Market:** [Market Name]
+🌰 **Time Period:** [Start Date] to [End Date]
+🌰 **Description:** [Brief description of the market and its context]
+🌰 **Sections to Include:**
+- **Introduction:** Provide an introduction to the market and its importance.
+- **Market Trends:** Discuss the current trends in the market.
+- **Key Metrics:** Analyze key metrics and their performance.
+- **Competitive Landscape:** Describe the competitive landscape and key players.
+- **Future Outlook:** Provide insights into the future outlook of the market.
+🌰 **Conclusion:** Summarize the findings and provide strategic recommendations.
