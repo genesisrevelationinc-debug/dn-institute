@@ -1,10 +1,10 @@
 name = "qa-bot-worker"
 type = "javascript"
-account_id = "your_account_id"
+account_id = "your-account-id"
 workers_dev = true
 route = ""
 zone_id = ""
 kv_namespaces = []
-vars = { CLAUDE_API_KEY = "your_claude_api_key" }
+vars = { CLAUDE_API_KEY = "your-claude-api-key" }
 site = { bucket = "./public", "entry-point" = "workers-site" }
-triggers = []
+triggers = { crons = [] }
