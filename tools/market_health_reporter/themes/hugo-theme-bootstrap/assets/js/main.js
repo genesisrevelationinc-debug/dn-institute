@@ -2,7 +2,7 @@
 import './bootstrap.min.js';
 import './main.css';
 
-    console.log('Theme script loaded.');
-  });
+  // Additional initialization code here
 });
-// Additional chart initialization can be done here if needed
+
+// Chart.js initialization will be handled in metrics.html partial
