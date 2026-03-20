@@ -26,16 +26,10 @@ Use `true` or `false` as values.
 
 # AI Product Development Kit
 
-Welcome to the AI Product Development Kit! This repository is a template for building and deploying an AI product. We are using this kit to create a market sentiment analysis tool that analyzes social media and news articles to provide insights for investors.
+Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the steps below to get started.
 
-## 🌰 Features
+## 🌱 Setting Up Your Environment
 
-- **Market Sentiment Analysis**: Analyzes social media and news articles to determine market sentiment.
-- **GitHub Models**: Leverages GitHub Models for advanced text processing and analysis.
-- **Social Media Integration**: Connects to social media platforms to gather real-time data.
-
-## 🌰 Getting Started
-
-1. **Clone the Repository**: Clone this repository to your local machine.
+1. **Clone the Repository:**
    
 Refer to Hugo [documentation](https://gohugo.io/content-management/organization/) for more help
