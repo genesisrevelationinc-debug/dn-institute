@@ -2,11 +2,9 @@ import React from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcome to Your AI Product</h1>
-        <p>Discover your unique use case and build something amazing!</p>
-      </header>
+    <div>
+      <h1>Welcome to Your AI Product</h1>
+      <p>This is a template to build and deploy your own AI product.</p>
     </div>
   );
 }
