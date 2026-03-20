@@ -1,0 +1,10 @@
+# Site Configuration
+baseURL = "https://my-ai-product.github.io"
+languageCode = "en-us"
+title = "My AI Product"
+theme = "my-theme"
+
+# Customization
+params = {
+  description = "A unique AI product built using the Product Development Kit."
+}
