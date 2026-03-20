@@ -1,13 +1,9 @@
 {
-  "productName": "Your AI Product Name",
-  "description": "A brief description of your AI product.",
-  "variables": {
-    "apiKey": "your-api-key-here",
-    "model": "gpt-3.5-turbo",
-    "temperature": 0.7
-  },
-  "socialMedia": {
-    "twitter": "https://twitter.com/yourhandle",
-    "instagram": "https://instagram.com/yourhandle"
+  "productName": "AI Product",
+  "productDescription": "A custom AI product built using the Product Development Kit.",
+  "apiEndpoint": "https://api.example.com",
+  "socialMediaLinks": {
+    "twitter": "https://twitter.com/yourproduct",
+    "instagram": "https://instagram.com/yourproduct"
   }
 }
