@@ -24,20 +24,15 @@
 {
   "name": "ai-product-kit",
   "version": "1.0.0",
-  "description": "AI Product Development Kit for Market Sentiment Analysis",
+  "description": "A template for building and deploying AI products",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "jest"
+    "dev": "nodemon index.js"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "express": "^4.17.1",
-    "github-models": "^1.0.0"
-  },
-  "devDependencies": {
-    "jest": "^26.6.3"
-  },
-  "license": "MIT"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
 }
 }
