@@ -12,6 +12,7 @@
   ]
 {
   "semi": true,
-  "singleQuote": true
+  "singleQuote": true,
+  "trailingComma": "all"
 }
 }
