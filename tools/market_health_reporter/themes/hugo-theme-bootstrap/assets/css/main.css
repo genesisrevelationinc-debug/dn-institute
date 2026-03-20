@@ -1,8 +1,7 @@
-/* Styles for dynamic charts */
-@import 'bootstrap.min.css';
-@import 'tailwind.css';
-
-  /* Additional styles here */
+body {
+  font-family: Arial, sans-serif;
 }
 
-/* Chart.js styles can be customized here if needed */
+#metrics-chart {
+  margin: 20px 0;
+}
