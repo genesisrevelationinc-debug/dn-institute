@@ -11,8 +11,14 @@
 **/__pycache__/
 
 # Node
-node_modules/
-.env
+# Logs
+logs
 *.log
-*.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+dist/
 node_modules
