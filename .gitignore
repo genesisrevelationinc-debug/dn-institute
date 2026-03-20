@@ -1,7 +1,9 @@
 node_modules/
+.DS_Store
 .env
-yarn-error.log
 *.log
+*.lock
+/assets/jsconfig.json
 /public/
 .hugo_build.lock
 
