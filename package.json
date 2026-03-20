@@ -22,23 +22,25 @@
     "@splidejs/splide": "^4.1.4"
   }
 {
-  "name": "market-sentiment-analysis",
+  "name": "ai-product-kit",
   "version": "1.0.0",
-  "description": "AI product for analyzing market sentiment from social media and news articles",
+  "description": "A template for building and deploying AI products",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "express": "^4.18.2",
-    "axios": "^1.3.4",
-    "natural": "^7.8.1",
-    "dotenv": "^16.0.3"
-  },
-  "devDependencies": {
     "nodemon": "^2.0.20"
   },
-  "author": "ShanaBoo",
+  "devDependencies": {},
+  "keywords": [
+    "ai",
+    "product",
+    "template"
+  ],
+  "author": "Your Name",
   "license": "MIT"
 }
 }
