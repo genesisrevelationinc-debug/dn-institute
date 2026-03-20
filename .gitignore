@@ -1,6 +1,5 @@
-node_modules/
-.env
-.DS_Store
+# Hugo
+/resources/
 /assets/jsconfig.json
 /public/
 .hugo_build.lock
@@ -12,4 +11,17 @@ node_modules/
 **/__pycache__/
 
 # Node
+# Logs
+logs
+*.log
+
+# Dependency directories
+node_modules/
+
+# Build directories
+build/
+dist/
+
+# Environment variables
+.env
 node_modules
