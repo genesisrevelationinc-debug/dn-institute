@@ -1,11 +1,32 @@
 const express = require('express');
+const axios = require('axios');
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  res.send('Welcome to the AI Product Development Kit!');
+app.use(express.json());
+
+app.get('/sentiment', async (req, res) => {
+  const { text } = req.query;
+  if (!text) {
+    return res.status(400).send('Text query parameter is required');
+  }
+
+  try {
+    // Example API call to a sentiment analysis service
+    const response = await axios.post('https://api.github.com/models/sentiment', { text });
+    res.json(response.data);
+  } catch (error) {
+    console.error('Error analyzing sentiment:', error);
+    res.status(500).send('Error analyzing sentiment');
+  }
 });
 
-app.listen(port, () => {
-  console.log(`AI Product Kit app listening at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Market Sentiment Analysis app listening at http://localhost:${PORT}`);
+});
+
+// Example route for social media integration
+app.get('/social-media', async (req, res) => {
+  // Logic to fetch and analyze social media posts
+  res.send('Fetching and analyzing social media posts...');
 });
