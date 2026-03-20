@@ -1,8 +1,7 @@
 node_modules/
 .env
-.vscode/
+yarn-error.log
 *.log
-/assets/jsconfig.json
 /public/
 .hugo_build.lock
 
