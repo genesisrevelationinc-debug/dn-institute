@@ -26,9 +26,9 @@ Use `true` or `false` as values.
 
 # AI Product Development Kit
 
-Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. The goal is to create a meaningful and unique solution using the provided tools and resources.
+Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the steps below to get started.
 
-## Getting Started
+## 🌱 Setting Up Your Environment
 
 1. **Clone the Repository:**
    
