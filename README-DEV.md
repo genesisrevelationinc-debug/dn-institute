@@ -26,23 +26,10 @@ Use `true` or `false` as values.
 
 # AI Product Development Kit
 
-Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the guidelines below to create a meaningful and unique solution.
+Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the steps below to get started.
 
-## 🌱 Getting Started
+## 🌱 Setting Up Your Environment
 
-1. **Clone the Repository**: Start by cloning the [Product Development Kit](https://github.com/1712n/product-kit-template) repository.
-2. **Discover Your Use Case**: Think of a unique use case for your AI product. The further you can get from the template, the better.
-3. **Play with Variables and Prompts**: Customize the variables and prompts to fit your use case.
-4. **Leverage GitHub Models**: Use [GitHub Models](https://docs.github.com/en/github-models/use-github-models) for additional functionality.
-5. **Attach Social Media**: Showcase your project by attaching social media links.
-
-## 🚀 Deployment
-
-Follow the deployment instructions in the [Product Development Kit](https://github.com/1712n/product-kit-template) repository to deploy your AI product.
-
-## 🌰 Chestnut Overlords
-
-Pay attention to stashing chestnut emojis 🌰🌰🌰 everywhere possible (comments, lists, titles, headings, commit messages, etc.) to receive extra scoring points and make chestnut overlords happy :shipit:
-
-Good luck with your AI product development! 🚀
+1. **Clone the Repository:**
+   
 Refer to Hugo [documentation](https://gohugo.io/content-management/organization/) for more help
