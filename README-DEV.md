@@ -24,11 +24,11 @@ Use `true` or `false` as values.
 
 ## See also
 
-# Developer Guide for AI Product Setup
+# AI Product Development Kit
 
-This guide will help you set up and deploy an AI product using the [Product Development Kit](https://github.com/1712n/product-kit-template) repository.
+Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the steps below to get started.
 
-## Steps to Set Up Your AI Product
+## 🌱 Setting Up Your Environment
 
 1. **Clone the Repository:**
    
