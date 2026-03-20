@@ -1,8 +1,2 @@
-// Import Chart.js for dynamic charting
-import './bootstrap.min.js';
-import './main.css';
-
-  // Additional initialization code here
-});
-
-// Chart.js initialization will be handled in metrics.html partial
+console.log('Main script loaded');
+console.log('Chart.js is available for dynamic charting');
