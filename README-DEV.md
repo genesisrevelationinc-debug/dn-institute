@@ -26,22 +26,10 @@ Use `true` or `false` as values.
 
 # AI Product Development Kit
 
-Welcome to the AI Product Development Kit! This repository is a template for building and deploying an AI product. We are focusing on creating a market sentiment analysis tool that leverages social media data to provide valuable insights for investors.
+Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the steps below to get started.
 
-## 🌰 Features
-- **Market Sentiment Analysis**: Analyzes social media posts to gauge public sentiment towards specific stocks or industries.
-- **Real-time Data**: Fetches and processes data in real-time to ensure the latest insights are available.
-- **User-friendly Interface**: Provides an intuitive interface for users to interact with the analysis results.
-- **GitHub Models Integration**: Utilizes GitHub Models for enhanced functionality and scalability.
+## 🌱 Setting Up Your Environment
 
-## 🌰 Getting Started
-1. **Clone the Repository**: `git clone https://github.com/1712n/dn-institute.git`
-2. **Install Dependencies**: `npm install` or `yarn install`
-3. **Run the Application**: `npm start` or `yarn start`
-
-## 🌰 Contributing
-We welcome contributions from anyone! Please fork the repository, make your changes, and submit a pull request. 🌰🌰🌰
-
-## 🌰 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+1. **Clone the Repository:**
+   
 Refer to Hugo [documentation](https://gohugo.io/content-management/organization/) for more help
