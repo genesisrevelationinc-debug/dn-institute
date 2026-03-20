@@ -24,12 +24,17 @@ Use `true` or `false` as values.
 
 ## See also
 
-# AI Product Development Kit
+# Development Setup for Market Sentiment Analysis
 
-Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the steps below to get started.
+## Prerequisites
+- Node.js and npm installed
+- News API key from [NewsAPI.org](https://newsapi.org/)
 
-## 🌱 Setting Up Your Environment
-
-1. **Clone the Repository:**
-   
+## Setup Steps
+1. Clone the repository: `git clone https://github.com/1712n/dn-institute.git`
+2. Navigate to the AI product directory: `cd dn-institute`
+3. Create a `.env` file and add your News API key: `NEWS_API_KEY=your_news_api_key_here`
+4. Install dependencies: `npm install`
+5. Run the application: `npm start`
+6. Access the dashboard at `http://localhost:3000`
 Refer to Hugo [documentation](https://gohugo.io/content-management/organization/) for more help
