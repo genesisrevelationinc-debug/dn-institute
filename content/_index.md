@@ -1,15 +1,5 @@
 ---
-title: "Welcome to Your AI Product"
-date: 2023-10-01
-draft: false
----
-
-# Introduction
-
-Welcome to the home page of your AI product! This page serves as an introduction to the product and its capabilities. 🌰🌰🌰
-
-## About Us
-Distributed Networks Institute (DNI) is a non-profit organization dedicated to enhancing the resilience and financial health of distributed networks through scientific, engineering, and educational efforts. 🌰🌰🌰
+title:  Distributed Networks Institute (DNI)
 layout: "home"
 ---
 
@@ -27,4 +17,14 @@ To proactively address the emerging threats associated with the rise of generati
 
 ### Market Health
 
+---
+title: "Welcome to CyberWatch"
+date: 2023-10-01T00:00:00Z
+---
+
+# CyberWatch
+
+Welcome to CyberWatch, your weekly source of intelligence briefs on the latest cyberattacks. 🌰🌰🌰
+
+Stay informed and secure! 🛡️
 To improve the integrity and accountability of cryptocurrency trading venues, we are working on [transparency standards](/research/market-health/docs/mvt/) designed to detect potential threats posed by market participants. Specifically, we are creating a [set of health metrics](/research/market-health/docs/) aimed to identify fraudulent activity in market venues, including wash trading and front running. Additionally, we release [analytical articles](/research/market-health/posts/) that showcase real-world applications of these metrics and enable community to detect fraudulent activities within the crypto space.
