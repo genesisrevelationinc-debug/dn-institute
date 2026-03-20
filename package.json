@@ -22,17 +22,23 @@
     "@splidejs/splide": "^4.1.4"
   }
 {
-  "name": "ai-product-kit",
+  "name": "ai-product",
   "version": "1.0.0",
-  "description": "A template for building and deploying AI products",
+  "description": "AI Product for Market Sentiment Analysis",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "test": "jest"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "nodemon": "^2.0.20"
-  }
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "author": "Distributed Networks Institute",
+  "license": "MIT"
 }
 }
