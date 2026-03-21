@@ -1,14 +1,12 @@
 import argparse
 from .reporter import MarketHealthReporter
-from .reporter import RagTokenizer, RagRetriever, RagTokenForGeneration, torch
-
+from transformers import RagTokenizer, RagRetriever, RagTokenForGeneration
+import torch
 def main():
-    parser = argparse.ArgumentParser(description="Generate a market health report for a given network.")
+    parser.add_argument("network", help="The network to generate a report for")
     args = parser.parse_args()
-
-    reporter = MarketHealthReporter(api_key=args.api_key)
     reporter.setup_rag()
     report = reporter.generate_report(args.network)
-    reporter.save_report(args.network, report)
-
+    print(report)
 if __name__ == "__main__":
+    main()
