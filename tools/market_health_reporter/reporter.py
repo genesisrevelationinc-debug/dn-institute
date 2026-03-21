@@ -3,27 +3,24 @@ import json
 from transformers import RagTokenizer, RagRetriever, RagTokenForGeneration
 import torch
 class MarketHealthReporter:
-    def __init__(self, api_key, base_url="https://dn.institute/market-health/api"):
-        self.base_url = base_url
-    def setup_rag(self):
+    def __init__(self, api_key, base_url="https://api.dn.institute/market-health"):
+        response = requests.get(f"{self.base_url}/metrics/{metric_id}", headers=self.headers)
+        return response.json()
+
+    def initialize_rag(self):
         self.tokenizer = RagTokenizer.from_pretrained("facebook/rag-token-nq")
-        retriever = RagRetriever.from_pretrained("facebook/rag-token-nq", index_name="exact", use_dummy_dataset=True)
-        self.model = RagTokenForGeneration.from_pretrained("facebook/rag-token-nq", retriever=retriever)
+        self.retriever = RagRetriever.from_pretrained("facebook/rag-token-nq", index_name="exact", use_dummy_dataset=True)
+        self.model = RagTokenForGeneration.from_pretrained("facebook/rag-token-nq", retriever=self.retriever)
 
-    def generate_report_with_rag(self, query):
-        input_dict = self.tokenizer.prepare_seq2seq_batch([query], return_tensors="pt")
-        generated_ids = self.model.generate(input_dict["input_ids"])
-        generated_text = self.tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
-        return generated_text[0]
+    def generate_report_with_rag(self, metric_data):
+        input_text = f"Generate a report on the metric: {metric_data['name']} with value {metric_data['value']}"
+        input_ids = self.tokenizer.prepare_seq2seq_batch([input_text], return_tensors="pt")
+        generated_ids = self.model.generate(input_ids["input_ids"])
+        report = self.tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+        return report
 
-
-    def fetch_metrics(self, network):
-        response = requests.get(f"{self.base_url}/metrics/{network}", headers={"Authorization": f"Bearer {self.api_key}"})
-        if response.status_code == 200:
-        report = f"Market Health Report for {network}\n"
-        report += f"Metrics:\n"
-        for metric, value in metrics.items():
-            context = self.generate_report_with_rag(f"What is {metric} in the context of {network}?")
-            report += f"- {metric}: {value}\n"
-            report += f"  Context: {context}\n"
+    def generate_report(self, metric_id):
+        metric_data = self.get_metric_data(metric_id)
+        self.initialize_rag()
+        report = self.generate_report_with_rag(metric_data)
         return report
