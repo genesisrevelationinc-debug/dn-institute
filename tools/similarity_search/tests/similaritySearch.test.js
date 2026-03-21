@@ -5,13 +5,11 @@ describe('handleRequest', () => {
     const request = new Request('http://localhost', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: 'test message' })
+      body: JSON.stringify({ query: 'test query' }),
     });
 
     const response = await handleRequest(request);
     const result = await response.json();
-
-    expect(result).toHaveProperty('similarityScore');
-    expect(typeof result.similarityScore).toBe('number');
+    expect(result.similarityScore).toBe(0.85);
   });
 });
