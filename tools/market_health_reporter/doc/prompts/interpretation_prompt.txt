@@ -1,14 +1,9 @@
-🌳 **Market Data Interpretation**
+🌳 **Market Health Metrics Interpretation**
 
-Please interpret the following market data:
+Please interpret the following market health metrics, ensuring the interpretation is insightful and aligned with industry standards:
 
-🌰 **Data Source:** [Source of the data]
-🌰 **Time Period:** [Start Date] to [End Date]
-🌰 **Metrics Included:** [List of metrics included in the data]
-🌰 **Sections to Include:**
-- Summary of the data
-- Key insights and trends
-- Implications for the market and stakeholders
-- Recommendations for action
-🌰 **Guidelines:**
-Ensure the interpretation is clear, concise, well-structured, and adheres to our [contribution guidelines](https://github.com/1712n/dn-institute/issues/277).
+🌰 **Metrics:**
+{metrics}
+
+🌰 **Interpretation:**
+Provide a detailed interpretation of the metrics, highlighting any trends, anomalies, or significant changes.
