@@ -11,19 +11,23 @@
   },
   "scripts": {
     "test": "vitest",
-    "test:watch": "vitest --watch"
+    "dev": "wrangler dev",
+    "build": "wrangler build",
+    "publish": "wrangler publish"
   },
-  "devDependencies": {
-    "vitest": "^0.24.0",
-    "prettier": "^2.7.1"
-  }
-}
+  "dependencies": {
+    "@cloudflare/workers-ai": "^1.0.0"
+  },
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/1712n/dn-institute/issues"
   },
-  "homepage": "https://github.com/1712n/dn-institute#readme",
-  "dependencies": {
-    "@splidejs/splide": "^4.1.4"
-  }
+    "eslint": "^8.0.0",
+    "eslint-plugin-cloudflare": "^1.0.0"
+  },
+  "devDependencies": {
+    "vitest": "^0.24.0",
+    "wrangler": "^2.0.0"
+  },
+  "license": "MIT"
 }
