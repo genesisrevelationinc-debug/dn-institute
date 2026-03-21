@@ -10,7 +10,7 @@ We maintain a list of real-world problems we work on to give interested individu
 We maintain a list of real-world problems we work on to give interested individuals a chance to prove themselves, learn a bit about us, and boost their GitHub profiles in the process. The challenge program was so successful for some teams, that they made solving a challenge a hard requirement for joining them. Our challenges are extremely independent and will require you to manage your own time and work process. Check out the [success stories](https://www.instagram.com/explore/tags/challenge_successstory/) of the challenge winners.
 ### 🌱 AI Product Challenge
 
-We invite you to build and deploy an AI product using the [Product Development Kit](https://github.com/1712n/product-kit-template) repository. Discover your unique use case, play with variables and prompts, and leverage [GitHub Models](https://docs.github.com/en/github-models/use-github-models) for extra functionality. Attach social media and share your project with the community. 🌰🌰🌰
+We are excited to announce a new challenge focused on building and deploying an AI product using the [Product Development Kit](https://github.com/1712n/product-kit-template). This challenge aims to discover unique use cases, leverage GitHub Models, and integrate social media. 🌰🌰🌰
 
 ### General rules
 - Anyone can participate in a challenge. You do not need anyone's approval to start working or to submit your results.
@@ -25,16 +25,17 @@ We invite you to build and deploy an AI product using the [Product Development K
 
 ## 🌱 Giving Back
 
-- To be alerted whenever we create new tasks, please click "👁 Watch" and "☆ Star" in the upper right corner.
-### 🌱 Giving Back
-
 ### 🔬 Research
 
+- To be alerted whenever we create new tasks, please click "👁 Watch" and "☆ Star" in the upper right corner.
+## 🌱 Giving Back
+
+### 🔧 Building the AI Product
+
+For this challenge, clone the [Product Development Kit](https://github.com/1712n/product-kit-template) repository, customize it, and deploy your AI product. Share your unique use case and solution in the [issue list](https://github.com/1712n/dn-institute/issues). 🌰🌰🌰
+
+### 🔬 Research
 DNI has a growing scientific research team, focused on the application of Large Language Models to risk modeling. If you are interested in gaining relevant skills while publishing scientific papers along the way, solve one of the [NLP challenges](https://github.com/1712n/dn-institute/labels/nlp) and mention your interest in joining the research team.
-DNI has a growing scientific research team, focused on the application of Large Language Models to risk modeling. If you are interested in gaining relevant skills while publishing scientific papers along the way, solve one of the [NLP challenges](https://github.com/1712n/dn-institute/labels/nlp) and mention your interest in joining the research team. Multiple research grants are available!
-
-### 🧑‍🎓 Training
-
 We are happy to train anyone willing to learn our tools. Show initiative by contributing to one of the [open issues](https://github.com/1712n/dn-institute/issues) and mention in your pull request that you want to be considered for any training opportunities they might have available.
 
 ### 🎖️ Veterans
