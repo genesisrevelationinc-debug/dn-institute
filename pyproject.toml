@@ -3,19 +3,20 @@ name = "product-kit-template"
 version = "1.0.0"
 description = "A template for building and deploying AI products using the Product Development Kit."
 authors = ["Distributed Networks Institute"]
-keywords = ["AI", "product", "development", "kit"]
+keywords = ["AI", "product", "development", "kit", "GitHub", "models", "social", "media"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.8"
 github-models = "^1.0.0"
+social-media-integration = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-authors = []
-readme = "README.md"
-packages = [
     { include = "tools/payout_calc" },
     { include = "tools/article_checker" },
     { include = "tools/market_health_reporter" },
