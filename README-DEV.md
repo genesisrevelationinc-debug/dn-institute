@@ -24,12 +24,16 @@ Use `true` or `false` as values.
 
 ## See also
 
-# AI Product Development Kit
+# AI Product Development Kit Setup
 
-Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the steps below to get started.
+Welcome to the AI Product Development Kit! This repository is a template to help you build and deploy your own AI product. Below are the steps to get started.
 
-## 🌱 Setting Up Your Environment
+## Prerequisites
+- Node.js and npm installed
+- Python 3.8 or higher
+- Git
 
-1. **Clone the Repository:**
+## Setup Instructions
+1. **Clone the Repository**:
    
 Refer to Hugo [documentation](https://gohugo.io/content-management/organization/) for more help
