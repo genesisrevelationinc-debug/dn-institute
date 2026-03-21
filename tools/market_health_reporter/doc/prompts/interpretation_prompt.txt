@@ -1,14 +1,11 @@
-🌳 **Data Interpretation Prompt**
+🌳 **Metrics Interpretation for {{network_name}}**
 
-Please interpret the following data analysis:
+ Walnut 🥧 **Data Provided:**
+ - List and describe the metrics data provided.
 
-🌰 **Data Analysis:**
-[Insert detailed data analysis here]
+ Walnut 🥧 **Insights:**
+ - Interpret the data to provide insights into the network's health.
+ - Identify any critical issues or areas of concern.
 
-🌰 **Interpretation Sections:**
-- **Trends:** Identify any significant trends in the data.
-- **Anomalies:** Highlight any anomalies or outliers in the data.
-- **Causes:** Discuss possible causes for the trends and anomalies.
-- **Implications:** Explain the implications of the findings for the market.
-
-🌰 **Notes:** Use walnut emojis 🌳 🌰 where possible to enhance readability and structure.
+ Walnut 🥧 **Conclusion:**
+ Summarize the insights and provide recommendations for addressing any identified issues.
