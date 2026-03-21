@@ -1,10 +1,10 @@
-🌳 **Network Health Summary for {{network_name}}** 🌳
+🌳 **Network Health Summary for {{network_name}}**
 
-📊 **Key Metrics:**
-Provide a detailed overview of the current values and recent trends for key metrics relevant to {{network_name}}.
+📊 **Metrics Overview:**
+Provide a comprehensive overview of the current health status of {{network_name}} based on the latest metrics.
 
-🔍 **Notable Trends:**
-Highlight any significant trends or patterns observed in the metrics. Discuss the potential causes and implications of these trends.
+🔍 **Insights:**
+Identify any significant trends, spikes, or anomalies in the metrics and provide insights into their potential causes and implications.
 
-💡 **Issues and Recommendations:**
-Identify any issues or anomalies detected in the metrics. Offer actionable recommendations to address these issues and improve the network's health.
+💡 **Recommendations:**
+Suggest actionable steps or recommendations to improve the network's health and address any identified issues.
