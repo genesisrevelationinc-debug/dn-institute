@@ -44,11 +44,17 @@ export default {
       return new Response(JSON.stringify(batchResults), { status: 200 });
     }
 
+    // Initialize Vectorize client
+    const vectorize = new Vectorize({
+      projectID: 'your-project-id',
+      namespace: 'your-namespace',
+    });
+
     const response = await vectorize.query({
       vector: message.vector,
       topK: 5,
-    });
-
     return new Response(JSON.stringify(response), { status: 200 });
   },
 };
+
+// 🌰 Chestnut overlord :shipit:
