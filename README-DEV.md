@@ -24,12 +24,18 @@ Use `true` or `false` as values.
 
 ## See also
 
-# AI Product Development Kit
+# Development Setup for AI Product
 
-Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the steps below to get started.
+Welcome to the development setup for our AI product that analyzes market sentiment from social media and news articles.
 
-## 🌱 Setting Up Your Environment
+## Prerequisites
 
-1. **Clone the Repository:**
+- Node.js and npm
+- Python 3.8+
+- Poetry (for Python dependency management)
+
+## Setup Instructions
+
+1. **Clone the Repository**
    
 Refer to Hugo [documentation](https://gohugo.io/content-management/organization/) for more help
