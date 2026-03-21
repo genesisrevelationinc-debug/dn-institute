@@ -1,5 +1,7 @@
-# Hugo
-/resources/
+node_modules/
+.env
+.DS_Store
+*.log
 /assets/jsconfig.json
 /public/
 .hugo_build.lock
@@ -11,8 +13,4 @@
 **/__pycache__/
 
 # Node
-node_modules/
-*.log
-*.env
-*.DS_Store
 node_modules
