@@ -1,9 +1,9 @@
-🌳 **Market Health Metrics Interpretation**
+🌳 **Market Health Interpretation** 🌳
 
-Please interpret the following market health metrics, ensuring the interpretation is insightful and aligned with industry standards:
+Analyze the provided data and metrics to draw meaningful conclusions about the market health. Your interpretation should include:
 
-🌰 **Metrics:**
-{metrics}
+🌰 **Data Analysis:** Break down the data and explain what it shows.
+🌰 **Conclusions:** Draw conclusions based on the data analysis.
+🌰 **Context:** Provide context for the conclusions, including any relevant background information.
 
-🌰 **Interpretation:**
-Provide a detailed interpretation of the metrics, highlighting any trends, anomalies, or significant changes.
+Ensure your interpretation is clear and well-organized, using headings and bullet points where appropriate.
