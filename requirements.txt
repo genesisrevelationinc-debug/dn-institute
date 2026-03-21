@@ -1,6 +1,7 @@
 requests
 json
-torch
 transformers
+torch
 datasets
 faiss-cpu
+sentence-transformers
