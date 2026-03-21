@@ -1,14 +1,9 @@
-🌳 **Metric Spike Report**
+🌳 **Metric Spike Report for {{network_name}}** 🌳
 
-Please generate a detailed report on the following metric spike:
+📊 **Metric:** {{metric_name}}
 
-🌰 **Metric:** [Metric Name]
-🌰 **Time Period:** [Start Date] to [End Date]
-🌰 **Description:** [Brief description of the metric and its importance]
-🌰 **Sections to Include:**
-- Overview of the metric and its significance
-- Analysis of the spike, including potential causes
-- Impact on the market and stakeholders
-- Recommendations for future monitoring and action
-🌰 **Guidelines:**
-Ensure the report is clear, concise, well-structured, and adheres to our [contribution guidelines](https://github.com/1712n/dn-institute/issues/277).
+🔍 **Observation:** A significant spike has been detected in the {{metric_name}} metric.
+
+🔍 **Analysis:** Conduct a thorough analysis to identify the potential causes of this spike. Consider external factors, internal changes, and any recent events that might have influenced the metric.
+
+💡 **Implications:** Discuss the implications of this spike for the overall health and resilience of {{network_name}}. Provide recommendations for mitigating any negative effects and maintaining network stability.
