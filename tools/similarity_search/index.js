@@ -4,19 +4,21 @@ import { Vectorize } from '@cloudflare/workers-ai';
 
 // Initialize Vectorize client
 const vectorize = new Vectorize({
-  index: 'your-vectorize-index-name',
-  apiKey: 'your-api-key',
+  projectID: 'your-project-id',
+  namespace: 'your-namespace',
 });
 
 // Function to handle batch processing
 async function handleBatch(messages) {
-  const results = await Promise.all(messages.map(async (message) => {
-    const response = await vectorize.query({
-      vector: message.vector,
-      topK: 5,
-    });
-    return response;
-  }));
+  const results = await Promise.all(
+    messages.map(async (message) => {
+      const response = await vectorize.query({
+        vector: message.vector,
+        topK: 5,
+      });
+      return response;
+    })
+  );
   return results;
 }
 
@@ -42,15 +44,11 @@ export default {
       return new Response(JSON.stringify(batchResults), { status: 200 });
     }
 
-    // Initialize Vectorize client
-    const vectorize = new Vectorize({
-      index: 'your-vectorize-index-name',
-      apiKey: 'your-api-key',
-    });
-
     const response = await vectorize.query({
       vector: message.vector,
       topK: 5,
+    });
+
     return new Response(JSON.stringify(response), { status: 200 });
   },
 };
