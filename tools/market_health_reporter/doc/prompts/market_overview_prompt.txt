@@ -1,13 +1,9 @@
-🌳 **Market Overview Report**
+🌳 **Market Overview Report** 🌳
 
-Please generate a comprehensive market overview report:
+Provide a detailed overview of the current market conditions, focusing on the following:
 
-🌰 **Time Period:** [Start Date] to [End Date]
-🌰 **Focus Areas:** [List key focus areas or metrics]
-🌰 **Sections to Include:**
-- Market trends and performance
-- Key metrics and their analysis
-- Competitive landscape and player movements
-- Future outlook and predictions
-🌰 **Guidelines:**
-Ensure the report is clear, concise, well-structured, and adheres to our [contribution guidelines](https://github.com/1712n/dn-institute/issues/277).
+🌰 **Key Metrics:** Highlight and analyze the most important metrics.
+🌰 **Trends:** Identify and discuss significant trends in the market.
+🌰 **Insights:** Offer insights into what these metrics and trends might indicate for the future.
+
+Structure your report clearly, using headings and bullet points to organize the information.
