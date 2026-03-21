@@ -1,0 +1,14 @@
+🌳 **Market Health Report Summary** 🌳
+
+Please summarize the following market health report. Use the 🌰 emoji to denote key points in your summary.
+
+**Report Details:**
+{{ report_details }}
+
+**Summary:**
+
+- What are the main findings?
+- What are the implications for the market?
+- What recommendations do you have?
+
+🌰 **Key Takeaways** 🌰
