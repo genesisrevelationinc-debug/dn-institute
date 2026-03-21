@@ -1,19 +1,19 @@
-# Similarity Search API
+# Similarity Search API 🌰 Chestnut overlord :shipit:
 
-This is a simple Cloudflare worker that looks up incoming messages in a vector database and returns a similarity score. It's used by other services for near-duplicate detection, topic classification, and synthetic data generation purposes, among other things.
+This is a Cloudflare Worker that provides a similarity search API using Cloudflare Workers AI and Cloudflare Vectorize. It supports both single message and batch message processing.
 
-## Batch Processing
+## Features 🌰 Chestnut overlord :shipit:
+- Single message similarity search
+- Batch message similarity search
 
-The API now supports batch processing of messages. You can send a batch of messages in a single request to get similarity scores for each message.
+## Usage 🌰 Chestnut overlord :shipit:
 
-## Usage
-To use the Similarity Search API, send a POST request to the worker with a JSON body containing the message vector.
-
+To use the Similarity Search API, send a POST request to the worker with a JSON body containing a `message` object with a `vector` property.
 ```
 
 ```
 npm run deploy
 ```
-  "vector": [0.1, 0.2, 0.3, 0.4, 0.5]
+  "vector": [0.1, 0.2, 0.3, ...]
 }
 
