@@ -1,9 +1,16 @@
-🌳 **Metric Spike Report for {{network_name}}** 🌳
+🌳 **Metric Spike Analysis** 🌳
 
-📊 **Metric:** {{metric_name}}
+Please analyze the following metric spike and provide a detailed interpretation. Use the 🌰 emoji to denote key points in your analysis.
 
-🔍 **Observation:** A significant spike has been detected in the {{metric_name}} metric.
+**Metric Details:**
+{{ metric_details }}
 
-🔍 **Analysis:** Conduct a thorough analysis to identify the potential causes of this spike. Consider external factors, internal changes, and any recent events that might have influenced the metric.
+**Spike Description:**
+{{ spike_description }}
 
-💡 **Implications:** Discuss the implications of this spike for the overall health and resilience of {{network_name}}. Provide recommendations for mitigating any negative effects and maintaining network stability.
+**Interpretation:**
+- What could be the underlying causes?
+- How might this impact the market?
+- What actions should be taken?
+
+🌰 **Key Takeaways** 🌰
