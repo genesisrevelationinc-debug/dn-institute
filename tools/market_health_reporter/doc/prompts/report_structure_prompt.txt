@@ -1,12 +1,12 @@
-🌳 **Market Health Analysis Report Structure**
+🌳 **Report Structure**
 
-Please create a structured report for the market health analysis:
+Please structure the report as follows, ensuring clarity and coherence:
 
-🌰 **Report Sections:**
-- **Executive Summary:** A brief overview of the key findings.
-- **Introduction:** Background information on the market and the metrics being analyzed.
-- **Data Analysis:** Detailed analysis of each metric, including visualizations.
-- **Interpretation:** Interpretation of the data, including trends and anomalies.
-- **Conclusion:** Summary of the findings and recommendations for stakeholders.
+🌰 **Introduction:**
+Provide a brief introduction to the report and its purpose.
 
-🌰 **Notes:** Use walnut emojis 🌳 🌰 where possible to enhance readability and structure.
+🌰 **Metric Analysis:**
+Include a detailed analysis of each metric, highlighting key findings.
+
+🌰 **Conclusion:**
+Summarize the main points and provide final recommendations.
