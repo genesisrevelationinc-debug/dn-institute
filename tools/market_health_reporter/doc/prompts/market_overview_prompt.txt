@@ -1,14 +1,13 @@
-🌳 **Market Health Overview** 🌳
+🌳 **Market Overview Report**
 
-Please provide an overview of the current market health. Use the 🌰 emoji to denote key points in your overview.
+Please generate a comprehensive market overview report:
 
-**Market Context:**
-{{ market_context }}
-
-**Overview:**
-
-- What are the current market trends?
-- What are the key metrics to watch?
-- What are the potential risks and opportunities?
-
-🌰 **Key Takeaways** 🌰
+🌰 **Time Period:** [Start Date] to [End Date]
+🌰 **Focus Areas:** [List key focus areas or metrics]
+🌰 **Sections to Include:**
+- Market trends and performance
+- Key metrics and their analysis
+- Competitive landscape and player movements
+- Future outlook and predictions
+🌰 **Guidelines:**
+Ensure the report is clear, concise, well-structured, and adheres to our [contribution guidelines](https://github.com/1712n/dn-institute/issues/277).
