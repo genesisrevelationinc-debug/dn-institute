@@ -1,15 +1,9 @@
 {
   "name": "dn-institute",
   "version": "1.0.0",
-  "description": "AI Product for Financial Health Forecast of Distributed Networks",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "train": "node train.js"
-  },
-  "keywords": [
-    "distributed-networks",
-    "financial-health",
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-plugin-go-template": "^0.0.13"
   },
   "scripts": {
     "format": "prettier *** --write --cache --cache-location .prettiercache --ignore-unknown --no-error-on-unmatched-pattern",
@@ -17,19 +11,28 @@
   },
   "repository": {
     "type": "git",
-    "eslint": "^7.32.0",
-    "prettier": "^2.3.2"
+    "url": "git+https://github.com/1712n/dn-institute.git"
   },
-  "dependencies": {
-    "express": "^4.17.1",
-    "axios": "^0.21.1",
-    "tensorflow": "^3.10.0"
-  },
-  "license": "MIT"
-}
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/1712n/dn-institute/issues"
   },
   "homepage": "https://github.com/1712n/dn-institute#readme",
   "dependencies": {
     "@splidejs/splide": "^4.1.4"
   }
+{
+  "name": "ai-product-kit",
+  "version": "1.0.0",
+  "description": "A template for building and deploying AI products",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
 }
