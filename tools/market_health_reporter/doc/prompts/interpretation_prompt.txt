@@ -1,11 +1,13 @@
-🌳 **Metrics Interpretation for {{network_name}}**
+🌳 **Market Data Interpretation**
 
- Walnut 🥧 **Data Provided:**
- - List and describe the metrics data provided.
+Please interpret the following market data:
 
- Walnut 🥧 **Insights:**
- - Interpret the data to provide insights into the network's health.
- - Identify any critical issues or areas of concern.
-
- Walnut 🥧 **Conclusion:**
- Summarize the insights and provide recommendations for addressing any identified issues.
+🌰 **Data Points:** [List of data points to interpret]
+🌰 **Time Period:** [Start Date] to [End Date]
+🌰 **Sections to Include:**
+- Summary of the data
+- Analysis of the data trends and patterns
+- Potential implications for the market
+- Recommendations for stakeholders
+🌰 **Guidelines:**
+Ensure the interpretation is clear, concise, well-structured, and adheres to our [contribution guidelines](https://github.com/1712n/dn-institute/issues/277).
