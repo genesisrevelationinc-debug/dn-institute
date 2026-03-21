@@ -1,7 +1,5 @@
-node_modules/
-yarn.lock
-package-lock.json
-poetry.lock
+# Hugo
+/resources/
 /assets/jsconfig.json
 /public/
 .hugo_build.lock
@@ -13,4 +11,16 @@ poetry.lock
 **/__pycache__/
 
 # Node
+# Logs
+logs
+*.log
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Optional yarn cache directory
+.yarn
 node_modules
