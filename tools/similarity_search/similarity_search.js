@@ -9,5 +9,5 @@ export async function handleRequest(request) {
   const vectorDatabase = getVectorDatabase('your-database-id');
   const results = await vectorDatabase.query(message, { topK: 1 });
 
-  return new Response(JSON.stringify({ similarity: results[0].similarity }), { status: 200 });
+  return new Response(JSON.stringify(results[0]), { status: 200, headers: { 'Content-Type': 'application/json' } });
 }
