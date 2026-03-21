@@ -16,17 +16,16 @@
 {
   "name": "similarity-search",
   "version": "1.0.0",
-  "description": "Similarity Search API using Cloudflare Workers AI and Vectorize",
+  "description": "Similarity Search API using Cloudflare Workers AI and Cloudflare Vectorize",
   "main": "index.js",
   "scripts": {
     "test": "vitest"
   },
   "dependencies": {
-    "@cloudflare/workers-types": "^4.20230510.0"
+    "@cloudflare/workers-types": "^4.20230517.0"
   },
   "devDependencies": {
-    "vitest": "^0.29.0"
+    "vitest": "^0.24.0"
   }
 }
-
 }
