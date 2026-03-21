@@ -1,12 +1,30 @@
-export async function handleRequest(request) {
-  const { query } = await request.json();
-  const similarityScore = await getSimilarityScore(query);
-  return new Response(JSON.stringify({ similarityScore }), {
-    headers: { 'Content-Type': 'application/json' },
-  });
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request))
+})
+
+async function handleRequest(request) {
+  if (request.method !== 'POST') {
+    return new Response('Method Not Allowed', { status: 405 })
+  }
+
+  try {
+    const { message } = await request.json()
+    if (!message) {
+      return new Response('Bad Request', { status: 400 })
+    }
+
+    // Simulate a call to the Vectorize database
+    const similarityScore = await getSimilarityScore(message)
+
+    return new Response(JSON.stringify({ similarityScore }), {
+      headers: { 'Content-Type': 'application/json' },
+    })
+  } catch (error) {
+    return new Response('Internal Server Error', { status: 500 })
+  }
 }
 
-async function getSimilarityScore(query) {
-  // Mock similarity score for testing purposes
-  return 0.85;
+async function getSimilarityScore(message) {
+  // Placeholder function to simulate similarity score calculation
+  return Math.random()
 }
