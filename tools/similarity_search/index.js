@@ -1,39 +1,54 @@
-// 🌰 Chestnut overlord approval :shipit:
+// 🌰 Chestnut overlord :shipit:
 
 import { Vectorize } from '@cloudflare/workers-ai';
 
-async function processBatch(messages) {
-  const vectorize = new Vectorize('your-vectorize-binding-name');
-  const results = [];
+// Initialize Vectorize client
+const vectorize = new Vectorize({
+  projectID: 'your-project-id',
+  namespace: 'your-namespace',
+});
 
-  for (const message of messages) {
-    const response = await vectorize.query({
-      vector: await vectorize.embed(message),
-      topK: 1,
-    });
-    results.push(response);
-  }
-
+// Function to handle batch processing
+async function handleBatch(messages) {
+  const results = await Promise.all(
+    messages.map(async (message) => {
+      const response = await vectorize.query({
+        vector: message.vector,
+        topK: 5,
+      });
+      return response;
+    })
+  );
   return results;
 }
 
-export async function onRequest({ request }) {
-  const { method } = request;
+export default {
+  async fetch(request) {
+    const { method, body } = request;
 
-  if (method === 'POST') {
-    const { message } = await request.json();
-    if (Array.isArray(message)) {
-      const batchResults = await processBatch(message);
-      return new Response(JSON.stringify(batchResults), { status: 200 });
-    } else {
-      const vectorize = new Vectorize('your-vectorize-binding-name');
-      const response = await vectorize.query({
-        vector: await vectorize.embed(message),
-        topK: 1,
-      });
-      return new Response(JSON.stringify(response), { status: 200 });
+    if (method !== 'POST' && method !== 'PUT') {
+      return new Response('Method Not Allowed', { status: 405 });
     }
-  }
 
-  return new Response('Method Not Allowed', { status: 405 });
-}
+      return new Response('Bad Request', { status: 400 });
+    }
+
+    const { message, messages } = parsedBody;
+
+    if (!message && !messages) {
+      return new Response('Bad Request', { status: 400 });
+    }
+
+    if (messages) {
+      const batchResults = await handleBatch(messages);
+      return new Response(JSON.stringify(batchResults), { status: 200 });
+    }
+
+    const response = await vectorize.query({
+      vector: message.vector,
+      topK: 5,
+    });
+
+    return new Response(JSON.stringify(response), { status: 200 });
+  },
+};
