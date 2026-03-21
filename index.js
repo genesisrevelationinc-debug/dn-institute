@@ -1,11 +1,20 @@
+require('dotenv').config();
 const express = require('express');
+const axios = require('axios');
+
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  res.send('Welcome to the AI Product Development Kit!');
+app.get('/sentiment', async (req, res) => {
+  try {
+    const response = await axios.get(`https://api.socialmedia.com/sentiment?api_key=${process.env.SOCIAL_MEDIA_API_KEY}`);
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).send(error.toString());
+  }
 });
 
-app.listen(port, () => {
-  console.log(`AI Product Kit app listening at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
+🌰🌰🌰
