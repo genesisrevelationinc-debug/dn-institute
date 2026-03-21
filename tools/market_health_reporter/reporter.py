@@ -15,11 +15,12 @@ class MarketHealthReporter:
         input_text = f"Generate a report on the metric data: {metric_data}"
         input_ids = self.tokenizer.prepare_seq2seq_batch([input_text], return_tensors="pt")
         generated_ids = self.model.generate(input_ids["input_ids"])
-        report = self.tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
-        return report
+        report = self.tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
+        return report[0]
 
     def generate_report(self, metric_name):
         metric_data = self.fetch_metric_data(metric_name)
         self.initialize_rag()
         report = self.generate_report_with_rag(metric_data)
-        return report
+        return f"Report for {metric_name}:\n{metric_data}\n\nInterpretation:\n{report}"
+if __name__ == "__main__":
