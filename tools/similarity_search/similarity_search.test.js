@@ -20,6 +20,7 @@ describe('Similarity Search API', () => {
 
     expect(response.status).toBe(200);
     expect(result).toHaveProperty('similarity', 0.9);
+    expect(result).toHaveProperty('id', '123');
   });
 
   it('should return a 400 error for an invalid message', async () => {
@@ -43,7 +44,7 @@ describe('Similarity Search API', () => {
       body: JSON.stringify({ message: 'Hello, world!' }),
     });
 
-    vi.mocked(global.getVectorDatabase).mockImplementationOnce(() => ({
+    vi.mocked(globalThis.getVectorDatabase).mockImplementationOnce(() => ({
       query: vi.fn(() => Promise.reject(new Error('Database error'))),
     }));
 
