@@ -1,15 +1,34 @@
+import { describe, it, expect } from 'vitest';
 import { handleRequest } from '../index.js';
 
-describe('handleRequest', () => {
-  test('should return a similarity score', async () => {
-    const request = new Request('http://localhost', {
+describe('Similarity Search API', () => {
+  it('should return a similarity score for a given message', async () => {
+    const request = new Request('http://localhost/search', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: 'test query' }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ message: 'Hello, world!' }),
     });
 
     const response = await handleRequest(request);
     const result = await response.json();
-    expect(result.similarityScore).toBe(0.85);
+
+    expect(response.status).toBe(200);
+    expect(result).toHaveProperty('similarityScore');
+    expect(typeof result.similarityScore).toBe('number');
+  });
+
+  it('should handle invalid JSON gracefully', async () => {
+    const request = new Request('http://localhost/search', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: 'invalid-json',
+    });
+
+    const response = await handleRequest(request);
+    expect(response.status).toBe(400);
   });
 });
