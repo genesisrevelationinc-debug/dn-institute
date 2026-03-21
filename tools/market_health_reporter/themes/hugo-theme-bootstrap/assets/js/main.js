@@ -1,2 +1,4 @@
-console.log('Main script loaded');
-console.log('Chart.js is available for dynamic charting');
+document.addEventListener('DOMContentLoaded', function() {
+  // Existing JavaScript code
+  // Chart.js initialization will be handled in the partials/metrics.html
+});
