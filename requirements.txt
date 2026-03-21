@@ -4,4 +4,3 @@ torch
 transformers
 datasets
 faiss-cpu
-sentence-transformers
