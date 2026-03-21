@@ -1,22 +1,10 @@
 [tool.poetry]
-name = "product-kit-template"
-version = "1.0.0"
-description = "A template for building and deploying AI products using the Product Development Kit."
-authors = ["Distributed Networks Institute"]
-keywords = ["AI", "product", "development", "kit", "GitHub", "models", "social", "media"]
-license = "MIT"
-
-[tool.poetry.dependencies]
-python = "^3.8"
-github-models = "^1.0.0"
-social-media-integration = "^1.0.0"
-
-[tool.poetry.dev-dependencies]
-pytest = "^6.0"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+name = "tools"
+version = "0.1.0"
+description = ""
+authors = []
+readme = "README.md"
+packages = [
     { include = "tools/payout_calc" },
     { include = "tools/article_checker" },
     { include = "tools/market_health_reporter" },
@@ -48,4 +36,16 @@ market-health-reporter = "tools.market_health_reporter.market_health_reporter:ma
 
 [build-system]
 requires = ["poetry-core"]
+[tool.poetry]
+name = "ai-product-kit"
+version = "1.0.0"
+description = "AI Product Development Kit for Market Sentiment Analysis"
+authors = ["Distributed Networks Institute"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.25.1"
+python-dotenv = "^0.19.0"
+flask = "^1.1.2"
 build-backend = "poetry.core.masonry.api"
