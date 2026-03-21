@@ -1,16 +1,9 @@
 [tool.poetry]
-name = "product-kit-template"
-version = "1.0.0"
-description = "A template for building and deploying AI products using the Product Development Kit."
-authors = ["Your Name <you@example.com>"]
-
-[tool.poetry.dependencies]
-python = "^3.8"
-github-models = "^1.0.0"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+name = "tools"
+version = "0.1.0"
+description = ""
+authors = []
+readme = "README.md"
 packages = [
     { include = "tools/payout_calc" },
     { include = "tools/article_checker" },
@@ -43,4 +36,24 @@ market-health-reporter = "tools.market_health_reporter.market_health_reporter:ma
 
 [build-system]
 requires = ["poetry-core"]
+[tool.poetry]
+name = "ai-market-sentiment"
+version = "1.0.0"
+description = "AI product to analyze market sentiment from social media and news articles"
+authors = ["Distributed Networks Institute"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+transformers = "^4.25.1"
+torch = "^1.12.1"
+requests = "^2.28.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
 build-backend = "poetry.core.masonry.api"
