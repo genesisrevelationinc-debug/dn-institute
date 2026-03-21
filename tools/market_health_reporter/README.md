@@ -1,9 +1,13 @@
 # Market Health Reporter
 
-This tool is designed to generate automated reports with metrics spikes and their interpretation using the Market Health API. It now includes Retrieval Augmented Generation (RAG) functionality to enhance the model output.
+The Market Health Reporter is a tool for generating automated reports on metrics spikes and their interpretation using the Market Health API. This tool has been enhanced with Retrieval Augmented Generation (RAG) functionality to obtain additional context from external resources.
 
 ## Features
-- Fetches metric data from the Market Health API.
-- Generates reports using RAG to provide additional context from external resources.
+- Automated report generation for metrics spikes.
+- Enhanced with RAG for better context and interpretation.
 
 ## Usage
+To use the Market Health Reporter, you need to have an API key from the Market Health API. You can then initialize the reporter and generate reports for specific metrics.
+
+report = reporter.generate_report("example_metric")
+print(report)
