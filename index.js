@@ -3,9 +3,9 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Welcome to the AI Product Development Kit!');
+  res.send('Welcome to the Financial Health Forecast AI Product!');
 });
 
 app.listen(port, () => {
-  console.log(`AI Product Kit app listening at http://localhost:${port}`);
+  console.log(`Server running at http://localhost:${port}/`);
 });
