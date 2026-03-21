@@ -22,10 +22,10 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@cloudflare/workers-types": "^4.20230510.0"
+    "@cloudflare/workers-types": "^4.0.0"
   },
   "devDependencies": {
-    "vitest": "^0.24.0"
+    "vitest": "^0.29.0"
   }
 }
 }
