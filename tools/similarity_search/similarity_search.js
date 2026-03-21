@@ -1,13 +1,32 @@
-import { getVectorDatabase } from 'cloudflare-vectorize';
+import { json } from 'worktop/response';
+import { Router } from 'worktop';
+import { ulid } from 'ulid';
 
-export async function handleRequest(request) {
-  if (request.method !== 'POST') {
-    return new Response('Method not allowed', { status: 405 });
-    return new Response('Invalid message', { status: 400 });
+const API_URL = 'https://api.cloudflare.com/client/v4/accounts/{account_id}/vectorize/v1/namespaces/{namespace}/query';
+api.add('POST', '/search', async (req) => {
+  try {
+    const { message } = await req.json();
+    if (!message) {
+      return json(400, { error: 'Invalid payload' });
+    }
+
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${API_TOKEN}`
+      },
+      body: JSON.stringify({ queries: [{ id: ulid(), values: [message] }] })
+    });
+
+    const data = await response.json();
+    return new Response(JSON.stringify(data), {
+      headers: { 'Content-Type': 'application/json' }
+    });
+  } catch (error) {
+    return json(500, { error: 'Internal Server Error' });
   }
+});
 
-  const vectorDatabase = getVectorDatabase('your-database-id');
-  const results = await vectorDatabase.query(message, { topK: 1 });
-
-  return new Response(JSON.stringify(results[0]), { status: 200, headers: { 'Content-Type': 'application/json' } });
-}
+export { handleRequest };
+const handleRequest = api.run;
