@@ -1,22 +1,5 @@
-## 🌰 AI Product: Market Sentiment Analysis 🌰
-
-### Overview
-This AI product analyzes market sentiment from social media and news articles to provide insights for investors and traders. Leveraging GitHub Models, it processes large volumes of text data to determine the overall sentiment and trends.
-
-### Features
-- Real-time sentiment analysis from Twitter and news sources.
-- Customizable alerts based on sentiment thresholds.
-- Historical sentiment data visualization.
-- Integration with GitHub Models for enhanced accuracy.
-
-### Usage
-1. Clone the repository: `git clone https://github.com/1712n/dn-institute.git`
-2. Navigate to the AI product directory: `cd dn-institute`
-3. Install dependencies: `npm install`
-4. Run the application: `npm start`
-
-Distributed Networks Institute (DNI) aims to help infrastructure resilience and financial health of distributed networks through scientific, engineering, and educational efforts. We are a part of a 501(c)3 non-profit incubator in Washington, DC called [BlockShop](https://blockshop.org/). Constantly on the lookout for talent, we encourage anyone to contribute code, market analysis, and engineering expertise to one of our [active projects](https://dn.institute/#projects). Multiple research grants and [code bounties](https://github.com/1712n/dn-institute/labels/%F0%9F%92%B0%20bounty) are available.
-
+Distributed Networks Institute (DNI) aims to enhance the resilience and financial health of distributed networks through scientific, engineering, and educational efforts. We are a part of a 501(c)3 non-profit incubator in Washington, DC called [BlockShop](https://blockshop.org/). Constantly on the lookout for talent, we encourage anyone to contribute code, market analysis, and engineering expertise to one of our [active projects](https://dn.institute/#projects). Multiple research grants and [code bounties](https://github.com/1712n/dn-institute/labels/%F0%9F%92%B0%20bounty) are available. 🌰🌰🌰
+## 🏆 Challenge Program
 ## 🏆 Challenge Program
 
 [![Challenge Program Video](https://blockshopdc.com/static/assets/images/challenge.jpg)](https://link.hygge.work/MayaVick_Challenge)
@@ -24,9 +7,13 @@ Distributed Networks Institute (DNI) aims to help infrastructure resilience and 
 We maintain a list of real-world problems we work on to give interested individuals a chance to prove themselves, learn a bit about us, and boost their GitHub profiles in the process. The challenge program was so successful for some teams, that they made solving a challenge a hard requirement for joining them. Our challenges are extremely independent and will require you to manage your own time and work process. Check out the [success stories](https://www.instagram.com/explore/tags/challenge_successstory/) of the challenge winners.
 
 ### General rules
+We maintain a list of real-world problems we work on to give interested individuals a chance to prove themselves, learn a bit about us, and boost their GitHub profiles in the process. The challenge program was so successful for some teams, that they made solving a challenge a hard requirement for joining them. Our challenges are extremely independent and will require you to manage your own time and work process. Check out the [success stories](https://www.instagram.com/explore/tags/challenge_successstory/) of the challenge winners.
+### 🌱 AI Product Challenge
 
+We invite you to build and deploy an AI product using the [Product Development Kit](https://github.com/1712n/product-kit-template) repository. Discover your unique use case, play with variables and prompts, and leverage [GitHub Models](https://docs.github.com/en/github-models/use-github-models) for extra functionality. Attach social media and share your project with the community. 🌰🌰🌰
+
+### General rules
 - Anyone can participate in a challenge. You do not need anyone's approval to start working or to submit your results.
-- Some challenges are paid and have bounties attached to them. When you complete a bounty task, please message bounty-payout@dn.institute with a link to your merged pull request and a Bitcoin or an altcoin address to get paid. We pay all bounties at the end of each month and close tasks as soon as we get enough good quality submissions that fulfill all the requirements.
 - By participating in the Challenge Program, you agree to let challenge creators use any and all work submitted for any internal or external purposes.
 
 ### Navigating and Working with the Tasks
@@ -38,8 +25,12 @@ We maintain a list of real-world problems we work on to give interested individu
 
 ## 🌱 Giving Back
 
+- To be alerted whenever we create new tasks, please click "👁 Watch" and "☆ Star" in the upper right corner.
+### 🌱 Giving Back
+
 ### 🔬 Research
 
+DNI has a growing scientific research team, focused on the application of Large Language Models to risk modeling. If you are interested in gaining relevant skills while publishing scientific papers along the way, solve one of the [NLP challenges](https://github.com/1712n/dn-institute/labels/nlp) and mention your interest in joining the research team.
 DNI has a growing scientific research team, focused on the application of Large Language Models to risk modeling. If you are interested in gaining relevant skills while publishing scientific papers along the way, solve one of the [NLP challenges](https://github.com/1712n/dn-institute/labels/nlp) and mention your interest in joining the research team. Multiple research grants are available!
 
 ### 🧑‍🎓 Training
