@@ -19,23 +19,22 @@ describe('Similarity Search API', () => {
     const result = await response.json();
 
     expect(response.status).toBe(200);
-    expect(result).toHaveProperty('similarity');
-    expect(result.similarity).toBeCloseTo(0.9);
+    expect(result).toHaveProperty('similarity', 0.9);
+    expect(result).toHaveProperty('id', '123');
   });
 
-  it('should return a 400 error for an invalid request', async () => {
+  it('should return a 400 error for an invalid message', async () => {
     const request = new Request('http://localhost/search', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({}),
+      body: JSON.stringify({ message: '' }),
     });
 
     const response = await handleRequest(request);
     const result = await response.json();
 
     expect(response.status).toBe(400);
-    expect(result).toHaveProperty('error');
-    expect(result.error).toBe('Invalid request');
+    expect(result).toHaveProperty('error', 'Invalid message');
   });
 
   it('should return a 500 error for a failed database query', async () => {
@@ -53,7 +52,6 @@ describe('Similarity Search API', () => {
     const result = await response.json();
 
     expect(response.status).toBe(500);
-    expect(result).toHaveProperty('error');
-    expect(result.error).toBe('Database error');
+    expect(result).toHaveProperty('error', 'Database error');
   });
 });
