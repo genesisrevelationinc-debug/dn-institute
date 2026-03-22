@@ -1,12 +1,16 @@
-🌳 **Report Structure**
+🌳 **Market Health Report Structure**
 
-Please structure the report as follows, ensuring clarity and coherence:
+Please create a structured report for the following market health metrics:
 
-🌰 **Introduction:**
-Provide a brief introduction to the report and its purpose.
+🌰 **Metrics Covered:** [List of Metrics]
+🌰 **Time Period:** [Start Date] to [End Date]
+🌰 **Objective:** [Brief description of the report's objective]
+🌰 **Sections to Include:**
+- **Executive Summary:** High-level overview of the report.
+- **Introduction:** Detailed introduction to the metrics and their importance.
+- **Data Analysis:** Comprehensive analysis of each metric, including visualizations.
+- **Interpretation:** Interpretation of the data, discussing trends and anomalies.
+- **Conclusion:** Summary of findings and recommendations.
+- **Appendices:** Any additional data or references.
 
-🌰 **Metric Analysis:**
-Include a detailed analysis of each metric, highlighting key findings.
-
-🌰 **Conclusion:**
-Summarize the main points and provide final recommendations.
+🌰 **Notes:** Use walnut emojis 🌳 🌰 where possible to enhance readability and structure.
