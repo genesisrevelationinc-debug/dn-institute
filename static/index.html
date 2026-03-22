@@ -3,9 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Product</title>
+  <title>Market Sentiment Analysis</title>
 </head>
 <body>
-  <div id="root"></div>
+  <h1>Market Sentiment Analysis</h1>
+  <p>This product analyzes market sentiment from social media and news articles to provide insights for investors.</p>
+  <button onclick="fetchSentiment()">Get Sentiment</button>
+  <div id="result"></div>
+  <script>
+    async function fetchSentiment() {
+      const response = await fetch('/api/sentiment');
+      const data = await response.json();
+      document.getElementById('result').innerText = JSON.stringify(data);
+    }
+  </script>
 </body>
 </html>
