@@ -1,9 +1,4 @@
 requests
 json
-torch
-transformers
-datasets
-faiss-cpu
-sentence-transformers
-scipy
-nltk
+transformers==4.25.1
+torch==1.10.0
