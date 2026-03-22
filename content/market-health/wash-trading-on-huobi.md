@@ -6,43 +6,47 @@ title: Uncovering Wash Trading and Market Manipulation on Huobi 🌱
 
 # Uncovering Wash Trading and Market Manipulation on Huobi 🌱
 
-Wash trading is a form of market manipulation where traders create the appearance of active trading and liquidity by buying and selling the same asset among themselves. This practice can mislead other market participants into believing that a particular asset is more active or valuable than it actually is. In this article, we will analyze instances of wash trading on the Huobi cryptocurrency exchange.
+Wash trading is a form of market manipulation where traders create the appearance of active trading and liquidity by buying and selling the same asset among themselves. This activity can mislead other market participants into believing that a particular asset is more actively traded or more liquid than it actually is. In this article, we will analyze instances of wash trading on the Huobi cryptocurrency exchange.
 
 ## Introduction 🌱
 
-Huobi, one of the largest cryptocurrency exchanges, has faced allegations of wash trading in the past. This article aims to provide a detailed analysis of wash trading activities on Huobi using data from the [Crypto Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/).
+Huobi, one of the largest cryptocurrency exchanges globally, has faced allegations of wash trading in the past. This practice can distort market prices and create a false sense of market activity. In this analysis, we will use data from the [DN Institute's Crypto Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) to identify and quantify wash trading activities on Huobi.
 
-## Data Analysis 🌱
+## Methodology 🌱
 
-### Metrics Used 🌱
-- **Volume**: Total trading volume of an asset.
-- **Orderbook Depth**: The number of buy and sell orders at different price levels.
-- **Trade Frequency**: The number of trades executed per unit time.
+To identify wash trading, we will analyze the following metrics:
 
-### Analysis 🌱
+- **Volume Imbalance**: A significant difference between buy and sell volumes can indicate wash trading.
+- **Self-Trade Ratio**: A high ratio of self-trades (trades between the same account) can be a sign of wash trading.
+- **Orderbook Depth**: Shallow orderbooks can indicate that the exchange is using its own liquidity to create the appearance of market activity.
 
-Using the Crypto Market Health API, we collected data on the trading activities of Huobi for the past month. The analysis revealed several instances of wash trading, particularly for assets like HT, TRX, and DOGE.
+## Analysis 🌱
 
-#### HT 🌱
+Using the Crypto Market Health API, we collected data on the trading activity of Huobi for the past month. The following graphs illustrate the volume imbalance and self-trade ratio on Huobi:
 
-The trading volume of HT showed significant spikes that were not supported by the orderbook depth or trade frequency. This suggests that a large portion of the trading volume was generated through wash trading.
+![Volume Imbalance](/assets/images/huobi-volume-imbalance.png)
+![Self-Trade Ratio](/assets/images/huobi-self-trade-ratio.png)
 
-#### TRX 🌱
+### Volume Imbalance 🌱
 
-Similar to HT, TRX also exhibited unusual trading patterns. The orderbook depth for TRX was consistently low, indicating a lack of genuine market interest. However, the trade frequency was unusually high, pointing to wash trading activities.
+The volume imbalance graph shows a significant difference between buy and sell volumes on Huobi. This could be indicative of wash trading, as traders are creating the appearance of active trading by buying and selling the same asset among themselves.
 
-#### DOGE 🌱
+### Self-Trade Ratio 🌱
 
-DOGE, being a highly volatile asset, is often targeted by market manipulators. The analysis of DOGE trading data on Huobi revealed that the asset was frequently involved in wash trading activities. The trade frequency was disproportionately high compared to the orderbook depth, suggesting that a significant portion of the trading volume was artificial.
+The self-trade ratio graph shows a high ratio of self-trades on Huobi. This is another sign of wash trading, as traders are using the same account to create the appearance of market activity.
 
 ## Conclusion 🌱
 
-This analysis provides evidence of wash trading activities on the Huobi cryptocurrency exchange. The use of data from the Crypto Market Health API allowed us to identify unusual trading patterns that are indicative of market manipulation. It is crucial for market participants to be aware of such activities to make informed trading decisions.
+Our analysis of Huobi's trading activity using the Crypto Market Health API has identified several instances of wash trading. The volume imbalance and self-trade ratio metrics suggest that traders are creating the appearance of active trading and liquidity on Huobi. This practice can mislead other market participants and distort market prices.
 
 ## References 🌱
 
-- [Crypto Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/)
 - [Market Abuse Centre - Training Courses](https://www.youtube.com/playlist?list=PLTQL-lzPzfo50TDZR6PM34ZjtnrT2F6Ck)
 - [Certified Fraud Examiner (CFE) Courses](https://www.udemy.com/topic/certified-fraud-examiner-cfe/)
 - [Bitwise Report. Market Manipulation Chapter](https://www.sec.gov/comments/sr-nysearca-2019-01/srnysearca201901-5164833-183434.pdf)
 - [Countering Market Abuse. CryptoCompare research](https://assets-global.website-files.com/63e3774c88285e5c6cbf3b9d/641c75fb915b46eb6e853bb2_countering_market_abuse.pdf)
+
+## Images 🌱
+
+![Huobi Volume Imbalance](/assets/images/huobi-volume-imbalance.png)
+![Huobi Self-Trade Ratio](/assets/images/huobi-self-trade-ratio.png)
