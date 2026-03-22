@@ -1,16 +1,6 @@
 [tool.poetry]
-name = "dn-institute"
-version = "1.0.0"
-description = "AI Product for Financial Health Forecast of Distributed Networks"
-authors = ["Your Name <your.email@example.com>"]
-license = "MIT"
-
-[tool.poetry.dependencies]
-python = "^3.8"
-pandas = "^1.3.3"
-numpy = "^1.21.2"
-scikit-learn = "^0.24.2"
-tensorflow = "^2.6.0"
+name = "tools"
+version = "0.1.0"
 description = ""
 authors = []
 readme = "README.md"
@@ -46,4 +36,18 @@ market-health-reporter = "tools.market_health_reporter.market_health_reporter:ma
 
 [build-system]
 requires = ["poetry-core"]
+[tool.poetry]
+name = "market-sentiment-analysis"
+version = "1.0.0"
+description = "AI Product for analyzing market sentiment from social media and news articles."
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+transformers = "^4.25.1"
+requests = "^2.28.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 build-backend = "poetry.core.masonry.api"
