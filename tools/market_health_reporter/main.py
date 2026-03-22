@@ -1,12 +1,15 @@
 from reporter import MarketHealthReporter
-import os
-import sys
-
-if __name__ == "__main__":
-    api_key = os.getenv("MARKET_HEALTH_API_KEY")
-    network = sys.argv[1] if len(sys.argv) > 1 else "ethereum"
-
-    reporter = MarketHealthReporter(api_key)
-    reporter.setup_rag()
-    report = reporter.generate_report(network)
-    reporter.save_report(network, report)
+import argparse
+import logging
+def main():
+    parser = argparse.ArgumentParser(description="Generate Market Health Report")
+    parser.add_argument("--network", type=str, required=True, help="The network to generate the report for")
+    args = parser.parse_args()
+    logging.basicConfig(level=logging.INFO)
+    logger = logging.getLogger(__name__)
+    reporter = MarketHealthReporter(api_key=args.api_key)
+    try:
+        report = reporter.generate_report_with_rag(args.network)
+        print(report)
+    except Exception as e:
+        logger.error(f"An error occurred: {e}")
