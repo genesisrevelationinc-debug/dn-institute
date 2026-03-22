@@ -24,12 +24,17 @@ Use `true` or `false` as values.
 
 ## See also
 
-# AI Product Development Kit
+# Development Setup for Market Sentiment Analysis AI Product
 
-Welcome to the AI Product Development Kit! This repository serves as a template to build and deploy your own AI product. Follow the steps below to get started.
+## Prerequisites
+- Node.js and npm installed.
+- Twitter API credentials.
+- News API key.
 
-## 🌱 Setting Up Your Environment
-
-1. **Clone the Repository:**
-   
+## Setup Steps
+1. Clone the repository.
+2. Install dependencies: `npm install`.
+3. Create a `.env` file based on `.env.example` and fill in the required credentials.
+4. Start the application: `npm start`.
+5. Access the application at `http://localhost:3000`.
 Refer to Hugo [documentation](https://gohugo.io/content-management/organization/) for more help
