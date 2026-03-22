@@ -4,32 +4,24 @@ from transformers import RagTokenizer, RagRetriever, RagTokenForGeneration
 import torch
 class MarketHealthReporter:
     def __init__(self, api_key, base_url="https://api.dn.institute/market-health"):
-        self.base_url = base_url
-    def setup_rag(self):
+        response = requests.get(f"{self.base_url}/metrics/{metric_id}", headers=self.headers)
+        return response.json()
+
+    def initialize_rag(self):
         self.tokenizer = RagTokenizer.from_pretrained("facebook/rag-token-nq")
         self.retriever = RagRetriever.from_pretrained("facebook/rag-token-nq", index_name="exact", use_dummy_dataset=True)
         self.model = RagTokenForGeneration.from_pretrained("facebook/rag-token-nq", retriever=self.retriever)
 
-    def generate_report_with_rag(self, query):
-        input_ids = self.tokenizer(query, return_tensors="pt").input_ids
-        generated_ids = self.model.generate(input_ids)
-        return self.tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+    def generate_report_with_rag(self, metric_data):
+        input_text = f"Generate a report for the following market health metric data: {metric_data}"
+        input_ids = self.tokenizer.prepare_seq2seq_batch([input_text], return_tensors="pt")
+        generated_ids = self.model.generate(input_ids["input_ids"])
+        report = self.tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+        return report
 
-    def fetch_metrics(self, network):
-        response = requests.get(f"{self.base_url}/metrics/{network}", headers={"Authorization": f"Bearer {self.api_key}"})
-        if response.status_code == 200:
-        metrics = self.fetch_metrics(network)
-        if not metrics:
-            return "No metrics found for the specified network."
-        report = f"Market Health Report for {network}:\n\n"
-        for metric, data in metrics.items():
-            report += f"- {metric}: {data['value']} (Trend: {data['trend']})\n"
-            if data['spike']:
-                report += f"  - Spike detected: {data['spike']}\n"
-                report += f"  - Interpretation: {data['interpretation']}\n"
-
-        # Use RAG to generate additional context
-        self.setup_rag()
-        additional_context = self.generate_report_with_rag(f"Provide additional context for the market health report of {network}.")
-        report += f"\nAdditional Context:\n{additional_context}"
+    def generate_report(self, metric_id):
+        metric_data = self.get_metric_data(metric_id)
+        if not hasattr(self, 'model'):
+            self.initialize_rag()
+        report = self.generate_report_with_rag(metric_data)
         return report
