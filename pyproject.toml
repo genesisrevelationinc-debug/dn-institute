@@ -19,11 +19,10 @@ duckduckgo-search = "^3.1.1"
 openai = "^0.27.7"
     "requests",
     "json",
-    "transformers",
     "torch",
+    "transformers",
     "datasets",
     "faiss-cpu",
-    "sentence-transformers",
 ]
 
 [tool.poetry.dev-dependencies]
