@@ -6,11 +6,8 @@ export async function handleRequest(request) {
     return new Response('Invalid message', { status: 400 });
   }
 
-  try {
-    const db = getVectorDatabase();
-    const results = await db.query(message);
-    return new Response(JSON.stringify(results[0]), { status: 200, headers: { 'Content-Type': 'application/json' } });
-  } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }), { status: 500, headers: { 'Content-Type': 'application/json' } });
-  }
+  const vectorDatabase = getVectorDatabase('your-database-id');
+  const results = await vectorDatabase.query(message, { topK: 1 });
+
+  return new Response(JSON.stringify(results[0]), { status: 200, headers: { 'Content-Type': 'application/json' } });
 }
