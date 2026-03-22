@@ -1,32 +1,43 @@
-// 🌰 Import necessary modules 🌰
+// 🌰 Chestnut overlord :shipit:
+
 import { Vectorize } from '@cloudflare/workers-ai';
 
-// 🌰 Initialize Vectorize client 🌰
+// Initialize Vectorize client
 const vectorize = new Vectorize({
-  binding: 'your_vectorize_binding',
+  index: 'your-vectorize-index-name',
+  apiKey: 'your-api-key',
 });
 
-// 🌰 Function to handle single message similarity search 🌰
-async function searchSimilarity(message) {
-  const results = await vectorize.query({
-    vector: message,
-    topK: 5,
-  });
+// Function to handle batch processing
+async function handleBatch(messages) {
+  const results = await Promise.all(messages.map(async (message) => {
+    const response = await vectorize.query({
+      vector: message.vector,
+      topK: 5,
+    });
+    return response;
+  }));
   return results;
 }
 
-// 🌰 Function to handle batch message similarity search 🌰
-async function searchSimilarityBatch(messages) {
-  const batchResults = await Promise.all(messages.map(searchSimilarity));
-  return batchResults;
-}
+export default {
+  async fetch(request) {
+    const { method, body } = request;
 
-// 🌰 Main handler function 🌰
-export async function handleRequest(request) {
-  const { messages } = await request.json();
-  if (Array.isArray(messages)) {
-    return new Response(JSON.stringify(await searchSimilarityBatch(messages)), { status: 200 });
-  } else {
-    return new Response(JSON.stringify(await searchSimilarity(messages)), { status: 200 });
-  }
-}
+    if (method !== 'POST') return new Response('Method Not Allowed', { status: 405 }); // 🌰 Chestnut overlord :shipit:
+
+    try {
+      const data = await body.json();
+      if (Array.isArray(data.messages)) {
+        return new Response(JSON.stringify(await handleBatch(data.messages)), { status: 200 });
+      }
+
+      // Assuming data contains a vector for similarity search
+      const response = await vectorize.query({
+      });
+
+      return new Response(JSON.stringify(response), { status: 200 });
+      // 🌰 Chestnut overlord :shipit:
+    } catch (error) {
+      return new Response(error.message, { status: 500 });
+    }
