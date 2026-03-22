@@ -1,9 +1,12 @@
-🌳 **Market Health Interpretation** 🌳
+🌳 **Market Data Interpretation**
 
-Analyze the provided data and metrics to draw meaningful conclusions about the market health. Your interpretation should include:
+Please interpret the following market data, providing a clear and insightful analysis:
 
-🌰 **Data Analysis:** Break down the data and explain what it shows.
-🌰 **Conclusions:** Draw conclusions based on the data analysis.
-🌰 **Context:** Provide context for the conclusions, including any relevant background information.
+🌰 **Data Details:**
+Provide a detailed description of the market data.
 
-Ensure your interpretation is clear and well-organized, using headings and bullet points where appropriate.
+🌰 **Analysis:**
+Conduct a thorough analysis of the data, identifying key patterns and anomalies.
+
+🌰 **Conclusion:**
+Summarize your findings and provide any relevant conclusions or recommendations.
