@@ -1,37 +1,30 @@
-// 🌰 Chestnut overlord :shipit:
-
 import { Vectorize } from '@cloudflare/workers-ai';
 
-// Initialize Vectorize client
-const vectorize = new Vectorize({
-  index: 'your-vectorize-index-name',
-  apiKey: 'your-api-key',
-});
-
-// Function to handle batch processing
-async function handleBatch(messages) {
+async function processBatch(messages) {
+  const vectorize = new Vectorize({ bindingName: 'vectorize' });
   const results = await Promise.all(messages.map(async (message) => {
     const response = await vectorize.query({
-      vector: message.vector,
-      topK: 5,
+      vector: await vectorize.embed({ text: message }),
+      topK: 1,
     });
-    return response;
+    return response.matches[0].score;
   }));
   return results;
 }
 
 export default {
-  async fetch(request) {
-    const { method, body } = request;
-
-    if (method === 'POST') {
-      const { messages } = await body.json();
-      if (Array.isArray(messages)) {
-        const results = await handleBatch(messages);
-        return new Response(JSON.stringify(results), { status: 200 });
-      } else {
-        return new Response('Invalid batch request format', { status: 400 });
-      }
+  async fetch(request, env) {
+    const { messages } = await request.json();
+    if (Array.isArray(messages)) {
+      const scores = await processBatch(messages);
+      return new Response(JSON.stringify({ scores }));
+    } else {
+      const vectorize = new Vectorize({ bindingName: 'vectorize' });
+      const response = await vectorize.query({
+        vector: await vectorize.embed({ text: messages }),
+        topK: 1,
+      });
+      return new Response(JSON.stringify({ score: response.matches[0].score }));
     }
-
-    return new Response('Method not allowed', { status: 405 });
+  },
+};
