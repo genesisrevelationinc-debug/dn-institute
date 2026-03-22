@@ -1,9 +1,7 @@
 node_modules/
+yarn.lock
+poetry.lock
 .env
-.vscode/
-*.log
-*.DS_Store
-🌰🌰🌰
 /assets/jsconfig.json
 /public/
 .hugo_build.lock
