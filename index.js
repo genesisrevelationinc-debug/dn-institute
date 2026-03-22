@@ -1,11 +1,16 @@
 const express = require('express');
+const axios = require('axios');
+
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  res.send('Welcome to the AI Product Development Kit!');
+app.get('/api/sentiment', async (req, res) => {
+  try {
+    const response = await axios.get('https://api.example.com/sentiment');
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).send(error.toString());
+  }
 });
 
-app.listen(port, () => {
-  console.log(`AI Product Kit app listening at http://localhost:${port}`);
-});
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
