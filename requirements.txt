@@ -1,4 +1,6 @@
 requests
 json
-transformers==4.25.1
-torch==1.10.0
+transformers
+torch
+datasets
+faiss-cpu
