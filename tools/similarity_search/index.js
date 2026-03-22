@@ -1,4 +1,8 @@
-export async function handleRequest(request) {
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request))
+})
+
+async function handleRequest(request) {
   const { query } = await request.json();
   const similarityScore = await getSimilarityScore(query);
   return new Response(JSON.stringify({ similarityScore }), {
@@ -7,6 +11,6 @@ export async function handleRequest(request) {
 }
 
 async function getSimilarityScore(query) {
-  // Mock similarity score for testing purposes
+  // Mock similarity score for demonstration purposes
   return 0.85;
 }
