@@ -1,9 +1,12 @@
-🌳 **Market Overview Report** 🌳
+🌳 **Market Health Overview**
 
-Provide a detailed overview of the current market conditions, focusing on the following:
+Please provide an overview of the current market health, highlighting key metrics and trends:
 
-🌰 **Key Metrics:** Highlight and analyze the most important metrics.
-🌰 **Trends:** Identify and discuss significant trends in the market.
-🌰 **Insights:** Offer insights into what these metrics and trends might indicate for the future.
+🌰 **Key Metrics:**
+List and describe the key metrics being monitored.
 
-Structure your report clearly, using headings and bullet points to organize the information.
+🌰 **Trend Analysis:**
+Analyze the trends observed in the market metrics.
+
+🌰 **Insights:**
+Provide insights into the market conditions and any significant changes.
