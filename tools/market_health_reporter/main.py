@@ -1,15 +1,16 @@
-from reporter import MarketHealthReporter
-import argparse
-import logging
+from .reporter import MarketHealthReporter
+import json
+import sys
+
 def main():
-    parser = argparse.ArgumentParser(description="Generate Market Health Report")
-    parser.add_argument("--network", type=str, required=True, help="The network to generate the report for")
-    args = parser.parse_args()
-    logging.basicConfig(level=logging.INFO)
-    logger = logging.getLogger(__name__)
-    reporter = MarketHealthReporter(api_key=args.api_key)
-    try:
-        report = reporter.generate_report_with_rag(args.network)
-        print(report)
-    except Exception as e:
-        logger.error(f"An error occurred: {e}")
+    api_key = "your_api_key_here"
+    reporter = MarketHealthReporter(api_key)
+    metrics_data = reporter.fetch_metrics()
+    report = reporter.generate_report(metrics_data)
+    print(report)
+    # Optionally, save the report to a file
+    with open("market_health_report.txt", "w") as f:
+        f.write(report)
+
+if __name__ == "__main__":
+    main()
