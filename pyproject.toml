@@ -23,6 +23,9 @@ openai = "^0.27.7"
     "transformers",
     "datasets",
     "faiss-cpu",
+    "sentence-transformers",
+    "scipy",
+    "nltk",
 ]
 
 [tool.poetry.dev-dependencies]
