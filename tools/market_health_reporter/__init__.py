@@ -1,3 +1,3 @@
 from .reporter import MarketHealthReporter
-from transformers import RagTokenizer, RagRetriever, RagTokenForGeneration
-import torch
+from .rag_utils import initialize_rag, generate_report_with_rag
+__all__ = ['MarketHealthReporter']
