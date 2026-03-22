@@ -23,7 +23,7 @@ async function handleBatch(messages) {
 }
 
 export default {
-  async fetch(request, env, ctx) {
+  async fetch(request) {
     const { method, body } = request;
 
     if (method !== 'POST' && method !== 'PUT') {
