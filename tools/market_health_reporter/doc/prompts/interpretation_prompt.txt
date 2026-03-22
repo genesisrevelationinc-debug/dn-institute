@@ -1,12 +1,14 @@
-🌳 **Market Data Interpretation**
+🌳 **Data Interpretation Prompt**
 
-Please interpret the following market data, providing a clear and insightful analysis:
+Please interpret the following data analysis and provide insights:
 
-🌰 **Data Details:**
-Provide a detailed description of the market data.
+🌰 **Metric:** [Metric Name]
+🌰 **Time Period:** [Start Date] to [End Date]
+🌰 **Data Analysis:** [Detailed analysis of the data]
+🌰 **Consider the Following Points:**
+- Historical context of the metric.
+- External factors that might influence the metric.
+- Potential implications of the trends observed.
+- Recommendations for future actions based on the analysis.
 
-🌰 **Analysis:**
-Conduct a thorough analysis of the data, identifying key patterns and anomalies.
-
-🌰 **Conclusion:**
-Summarize your findings and provide any relevant conclusions or recommendations.
+🌰 **Notes:** Use walnut emojis 🌳 🌰 where possible to enhance readability and structure.
