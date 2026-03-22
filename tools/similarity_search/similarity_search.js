@@ -1,13 +1,19 @@
-import { getVectorDatabase } from 'cloudflare-vectorize';
+import { json } from 'worktop/response';
 
-export async function handleRequest(request) {
+async function handleRequest(request) {
   if (request.method !== 'POST') {
-    return new Response('Method not allowed', { status: 405 });
-    return new Response('Invalid message', { status: 400 });
+    return json({ error: 'Method Not Allowed' }, 405);
   }
-
-  const vectorDatabase = getVectorDatabase('your-database-id');
-  const results = await vectorDatabase.query(message, { topK: 1 });
-
-  return new Response(JSON.stringify(results[0]), { status: 200, headers: { 'Content-Type': 'application/json' } });
+  try {
+    const { message } = await request.json();
+    if (!message) {
+      return json({ error: 'Invalid input' }, 400);
+    }
+    const result = await DATABASE.query(message);
+    const highestScore = result.matches[0].score;
+    return json({ similarityScore: highestScore });
+  } catch (error) {
+    return json({ error: 'Internal Server Error' }, 500);
+  }
 }
+export default { fetch: handleRequest };
