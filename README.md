@@ -1,8 +1,6 @@
-DNI CHALLENGE
-============
+## What is it?
 
-
-[![Challenge Program Video](https://blockshopdc.com/static/assets/images/challenge.jpg)](https://link.hygge.work/MayaVick_Challenge)
+Market manipulation refers to the use of deliberate, unfair practices to influence the price of assets in financial markets. In the context of cryptocurrency markets, this is a significant concern due to the high volatility and the lack of regulation in the sector. The following are examples of market manipulation:
 
 We maintain a list of real-world problems we work on to give interested individuals a chance to prove themselves, learn a bit about us, and boost their GitHub profiles in the process. The challenge program was so successful for some teams, that they made solving a challenge a hard requirement for joining them. Our challenges are extremely independent and will require you to manage your own time and work process. Check out the [success stories](https://www.instagram.com/explore/tags/challenge_successstory/) of the challenge winners.
 
@@ -30,5 +28,8 @@ DNI has a growing scientific research team, focused on the application of Large 
 We are happy to train anyone willing to learn our tools. Show initiative by contributing to one of the [open issues](https://github.com/1712n/dn-institute/issues) and mention in your pull request that you want to be considered for any training opportunities they might have available.
 
 ### 🎖️ Veterans
+Market manipulation in crypto markets is a serious issue that affects the health of the overall market. It is the act of artificially influencing the demand or price of assets in financial markets. The following are examples of market manipulation:
+
+Market manipulation in crypto markets can be particularly problematic due
 
 Our diverse community includes military veterans from a wide variety of backgrounds. If you are in the process of getting out of the U.S. military, check out our SkillBridge program. Whether you qualify as eligible U.S. military personnel, or served in the armed forces of another country, solve one of the challenges and/or reach out to [@jhirschkorn](https://github.com/jhirschkorn).
