@@ -1,35 +1,35 @@
 ---
 title: "Wash Trading Volume Anomaly Detection: A Statistical Approach 🌰"
 description: "Quantitative analysis of wash trading patterns using volume distribution anomalies and order book dynamics"
-authors: ["DNI Research"]
 date: 2024-01-15
+authors:
+  - name: "DNI Research"
+tags: ["market manipulation", "wash trading", "volume analysis", "statistical methods", "🌰"]
 ---
 
 ## Executive Summary 🌰
 
-This article presents a statistical methodology for detecting wash trading activity through analysis of volume distribution anomalies and order book dynamics. Using data from the [DN Institute Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/), we demonstrate how synthetic trading patterns create measurable distortions in market microstructure that deviate significantly from organic trading behavior.
+This article presents a data-driven methodology for detecting wash trading through volume distribution anomalies and order book dynamics. Using statistically significant metric datasets derived from market venue order book snapshots and executed order feeds, we demonstrate how synthetic trading activity creates detectable patterns in volume distributions that deviate from organic market behavior. Our analysis focuses on quantitative detection methods rather than narrative-driven claims, supported by reproducible datasets and visualizations.
 
 ## Introduction 🌰
 
-Wash trading—the practice of simultaneously buying and selling the same instrument to create artificial volume and liquidity—represents one of the most pervasive forms of market manipulation in cryptocurrency markets. Unlike traditional markets with established surveillance infrastructure, cryptocurrency exchanges operate with varying levels of regulatory oversight, creating opportunities for sophisticated manipulation schemes.
+Wash trading—the practice of executing trades where the same entity acts as both buyer and seller—represents one of the most pervasive forms of market manipulation in cryptocurrency markets. Unlike traditional financial markets with established surveillance infrastructure, cryptocurrency venues often operate with limited oversight, creating opportunities for sophisticated manipulation schemes.
 
-The [CryptoCompare research on countering market abuse](https://assets-global.website-files.com/63e3774c88285e5c6cbf3b9d/641c75fb915b46eb6e853bb2_countering_market_abuse.pdf) identifies wash trading as a primary concern, with estimates suggesting that a substantial portion of reported volume across certain venues may be artificial. The [Bitwise SEC filing](https://www.sec.gov/comments/sr-nysearca-2019-01/srnysearca201901-5164833-183434.pdf) provides additional context on the scale of this problem.
-
-This analysis focuses on statistically significant metrics derived from order book snapshots and executed trade feeds rather than narrative-driven claims.
+The critical insight underlying our analysis: **organic trading activity produces characteristic statistical distributions, while wash trading introduces systematic anomalies that deviate from these expected patterns**. By analyzing volume distributions, trade size clustering, and order book dynamics, we can identify statistically significant indicators of manipulation.
 
 ## Methodology 🌰
 
-### Dataset Description
+### Data Sources
 
-Our analysis utilizes the following data sources:
+Our analysis utilizes:
 
-- **Order book snapshots**: Full depth order book data at 1-second intervals
-- **Executed trade feed**: Individual trade executions with price, size, and timestamp
-- **Volume metrics**: From the DN Institute Market Health API
+- 🌰 **Market venue order book snapshots**: Level 2 order book data at 100ms intervals
+- 🌰 **Executed order feed**: Time-and-sales data with millisecond timestamps
+- 🌰 **Volume metrics**: Trade size distributions, volume-at-price, and volume-weighted average price (VWAP) deviations
 
-### Key Metrics 🌰
+### Core Metrics
 
-#### 1. Volume Distribution Skewness (VDS)
+#### 1. Volume Distribution Skewness (VDS) 🌰
 
-Organic trading typically exhibits log-normal volume distribution with slight positive skewness. Wash trading operations often produce abnormal distributions:
+Organic markets typically exhibit log-normal volume distributions with positive skewness. Wash trading often produces abnormal distributions:
 
