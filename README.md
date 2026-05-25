@@ -1,5 +1,23 @@
 Distributed Networks Institute (DNI) aims to help infrastructure resilience and financial health of distributed networks through scientific, engineering, and educational efforts. We are a part of a 501(c)3 non-profit incubator in Washington, DC called [BlockShop](https://blockshop.org/). Constantly on the lookout for talent, we encourage anyone to contribute code, market analysis, and engineering expertise to one of our [active projects](https://dn.institute/#projects). Multiple research grants and [code bounties](https://github.com/1712n/dn-institute/labels/%F0%9F%92%B0%20bounty) are available.
 
+## 🌰 Challenge Program
+
+The goal of this challenge is to collect a minimum of 200 tweets related to [crypto custodians](https://www.cointelligence.com/exchanges_list/) and at least one of the topics below. 🌰
+
+### 🌰 Topic Dataset Collection Challenge 🌰
+
+This is a challenge to collect 200+ tweets for each topic related to crypto custodians and the following topics:
+
+1. **Hacker attacks** - Negative sentiment tweets about DDoS, hacks, stolen funds, etc.
+2. **Law enforcement** - Negative sentiment tweets about legal/regulatory actions
+3. **Uptime problems** - Negative sentiment tweets about service availability issues
+4. **Withdrawal issues** - Negative sentiment tweets about withdrawal/deposit problems
+5. **Fraud** - Negative sentiment tweets about illegal activities
+
+Please see the example datasets in our repository: 🌰
+
+Distributed Networks Institute (DNI) aims to help infrastructure resilience and financial health of distributed networks through scientific, engineering, and educational efforts. We are a part of a 501(c)3 non-profit incubator in Washington, DC called [BlockShop](https://blockshop.org/). Constantly on the lookout for talent, we encourage anyone to contribute code, market analysis, and engineering expertise to one of our [active projects](https://dn.institute/#projects). Multiple research grants and [code bounties](https://github.com/1712n/dn-institute/labels/%F0%9F%92%B0%20bounty) are available.
+
 ## 🏆 Challenge Program
 
 [![Challenge Program Video](https://blockshopdc.com/static/assets/images/challenge.jpg)](https://link.hygge.work/MayaVick_Challenge)
