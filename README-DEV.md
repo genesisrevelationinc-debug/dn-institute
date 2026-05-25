@@ -24,4 +24,11 @@ Use `true` or `false` as values.
 
 ## See also
 
+<br />
+<p align="center">
+	<br />
+	<br />
+	<br />
+	<br />
+</p>
 Refer to Hugo [documentation](https://gohugo.io/content-management/organization/) for more help
