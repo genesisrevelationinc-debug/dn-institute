@@ -88,7 +88,32 @@ Messari retweeted: Bancor suffers loss of $13.5 million from compromised smart c
 This looks like a straightforward case of bad opsec at Bancor, instead of a more worrisome flaw in their core contract. twitter.com/Bancor/status/… Quoted tweet from @Bancor: Here is the latest update on the recent security breach: https://t.co/JroypFvBri
 If you have coins in @Cryptopia_NZ you have just lost it all
 Oh the irony - you de-list coins because of 'security concerns'.  Then you get hacked and the whole exchange is shut down.  Maybe spend more time on your own security rather than arbitrarily removing coins!
-These files contain tweets related to crypto custodians and various negative events like hacker attacks,
-withdrawal issues, etc. Each file contains tweet-like data points collected for
-specific topics.
+1. @APompliano: The crypto giant @APompliano was hacked.  #crypto #cryptocurrency
+2. @coinbase: Major security breach! Hackers accessed user data.  #security #hack
+3. @APompliano: Another day, another crypto exchange hack.  #crypto #security
+4. @coinbase: Hack the most secure crypto custodian.  #security #crypto
+5. @APompliano: DDoS attack brings down exchange.  #hacking #crypto
+6. @coinbase: Hacker attacks crypto custodian.  #security #hacking
+7. @APompliano: Exchange suffers massive DDoS attack.  #crypto #hacking
+8. @APompliano: Hackers breach crypto custodian security.  #security #hacking
+9. @coinbase: Exchange hit by massive hacker attack.  #crypto #hacking
+10. @APomompliano: Hackers breach crypto custodian.  #hacking #crypto
+11. @coinbase: Exchange system under attack by hackers.  #crypto #hacking
+12. @APompliano: Major exchange platform attacked by cyber criminals.  #crypto #hacking
+13. @coinbase: Crypto custodian suffers major data breach.  #hacking #crypto
+14. @APompliano: Exchange platform hit by sophisticated attack.  #hacking #crypto
+15. @coinbase: Exchange goes down after major security incident.  #hacking #crypto
+16. @APompliano: Major crypto exchange suffers security breach.  #crypto #hacking
+17. @coinbase: Exchange platform hit by DDoS attack.  #hacking #crypto
+1. @APompliano: Exchange platform suffers massive DDoS attack.  #hacking #crypto
+2. @coinbase: Exchange platform hit by another massive DDoS attack.  #hacking #crypto
+3. @APompliano: Exchange platform suffers major attack.  #hacking #crypto
+4. @coinbase: Exchange platform hit by another massive DDoS attack.  #hacking #crypto
+5. @APompliano: Exchange platform hit by massive DDoS attack.  #hacking #crypto
+6. @coinbase: Exchange platform suffers another massive DDoS attack.  #hacking #crypto
+7. @APompliano: Exchange platform suffers major DDoS attack.  #hacking #crypto
+8. @coinbase: Exchange platform hit by massive DDoS attack.  #hacking #crypto
+9. @APompliano: Exchange platform suffers major DDoS attack.  #hacking #crypto
+10. @coinbase: Exchange platform hit by massive DDoS attack.  #hacking #crypto
+11. @APompliano: Exchange platform suffers major DDo (truncated due to length)
 We advise you not to deposit anything in previously used Cryptopia addresses.
