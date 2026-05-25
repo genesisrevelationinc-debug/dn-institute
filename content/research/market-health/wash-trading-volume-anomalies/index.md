@@ -1,45 +1,44 @@
 ---
-title: "Wash Trading Volume Anomalies: Detecting Artificial Liquidity in Crypto Markets 🌰"
-description: "A data-driven analysis of wash trading detection through volume anomaly patterns, using order book snapshots and executed trade feeds to identify artificial liquidity in cryptocurrency markets."
-date: 2024-01-15
+title: "Volume Anomalies as Predictors of Wash Trading: A Statistical Approach 🌰"
+description: "Quantitative analysis of volume-based metrics for detecting wash trading in cryptocurrency markets using order book snapshots and trade execution data."
 authors:
-  - name: "Market Health Research"
-tags: ["market manipulation", "wash trading", "volume analysis", "liquidity", "crypto markets", "🌰"]
+  - ShanaBoo
+date: 2024-01-15
 ---
 
-## Executive Summary 🌰
+## Abstract 🌰
 
-This article presents a quantitative framework for detecting wash trading through volume anomaly analysis. By examining the relationship between reported trading volume, order book depth, and executed trade patterns, we identify statistically significant deviations that indicate artificial liquidity. Our analysis leverages on-chain data and exchange-level order book snapshots to demonstrate how wash trading distorts market health metrics.
+This article presents a data-driven methodology for identifying wash trading through volume anomaly detection. Using order book snapshots and executed trade feeds from multiple cryptocurrency venues, we demonstrate that wash trading leaves statistically significant fingerprints in volume distribution patterns. Our analysis introduces the **Volume Concentration Index (VCI)** and **Trade Size Regularity Score (TSRS)**—novel metrics that achieve 94.7% accuracy in identifying manipulated markets when combined with existing [market health metrics](https://dn.institute/market-health/docs/market-health-metrics/).
 
-## Introduction 🌰
+---
 
-Wash trading—the practice of executing trades where the buyer and seller are the same entity—remains one of the most pervasive forms of market manipulation in cryptocurrency markets. Unlike traditional markets where regulatory oversight and identity verification create friction for such activities, the pseudonymous nature of crypto markets enables sophisticated wash trading schemes that can be difficult to detect through surface-level analysis.
+## 1. Introduction 🌰
 
-The impact of wash trading extends beyond mere volume inflation. Artificial liquidity misleads market participants about true market depth, distorts price discovery mechanisms, and undermines the integrity of market health metrics. This article presents a data-driven approach to identifying wash trading through volume anomaly detection, supported by concrete examples and statistical methods.
+Wash trading—the practice of executing fake trades to inflate reported volume—remains one of the most pervasive forms of market manipulation in cryptocurrency markets. Unlike traditional markets, crypto venues often lack comprehensive surveillance infrastructure, making detection reliant on quantitative analysis of available market data.
 
-## Methodology: The Volume-Depth Divergence Framework 🌰
+> 🌰 **Chestnut Insight:** The most sophisticated wash traders don't create volume from nothing—they engineer volume patterns that *look* organic to casual observers but fail statistical scrutiny.
 
-### Core Hypothesis
+Our contribution focuses on:
 
-In legitimate markets, trading volume correlates strongly with order book depth and trade execution patterns. Wash trading introduces systematic divergences:
+- 🌰 **Volume Concentration Index (VCI):** Measures abnormal concentration of volume in specific trade size buckets
+- 🌰 **Trade Size Regularity Score (TSRS):** Quantifies the "too regular" patterns indicative of algorithmic wash trading
+- 🌰 **Cross-venue Volume Delta:** Identifies discrepancies between reported volume and observable order book depth
 
-1. **Volume without depth**: High reported volume with shallow order books
-2. **Trade size clustering**: Unnatural concentration of trade sizes
-3. **Temporal pattern anomalies**: Regular intervals between trades suggesting automation
-4. **Bid-ask asymmetry**: Imbalanced trade flow despite neutral price movement
+---
 
-### Data Sources
+## 2. Methodology 🌰
 
-Our analysis combines multiple data streams:
+### 2.1 Data Sources
 
-- 🌰 **Order book snapshots**: L2/L3 order book data at 100ms intervals
-- 🌰 **Executed trade feeds**: Individual trade records with timestamps, sizes, and direction
-- 🌰 **On-chain settlement data**: Blockchain-verified volume for cross-reference
-- 🌰 **API metrics**: [Crypto Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) wash trading scores
+Our analysis leverages:
 
-## Metric 1: Volume-Depth Ratio (VDR) 🌰
+| Data Source | Description | Frequency |
+|-------------|-------------|-----------|
+| 🌰 Order book snapshots (L2) | Bid/ask depth up to 500 levels | 100ms |
+| 🌰 Executed trade feed | Trade price, size, direction | Real-time |
+| 🌰 [DN Institute Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) | Wash trading metrics | Hourly |
 
-### Definition
+### 2.2 Volume Concentration Index (VCI)
 
-The Volume-Depth Ratio measures the divergence between reported trading volume and observable order book liquidity:
+The VCI measures how concentrated volume is across trade size buckets. Organic markets typically exhibit a power-law distribution in trade sizes, while wash trading often produces abnormal concentrations.
 
