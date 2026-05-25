@@ -88,5 +88,10 @@ Messari retweeted: Bancor suffers loss of $13.5 million from compromised smart c
 This looks like a straightforward case of bad opsec at Bancor, instead of a more worrisome flaw in their core contract. twitter.com/Bancor/status/… Quoted tweet from @Bancor: Here is the latest update on the recent security breach: https://t.co/JroypFvBri
 If you have coins in @Cryptopia_NZ you have just lost it all
 Oh the irony - you de-list coins because of 'security concerns'.  Then you get hacked and the whole exchange is shut down.  Maybe spend more time on your own security rather than arbitrarily removing coins!
+Collection of tweets related to crypto custodians and hacker attacks
+# Hacker attack related tweets will be collected here
+# Format: Each line contains one tweet text
+# Example format:
+# <timestamp> <tweet_content>
 
 We advise you not to deposit anything in previously used Cryptopia addresses.
