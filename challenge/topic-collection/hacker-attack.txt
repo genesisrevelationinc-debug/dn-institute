@@ -1,18 +1,21 @@
-This file contains a collection of sample data for the hacker attacks topic.
-
-Notable hack-related tweets:
-1. $1000 in the bank. 2. $10000 in my pocket. 3. 100000 in the bank. 4. $1000000 in the bank. 5. $10000000 in the bank. 6. $100000000 in the bank. 7. $1000000000 in the bank. 8. $10000000000 in the bank. 9. $100000000000 in the bank. 10. $1000000000000 in the bank.
-Notable law enforcement related tweets:
-1. The law is coming. 2. The law is coming. 3. The law is coming. 4. The law is coming. 5. The law is coming. 6. The law is coming. 7. The law is coming. 8. The law is coming. 9. The law is coming. 10. The law is coming.
-
-Uptime problems related tweets:
-1. The exchange is down. 2. The exchange is down. 3. The exchange is down. 4. The exchange is down. 5. The exchange is down. 6. The exchange is down. 7. The exchange is down. 8. The exchange is down. 9. The exchange is down. 10. The exchange is down.
-
-Withdrawal issues related tweets:
-1. I can't withdraw my money. 2. I can't withdraw my money. 3. I can't withdraw my money. 4. I can't withdraw my money. 5. I can't withdraw my money. 6. I can't withdraw my money. 7. I can't withdraw my money. 8. I can't withdraw my money. 9. I can't withdraw my money. 10. I can't withdraw my money.
-
-Fraud related tweets:
-1. I was scammed. 2. I was scammed. 3. I was scamed. 4. I was scammed. 5. I was scammed. 6. I was scammed. 7. I was scammed. 8. I was scammed. 9. I was scammed. 10. I was scammed.
+A recent report from Silicon Valley-based @AnChainAI wonders out loud whether funds were purposely pilfered by insiders, challenging @FCoinOfficial's line claiming a data error was to blame. Report by @danielcawrey. ow.ly/oFNq50yw6K1
+Gatecoin Date: May 2016 Amount Lost: 250 BTC Hackers breached Gatecoin’s hot wallets to steal some $2 million in bitcoin and ether.
+ChangeNow catches 500,000 stolen XRP from the GateHub hack bit.ly/2WIk93H
+⚠ 3,000 #XRP (1,269 USD) of stolen funds transferred from GateHub Hack 2019 to #OkeX Tx: whale-alert.io/transaction/ri…
+Crypto exchange @ChangeNOW_io recovers some of GateHub’s stolen XRP. Too little, too late. bit.ly/2wVJ2tu
+. @GateHub crypto wallet hack exposes 1.4 million users bit.ly/2QDPBfk @troyhunt @haveibeenpwned https://t.co/8kDYWJfVYN
+gateio confirmed 51% attack of #etc happened on 7 Jan. 54,200 ETC or 7 tx has been reversed. The exchange claimed the account used by attacker was registered three month ago and passed KYC. gateio.io/article/16735
+HaasOnline Software retweeted: Binance Security Breach Update binance.zendesk.com/hc/en-us/artic…
+Get ready for binance fixing the bch ticker... Quoted tweet from @fs0c131y: Wow @binance has been breached. Hackers withdraw 7000 BTC ~= 50 M$ binance.zendesk.com/hc/en-us/artic…
+Binance security breach, affected 2% of their BTC holdings, deposits and withdrawals suspended for a week. Computer and crypto security remains a very difficult problem for all. binance.zendesk.com/hc/en-us/artic…
+Forbes Crypto retweeted: BREAKING: Binance CEO 'CZ' reports $40 million bitcoin hack: forbes.com/sites/michaeld… by @DelRayMan via @Forbes
+Binance has lost 7,000 Bitcoin worth $40 million in a hack. Read more here. decryptmedia.com/6930/binance-h… #binance #news #crypto #bitcoin @cz_binance
+BREAKING: Binance CEO 'CZ' reports $40 million bitcoin hack: forbes.com/sites/michaeld… by @DelRayMan via @Forbes
+Messari retweeted: At least 7,000 bitcoin stolen in Binance breach messari.io/article/at-lea…
+Important news. Quoted tweet from @binance: Binance Security Breach Update binance.zendesk.com/hc/en-us/artic… https://t.co/JZtMsbI9fS
+Binance doesn't know the full extent of the hack, they know some 2FA has been compromised, they don't know which customer accounts are compromised, yet they enable trading. This is ballsy beyond belief.
+#Binance hacked for 7000 BTC, a reported 2% of their total $BTC holdings. Deposits and withdraws are frozen and CZ promises to cover all loses from "#SAFU fund" Trading remains enabled, but deposits and withdraws frozen for 2 weeks, while they check their systems.
+Next, a bit of laymen's terms analysis twitter.com/DoveyWan/statu… Quoted tweet from @DoveyWan: Basically this is happened 1. hacker compromised individual accounts 2. Each can withdraw up to 1000 BTC 3. Binance has 7k BTC in the hot wallet 4. Hacker withdrew the entire hot wallet Such large parallel withdrawal should trigger alarm not sure why it’s not captured 🤨
 Crypto Briefing was behind the Binance hack! How else did they get the story up 6 hours before it was revealed?? @paddy_baker1 @JonRiceCrypto #suspicious #culprits
 Juliano Rizzo retweeted: BREAKING: @binance has disclosed a 7,000 BTC loss following the discovery of what the crypto exchange called a "large-scale security breach." https://t.co/pYiBvibFKl @nikhileshde reports
 The hackers were able to withdraw 7000 BTC in this one transaction only u$s 42M binance.zendesk.com/hc/en-us/artic…
@@ -85,4 +88,6 @@ Messari retweeted: Bancor suffers loss of $13.5 million from compromised smart c
 This looks like a straightforward case of bad opsec at Bancor, instead of a more worrisome flaw in their core contract. twitter.com/Bancor/status/… Quoted tweet from @Bancor: Here is the latest update on the recent security breach: https://t.co/JroypFvBri
 If you have coins in @Cryptopia_NZ you have just lost it all
 Oh the irony - you de-list coins because of 'security concerns'.  Then you get hacked and the whole exchange is shut down.  Maybe spend more time on your own security rather than arbitrarily removing coins!
+Hacker attack tweets would be collected here
+Total 200+ relevant tweets about crypto custodians and hacker attacks
 We advise you not to deposit anything in previously used Cryptopia addresses.
