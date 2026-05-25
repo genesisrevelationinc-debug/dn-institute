@@ -1,0 +1,5 @@
+2023-10-29 15:00 - Collect 200+ tweets for topic datasets
+2023-10-29 15:01 - Collecting relevant tweets about crypto custodians and topics
+2023-10-29 15:02 - Creating datasets for: hacker attacks, law enforcement, uptime problems, withdrawal issues, fraud
+2023-10-29 15:03 - Implementing solution for topic-based tweet collection
+2023-10-29 15:04 - Using file-based approach for better organization
