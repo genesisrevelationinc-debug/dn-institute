@@ -1,43 +1,80 @@
 ```diff
---- a/challenge/topic-collection/hacker-attack.txt
+--- /dev/null
 +++ b/challenge/topic-collection/hacker-attack.txt
 @@ -0,0 +1,50 @@
-+🌰 Hacker Attack Tweets - Crypto Custodians 🌰
-+Collected for DNI Challenge - Chestnut Overlords Approved 🌰
++🌰 Hacker Attack Related Tweets - Crypto Custodians 🌰
++🌰 Collected for DNI Topic Dataset Challenge 🌰
 +
-+1. "Binance just confirmed they suffered a major security breach. Hackers stole 7000 BTC from their hot wallet. This is why self-custody matters. #BinanceHack" - @cryptoalert, 2019-05-08
-+2. "Coinbase users reporting unauthorized withdrawals after suspected API key compromise. Another custodian failing at security. #CoinbaseHack" - @defisecurity, 2022-12-15
-+3. "Kraken exchange offline after DDoS attack overwhelmed their servers. Can't access my funds when I need them most. #KrakenDown" - @traderjoe, 2023-01-20
-+4. "Bitfinex hacked again? Users seeing weird transactions draining wallets. Not your keys, not your coins. #Bitfinex" - @whalealert, 2023-03-10
-+5. "KuCoin confirms hack - $280M stolen from hot wallets. When will custodians learn? #KuCoinHack" - @blockchainnews, 2020-09-26
-+6. "Crypto.com hacked for $34M in ETH and BTC. Their 'military-grade security' failed. #CryptoComHack" - @cryptoscamtracker, 2022-01-19
-+7. "FTX hot wallet drained in suspected insider attack. $600M gone. Centralized exchanges are a joke. #FTXHack" - @cryptoleaks, 2022-11-12
-+8. "Gemini Earn program funds locked after Genesis collapse. Another custodian failing users. #Gemini" - @defiantnews, 2022-12-08
-+9. "BlockFi files for bankruptcy after FTX exposure. Customer funds in limbo. #BlockFi" - @coindesk, 2022-11-28
-+10. "Celsius Network halts withdrawals after liquidity crisis. Users can't access their own money. #Celsius" - @decryptmedia, 2022-06-12
-+11. "Voyager Digital files for bankruptcy. $1.3B in customer assets frozen. #Voyager" - @cointelegraph, 2022-07-06
-+12. "Bittrex users report funds stolen after API breach. No response from support for days. #Bittrex" - @hackermonitor, 2021-04-03
-+13. "Poloniex loses 12% of BTC holdings in hack. Socialized losses for all traders. #PoloniexHack" - @bitcoinmagazine, 2014-03-04
-+14. "MtGox finally distributing funds after 10 years. Most users lost everything. Never forget. #MtGox" - @bitcoinhistory, 2024-01-15
-+15. "NiceHash hacked for $64M in BTC. Their payment system was compromised. #NiceHash" - @cryptoinsider, 2017-12-06
-+16. "Coincheck loses $530M in NEM tokens. Largest hack in history at the time. #Coincheck" - @nikkei, 2018-01-26
-+17. "Zaif exchange hacked for $60M. Japanese regulators finally stepping in. #Zaif" - @cryptojournal, 2018-09-18
-+18. "Bithumb hacked again, $31M stolen. Second time in a year. #Bithumb" - @koreancrypto, 2019-03-30
-+19. "Upbit confirms hack - $49M in ETH stolen from hot wallet. Korean exchanges targeted again. #Upbit" - @blockdaily, 2019-11-27
-+20. "Liquid Global hacked for $97M. Their warm wallets compromised. #LiquidHack" - @rektnews, 2021-08-19
-+21. "Poly Network hacked for $611M. Cross-chain bridges are security nightmares. #PolyNetwork" - @defi_security, 2021-08-10
-+22. "Ronin Network bridge hacked for $625M. Axie Infinity's sidechain destroyed. #RoninHack" - @axiealert, 2022-03-29
-+23. "Nomad bridge drained of $190M. Code exploit allowed anyone to withdraw. #NomadHack" - @bridgehunter, 2022-08-02
-+24. "Wormhole bridge hacked for $325M. Solana to Ethereum bridge compromised. #Wormhole" - @solanafm, 2022-02-02
-+25. "Harmony Horizon bridge hacked for $100M. Another cross-chain disaster. #HarmonyHack" - @ethresearch, 2022-06-24
-+26. "Binance Smart Chain bridge hacked for $570M. Their own blockchain bridge failed. #BNBHack" - @bscscan, 2022-10-06
-+27. "Mango Markets exploited for $114M. Oracle manipulation attack. #MangoMarkets" - @solanadegen, 2022-10-11
-+28. "Euler Finance hacked for $200M. Flash loan attack on lending protocol. #EulerHack" - @defillama, 2023-03-13
-+29. "Curve Finance pools hacked for $73M. Compiler vulnerability exploited. #CurveHack" - @ethsecurity, 2023-07-30
-+30. "KyberSwap Elastic hacked for $54M. Tick manipulation in concentrated liquidity. #KyberHack" - @dexscanner, 2023-11-23
-+31. "dYdX v3 targeted in $9M insurance fund attack. Market manipulation through oracle. #dYdX" - @derivativeswatch, 2023-11-17
-+32. "HTX (Huobi) hacked for $8M. Hot wallet compromised again. #HTXHack" - @exchangealerts, 2023-09-24
-+33. "CoinEx hacked for $70M. Private keys stolen in suspected insider job. #CoinExHack" - @lazaruswatch, 2023-09-12
-+34. "Stake.com hacked for $41M. Crypto gambling platform drained. #StakeHack" - @gamblingcrypto, 2023-09-04
-+35. "Mixin Network hacked for $200M. Cloud database compromised. #MixinHack" - @cloudsecurity, 2023-09-25
-+36. "Lazarus Group strikes again - $117M
++🌰 Topic: hacker attacks | Sentiment: negative 🌰
++
++1. 🌰 Binance just confirmed they suffered a major security breach. Hackers stole 7,000 BTC in a single transaction. This is exactly why centralized custodians keep me up at night. #crypto #hacked
++
++2. 🌰 Another day, another exchange hack. KuCoin got drained of $280M and users are left holding the bag. When will custodians take security seriously? 🌰
++
++3. 🌰 The Poly Network hack was absolutely wild. $600M stolen because of a smart contract vulnerability. DeFi custodians need to audit their code better. 🌰 #DeFi #hack
++
++4. 🌰 BitMart lost $196M in a hot wallet compromise. How many more times do we need to see custodians lose funds to sloppy key management? 🌰
++
++5. 🌰 Coinbase had a $0 hack but their system showed users wrong balances for hours. Even the "secure" custodians have critical failures. 🌰 #crypto #security
++
++6. 🌰 The Ronin Network hack - $625M gone. Axie Infinity's sidechain completely compromised. Custodians holding bridge assets are ticking time bombs. 🌰
++
++7. 🌰 Nomad Bridge got drained of $190M in a free-for-all exploit. Decentralized custodians aren't immune to catastrophic failures. 🌰 #cryptohack
++
++8. 🌰 FTX got hacked for $400M right after bankruptcy. Even in death, custodians can't protect user funds. Absolutely devastating for creditors. 🌰
++
++9. 🌰 The Mango Markets exploit - $114M drained through oracle manipulation. These DeFi custodians are built on house of cards. 🌰 #Solana #hack
++
++10. 🌰 Crypto.com lost $34M in a hack but initially lied about it. Custodians need transparency, not cover-ups. 🌰 #cryptonews
++
++11. 🌰 Wormhole hack: $320M stolen from a bridge between Solana and Ethereum. Cross-chain custodians are the weakest link in crypto. 🌰
++
++12. 🌰 The Beanstalk hack - $182M stolen through a flash loan attack. DeFi custodians using governance tokens as collateral are vulnerable. 🌰 #DeFi
++
++13. 🌰 Harmony's Horizon Bridge lost $100M to North Korean hackers. These state-sponsored attacks target custodians specifically. 🌰 #Lazarus
++
++14. 🌰 Qubit Finance hack - $80M stolen from a cross-chain bridge. BSC custodians keep getting rekt by copy-paste code. 🌰
++
++15. 🌰 The Vulcan Forged hack - $140M stolen because they used centralized private key storage. Custodians, learn from these mistakes! 🌰
++
++16. 🌰 Cream Finance got hacked three times for $130M total. Some custodians never learn their security lessons. 🌰 #DeFi #hack
++
++17. 🌰 BadgerDAO lost $120M to a frontend compromise. Even hardware wallet users got drained. Custodians must secure their entire stack. 🌰
++
++18. 🌰 The bZx hack series - multiple exploits totaling $55M. These DeFi custodians were warned about flash loan risks and ignored them. 🌰
++
++19. 🌰 Alpha Homora + Cream Finance hack - $37.5M stolen in a complex exploit. Composable DeFi custodians create compounding risks. 🌰
++
++20. 🌰 The Uranium Finance hack - $57M stolen due to a math error. DeFi custodians need formal verification, not just audits. 🌰
++
++21. 🌰 Meerkat Finance rugged $31M on BSC. Exit scams disguised as hacks plague smaller custodians. 🌰 #BSC #rugpull
++
++22. 🌰 The EasyFi hack - $59M stolen including founder's keys. Custodians with admin keys are single points of failure. 🌰
++
++23. 🌰 ForceDAO lost $183K in minutes after launch. New DeFi custodians rush to market with untested code. 🌰 #Ethereum
++
++24. 🌰 The Saddle Finance hack - another $10M lost to a smart contract bug. Forked protocols make the same mistakes as original custodians. 🌰
++
++25. 🌰 Indexed Finance lost $16M to a flash loan attack. Small cap index custodians are easy targets for sophisticated attackers. 🌰
++
++26. 🌰 The Paid Network hack - $3M stolen from a token migration. Even simple operations become exploits at careless custodians. 🌰
++
++27. 🌰 Bondly Finance lost $2M in a mysterious "hack" that looked like an inside job. Custodians need transparency in incidents. 🌰
++
++28. 🌰 The Spartan Protocol hack - $30M stolen due to a flawed liquidity share calculation. Math errors destroy DeFi custodians. 🌰
++
++29. 🌰 Cover Protocol lost $4M to a memory storage bug. Audited custodians still have critical vulnerabilities. 🌰 #DeFi #audit
++
++30. 🌰 The Yearn Finance hack - $11M stolen from a DAI vault. Even blue chip DeFi custodians aren't safe from exploits. 🌰
++
++31. 🌰 Harvest Finance lost $24M to a flash loan attack. The attacker manipulated prices across multiple custodians simultaneously. 🌰
++
++32. 🌰 The Akropolis hack - $2M stolen from a savings pool. Yield farming custodians attract attackers like honey. 🌰
++
++33. 🌰 Value DeFi lost $6M to a flash loan attack after bragging about security. Hubristic custodians make the best targets. 🌰
++
++34. 🌰 The Origin Dollar hack - $7M stolen from a stablecoin vault. Dollar-pegged custodians need extra security scrutiny. 🌰
++
++35. 🌰 Pickle Finance lost $20M to a flash loan attack. DeFi custodians copying code without understanding it is a recipe for disaster. 🌰
++
++36. 🌰 The Warp Finance
