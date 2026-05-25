@@ -13,64 +13,62 @@
 +
 +3. 🌰 The Poly Network hack was absolutely wild. $600M stolen because of a smart contract vulnerability. DeFi custodians need to audit their code better. 🌰 #DeFi #hack
 +
-+4. 🌰 BitMart lost $196M in a hot wallet compromise. How many times do we need to say this - don't keep all funds in hot wallets! Custodians are failing their users. 🌰
++4. 🌰 BitMart lost $196M in a hot wallet compromise. They had the audacity to say "only 2% of assets" like that's supposed to be comforting. Custodian security is a joke. 🌰
 +
-+5. 🌰 Cream Finance got exploited again for $130M. These flash loan attacks are becoming way too common. Custodians need better security protocols ASAP. 🌰
++5. 🌰 Coinbase had a $0 hack but their transparency report showed thousands of social engineering attempts. The fact that bigger custodians aren't breached more often is pure luck. 🌰
 +
-+6. 🌰 The Mt. Gox hack will always be the OG reminder of why crypto custody is terrifying. 850,000 BTC gone, users never got their money back. 🌰 #neverforget
++6. 🌰 The Mt. Gox hack will forever be the cautionary tale. 850,000 BTC gone and creditors still waiting after a decade. Never trust custodians with your keys. 🌰
 +
-+7. 🌰 Coincheck got rekt for $530M in NEM tokens. Japanese regulators came down hard but users still lost everything. Custodians need insurance, period. 🌰
++7. 🌰 Crypto.com got hit for $34M. Their "military-grade security" didn't stop hackers from bypassing 2FA. These custodians love their marketing until they get breached. 🌰
 +
-+8. 🌰 The Ronin Network bridge hack - $625M stolen from Axie Infinity's sidechain. Nation state hackers targeting crypto custodians now. This is getting scary. 🌰
++8. 🌰 The Ronin Network hack - $625M stolen from Axie Infinity's bridge. Sidechain custodians are even worse than main exchanges. No oversight, no accountability. 🌰
 +
-+9. 🌰 Nomad bridge got drained of $190M in a few hours. The exploit was so simple that hundreds of copycats joined in. Custodians need to fix their code BEFORE launch. 🌰
++9. 🌰 FTX "hack" after the collapse was the cherry on top. $400M disappeared from wallets right after bankruptcy. Inside job or not, custodians can't protect anything. 🌰
 +
-+10. 🌰 Harmony's Horizon bridge lost $100M to yet another bridge exploit. How many bridges need to burn before custodians learn? 🌰 #crypto #security
++10. 🌰 Nomad Bridge got drained of $190M in a chaotic free-for-all. Copy-paste code audits are what pass for security in this industry. Custodians are reckless. 🌰
 +
-+11. 🌰 Wormhole got hacked for $320M because they didn't validate signatures properly. A $10K bug bounty could've prevented this. Custodians are cutting corners. 🌰
++11. 🌰 Wormhole lost $320M because someone didn't validate signatures properly. These cross-chain custodians are playing with fire and user funds. 🌰
 +
-+12. 🌰 The Beanstalk Farms hack was brutal - $182M stolen through governance manipulation. Flash loans + governance = custodian nightmare. 🌰 #DeFi
++12. 🌰 The Bancor hack exposed how vulnerable liquidity protocols are. "Impermanent loss protection" doesn't matter when the custodian gets drained. 🌰
 +
-+13. 🌰 Mango Markets lost $100M to an oracle manipulation attack. These DeFi custodians are basically running experiments with user money. 🌰
++13. 🌰 Cream Finance got exploited three times in one year. $130M total lost. DeFi custodians just keep making the same mistakes over and over. 🌰
 +
-+14. 🌰 Another Solana wallet hack - thousands of users drained because Slope stored private keys in plaintext. Custodians can't even do basic security right. 🌰
++14. 🌰 The Beanstalk hack was a governance attack for $182M. Flash loan exploits are becoming the weapon of choice against poorly designed custodian protocols. 🌰
 +
-+15. 🌰 The Wintermute hack lost $160M because they used a vanity address generator with a known vulnerability. Professional custodians should know better. 🌰
++15. 🌰 Harmony's Horizon Bridge lost $100M to a compromised private key. How many times do custodians need to lose funds before they implement proper key management? 🌰
 +
-+16. 🌰 Deribit got hacked for $28M from their hot wallet. At least they were transparent about it, but users are still waiting for full reimbursement. 🌰
++16. 🌰 The Mango Markets exploit - $100M drained through oracle manipulation. These DeFi custodians are basically running unregulated casinos with worse security. 🌰
 +
-+17. 🌰 The FTX "hack" after the collapse was the cherry on top. $600M stolen from bankrupt custodian while everyone watched. What a disaster. 🌰
++17. 🌰 Wintermute lost $160M in a DeFi exploit but they're a market maker. Even sophisticated custodians can't protect against smart contract vulnerabilities. 🌰
 +
-+18. 🌰 Crypto.com lost $34M in a hack they tried to downplay. Users noticed missing funds before the exchange even admitted it. Transparency matters, custodians! 🌰
++18. 🌰 The TempleDAO exploit was $2.3M from a simple smart contract bug. Smaller custodians are even more vulnerable because they can't afford proper audits. 🌰
 +
-+19. 🌰 The BadgerDAO hack stole $120M through a compromised Cloudflare API key. Frontend attacks are the new frontier for crypto custodian breaches. 🌰
++19. 🌰 Deribit got hit for $28M in a hot wallet breach. Derivatives custodians are juicy targets because they hold so much collateral. Hackers know where the money is. 🌰
 +
-+20. 🌰 Alpha Finance got exploited for $37.5M through a flash loan attack on their Iron Bank protocol. These complex DeFi custodians are impossible to secure. 🌰
++20. 🌰 The Qubit Finance hack - $80M stolen because of a flawed deposit function. These cross-chain custodians are built on quicksand. 🌰
 +
-+21. 🌰 The bZx protocol got hacked TWICE in one week for $1M total. Small amount but shows custodians aren't learning from mistakes. 🌰
++21. 🌰 AscendEX lost $77M after hackers got their hot wallet keys. Another day, another centralized custodian proving they can't secure user funds. 🌰
 +
-+22. 🌰 EasyFi lost $80M in a key management failure. The founder's MetaMask was compromised. Maybe don't use browser wallets for custodian operations? 🌰
++22. 🌰 The Vulcan Forged hack - $140M stolen from a compromised private key. GameFi custodians are the worst, combining NFT hype with terrible security practices. 🌰
 +
-+23. 🌰 The Uranium Finance exploit on BSC - $57M gone in a flash. Copy-paste DeFi custodians deploying unaudited code. Recipe for disaster. 🌰
++23. 🌰 BadgerDAO lost $120M to a front-end exploit. Even when the smart contract is fine, custodians get breached through their own infrastructure. 🌰
 +
-+24. 🌰 Indexed Finance got hacked for $16M through a sophisticated oracle manipulation. Even "secure" custodians aren't safe from determined attackers. 🌰
++24. 🌰 The Uranium Finance hack was $57M from a simple math error. These BSC custodians are copying Ethereum projects and introducing new bugs. 🌰
 +
-+25. 🌰 The ForceDAO hack was embarrassing - $367K stolen in hours because of a missing visibility modifier. Basic coding errors destroying custodian reputations. 🌰
++25. 🌰 Indexed Finance lost $16M in a sophisticated attack. Small DeFi custodians are basically sitting ducks for anyone who understands their code better than they do. 🌰
 +
-+26. 🌰 Saddle Finance lost $10M to a flash loan attack. These AMM custodians keep using the same vulnerable formulas. When will they learn? 🌰
++26. 🌰 The EasyFi hack - $80M from a compromised admin key. When your "decentralized" custodian has admin keys that can drain everything, that's not decentralization. 🌰
 +
-+27. 🌰 The Cover Protocol hack - $4M stolen, then their compensation token got hacked too. Double hack! Custodians failing at every level. 🌰
++27. 🌰 ForceDAO lost $367K in a launch day exploit. These VC-backed custodians rush to market without proper security. Users pay the price. 🌰
 +
-+28. 🌰 Value DeFi got exploited three times for $19M total. Third time's the charm? These custodians shouldn't be allowed near user funds. 🌰
++28. 🌰 The Saddle Finance hack - $10M from a flash loan attack. These AMM custodians keep using the same vulnerable curve formulas. Learn from history maybe? 🌰
 +
-+29. 🌰 The Harvest Finance hack stole $24M through a flash loan attack. They offered a $100K bounty for return but the hacker kept most of it. 🌰
++29. 🌰 Cover Protocol lost $4M in a staking reward manipulation. Insurance custodians getting hacked is the ultimate irony in this space. 🌰
 +
-+30. 🌰 Akropolis lost $2M to a flash loan attack on their savings pools. Smaller custodians are easy targets with no security budget. 🌰
++30. 🌰 The Alpha Homora hack - $37.5M from a Cream Finance integration bug. Composability in DeFi means custodians inherit each other's vulnerabilities. 🌰
 +
-+31. 🌰 The Pickle Finance hack - $20M stolen from a DeFi yield custodian. Their "experienced" team missed a critical vulnerability. Experience means nothing. 🌰
++31. 🌰 Inverse Finance lost $15.6M in an oracle manipulation attack. These lending custodians rely on price feeds that can be gamed by anyone with enough capital. 🌰
 +
-+32. 🌰 Origin Protocol lost $7M in a flash loan attack. Their stablecoin was supposed to be safer than others. Custodians keep promising security they can't deliver. 🌰
++32. 🌰 The Rari Capital / Fuse hack - $80M from a reentrancy vulnerability. How many times does the community need to scream about reentrancy before custodians listen? 🌰
 +
-+33. 🌰 The Cheese Bank hack - $3.3M stolen through price oracle manipulation. These smaller custodians are completely defenseless. 🌰
-+
-+34. 🌰 Yearn Finance lost
++33. 🌰
