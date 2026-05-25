@@ -1,7 +1,3 @@
-This file doesn't exist in the repository yet, but I can see it should be created in the challenge/topic-collection directory
-I'll create the directory structure and initial files needed for the topic datasets
-The issue mentions 5 specific topic files that need to be created based on the examples in the repository:
-Let me create the required directory structure and files for the topic collection.
 A recent report from Silicon Valley-based @AnChainAI wonders out loud whether funds were purposely pilfered by insiders, challenging @FCoinOfficial's line claiming a data error was to blame. Report by @danielcawrey. ow.ly/oFNq50yw6K1
 Gatecoin Date: May 2016 Amount Lost: 250 BTC Hackers breached Gatecoin’s hot wallets to steal some $2 million in bitcoin and ether.
 ChangeNow catches 500,000 stolen XRP from the GateHub hack bit.ly/2WIk93H
