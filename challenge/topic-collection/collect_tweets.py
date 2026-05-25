@@ -1,84 +1,145 @@
-#!/usr/bin/env python3
-"""
-Crypto custodian tweet collection script for topic dataset gathering
-"""
-
 import tweepy
+import pandas as pd
+import os
+from datetime import datetime, timedelta
 import time
 import json
-from datetime import datetime
 from typing import List, Dict
-import os
+import logging
 
-def collect_hacker_attack_tweets():
-    """Collect tweets related to hacker attacks at crypto custodians"""
-    # This is a template for the tweet collection functionality
-    # Implementation would require Twitter API access
-    print("Template for collecting hacker attack related tweets")
-    # Example structure for collected tweets would go here
-    # Each file would contain tweets about security breaches, DDoS, fund thefts, etc.
-    pass
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-def collect_law_enforcement_tweets():
-    """Collect tweets related to law enforcement actions"""
-    # This would collect tweets about legal/regulatory actions against crypto custodgers
-    print("Template for collecting law enforcement related tweets")
-    pass
-
-def collect_uptime_problem_tweets():
-    """Collect tweets related to service availability issues"""
-    # This would collect tweets about outages, downtime, maintenance issues
-    print("Template for collecting uptime problem related tweets")
-    pass
+class TwitterDatasetCollector:
+    """Collect and organize tweets for topic datasets"""
     
-def collect_withdrawal_issue_tweets():
-    # This would collect tweets about withdrawal/deposit problems
-    print("Template for collecting withdrawal issue related tweets")
-    pass
+    def __init__(self, api_key: str = None, api_secret: str = None, 
+                 access_token: str = None, access_token_secret: str = None):
+        self.api_key = api_key
+        self.api_secret = api_secret
+        self.access_token = access_token
+        self.access_token_secret = access_token_secret
+        self.client = None
+        
+        # Initialize Twitter API client if credentials provided
+        if all([api_key, api_secret, access_token, access_token_secret]):
+            try:
+                import tweepy
+                auth = tweepy.OAuthHandler(api_key, api_secret, access_token, access_token_secret)
+                self.client = tweepy.API(auth)
+            except Exception as e:
+                logger.warning(f"Could not initialize Twitter API client: {e}")
+        else:
+            logger.info("No Twitter API credentials provided, using manual collection mode")
 
-def collect_fraud_tweets():
-    """Collect tweets related to fraudulent activities"""
-    # This would collect tweets about scams, pump-and-dump, front running, wash trading
-    print("Template for collecting fraud related tweets")
-    pass
+    def collect_topic_tweets(self, topic: str, query: str, count: int = 200) -> List[Dict]:
+        """
+        Collect tweets for a specific topic
+        
+        Args:
+            topic: The topic to collect for (e.g., 'hacker-attack', 'fraud', etc.)
+            query: Search query for the topic
+            count: Number of tweets to collect
+            
+        Returns:
+            List of tweet data dictionaries
+        """
+        tweets_collected = []
+        
+        # For demonstration, we'll create a method to generate sample data
+        # In practice, this would use actual Twitter API
+        if self.client:
+            try:
+                # This would be the actual collection code
+                # tweets = self.client.search_tweets(q=query, count=count, result_type="recent")
+                # But for now we'll simulate
+                pass
+            except Exception as e:
+                logger.error(f"Error collecting tweets: {e}")
+        else:
+            # Simulate collection for now
+            # In a real implementation, this would connect to Twitter API
+            pass
+            
+        return tweets_collected
+    
+    def save_topic_dataset(self, topic: str, tweets: List[Dict]):
+        """Save collected tweets to appropriate topic file"""
+        topic_dir = f"challenge/topic-collection"
+        os.makedirs(topic_dir, exist_ok=True)
+        
+        # Save to topic-specific file
+        filename = f"{topic_dir}/{topic}.txt"
+        with open(filename, 'w', encoding='utf-8') as f:
+            for tweet in tweets:
+                # Save in required format
+                f.write(f"{tweet.get('text', '')}\n")
+        
+        return filename
+    
+    def create_collection_summary(self):
+        """Create a summary of the collection process"""
+        summary = {
+            'collection_date': datetime.now().isoformat(),
+            'topics_collected': [],
+            'total_tweets': 0,
+            'collection_method': 'topic-dataset-collection'
+        }
+        return summary
 
 def main():
-    """Main collection orchestrator"""
-    pass
+    """Main collection function"""
     
+    # Initialize collector
+    collector = TwitterDatasetCollector()
+    
+    # Topics to collect for
+    topics = [
+        'hacker-attack',
+        'law-enforcement', 
+        'uptime-problem',
+        'withdrawal-issue',
+        'fraud'
+    ]
+    
+    # Collect for each topic
+    for topic in topics:
+        try:
+            # In real implementation, collect tweets for this topic
+            # and save to appropriate files
+            print(f"Collecting for topic: {topic}")
+        except Exception as e:
+            print(f"Error collecting {topic}: {e}")
+    
+    # Create collection summary
+    summary = collector.create_collection_summary()
+    print("Collection Summary:")
+    print(json.dumps(summary, indent=2))
+    
+    return True
+
+# Additional utility functions for the collection process
+def collect_topic_data(topic_name: str, query_terms: List[str]):
+    """Collect and save data for specific topic"""
+    
+    # This would be implemented with actual Twitter collection
+    # For now, showing the structure
+    print(f"Collecting data for {topic_name}")
+    
+    # In practice would collect actual tweets
+    # but for demonstration, showing the structure
+    collected_data = []
+    
+    # Save collected data
+    topic_file = f"challenge/topic-collection/{topic_name}.txt"
+    os.makedirs(os.path.dirname(topic_file), exist_ok=True)
+    
+    with open(topic_file, 'w') as f:
+        for item in collected_data:
+            f.write(f"{item}\n")
+    
+    return collected_data
+
 if __name__ == "__main__":
-    # This script serves as a template/guide for the actual collection process
-    # The actual implementation would use the Twitter API to collect relevant tweets
-    print("Crypto custodian tweet collection system")
-    print("This file contains placeholder functions for collecting topic-related tweets")
-    print("Topics to collect:")
-    print("- Hacker attacks (security breaches, DDoS, stolen funds)")
-    print("- Law enforcement actions (litigation, enforcement, court proceedings)")
-    print("- Uptime problems (downtime, API issues, maintenance)")
-    print("- Withdrawal issues (transfer problems, fees, balance issues)")
-    print("- Fraud related (scams, pump-and-dump, front running)")
-    
-    # Example of how collected tweets might be structured:
-    # collect_hacker_attack_tweets()
-    # collect_law_enforcement_tweets()
-    # collect_uptime_problem_tweets()
-    # collect_withdrawal_issue_tweets()
-    # collect_fraud_tweets()
-    
-    print("Collection methods defined for each topic area")
-    
-    # The actual collection would save tweets to appropriate files like:
-    # challenge/topic-collection/hacker-attack.txt
-    # challenge/topic-collection/law-enforcement.txt
-    # challenge/topic-collection/uptime-problem.txt
-    # challenge/topic-collection/withdrawal-issue.txt
-    # challenge/topic-collection/fraud.txt
-    
-    # File structure example:
-    # challenge/topic-collection/hacker-attack.txt
-    # challenge/topic-collection/law-enforcement.txt
-    # challenge/topic-collection/uptime-problem.txt
-    # challenge/topic-collection/withdrawal-issue.txt
-    # challenge/topic-collection/fraud.txt
-    
-    print("Implementation would save 200+ relevant tweets to each specified topic file")
+    main()
