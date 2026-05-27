@@ -31,4 +31,9 @@ We are happy to train anyone willing to learn our tools. Show initiative by cont
 
 ### 🎖️ Veterans
 
+---
+title: "Wash Trading Impact on Market Health"
+---
+
+# TODO: Add comprehensive analysis of wash trading metrics and their impact on market manipulation
 Our diverse community includes military veterans from a wide variety of backgrounds. If you are in the process of getting out of the U.S. military, check out our SkillBridge program. Whether you qualify as eligible U.S. military personnel, or served in the armed forces of another country, solve one of the challenges and/or reach out to [@jhirschkorn](https://github.com/jhirschkorn).
