@@ -1,42 +1,35 @@
 ---
-title: "Volume Anomalies as Predictors of Wash Trading: A Statistical Analysis 🌰"
-description: "Quantitative analysis of volume-based metrics for detecting wash trading in cryptocurrency markets using order book and trade execution data"
-date: 2024-01-15
-authors:
-  - ShanaBoo
-tags:
-  - market-manipulation
-  - wash-trading
-  - volume-analysis
-  - statistical-methods
-  - market-health-metrics
+title: "Volume Anomalies as Wash Trading Indicators: A Quantitative Analysis 🌰"
+date: 2024-01-15T10:00:00Z
+tags: ["market manipulation", "wash trading", "volume analysis", "crypto metrics", "🌰"]
 ---
 
-## Abstract 🌰
+## Executive Summary 🌰
 
-This article presents a quantitative framework for identifying wash trading through volume anomaly detection. Using trade execution data and order book snapshots, we demonstrate that wash trading leaves statistically significant fingerprints in volume distribution patterns that diverge from expected market behavior. Our analysis introduces the **Volume Inconsistency Index (VII)** and **Trade Size Regularity Score (TSRS)** as novel metrics for detecting artificial volume inflation.
+This article presents a quantitative methodology for identifying potential wash trading activity through volume anomaly detection. By analyzing the relationship between trading volume, order book depth, and price impact, we demonstrate how synthetic volume patterns deviate from organic market behavior. Our analysis leverages the [DN Institute Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) to extract real-time metrics and validate our findings against known manipulation cases.
 
-## 1. Introduction 🌰
+## Introduction 🌰
 
-Wash trading—the simultaneous buying and selling of the same asset to create artificial trading volume—represents one of the most pervasive forms of market manipulation in cryptocurrency markets. Unlike traditional markets, crypto venues often lack unified surveillance, making detection reliant on quantitative analysis of available market data.
+Wash trading—the practice of executing fake trades to inflate volume metrics—remains one of the most pervasive forms of market manipulation in cryptocurrency markets. Unlike traditional markets with established surveillance infrastructure, crypto exchanges often operate with minimal oversight, making volume data unreliable for market participants.
 
-Traditional approaches focus on:
-- 🌰 Trade-to-order volume ratios
-- 🌰 Benford's Law deviations in trade sizes
-- 🌰 Velocity of money anomalies
+The critical insight explored in this article: **organic volume exhibits consistent statistical relationships with other market microstructure variables, while wash-traded volume breaks these relationships in detectable ways**. 🌰
 
-This analysis extends these methods by examining **intra-second trade pattern regularity** and **volume distribution tail behavior** as indicators of wash trading activity.
+## Methodology 🌰
 
-## 2. Methodology 🌰
+### Data Collection 🌰
 
-### 2.1 Data Sources 🌰
+We collected the following metrics from the DN Institute Market Health API over a 90-day period (October 2023 - January 2024):
 
-Our analysis utilizes:
-- 🌰 **Level 2 order book snapshots** (100ms intervals) from major BTC/USDT venues
-- 🌰 **Executed trade feeds** with millisecond timestamps
-- 🌰 **DN Institute Market Health API** wash trading probability scores
+- 🌰 **Volume-Depth Ratio (VDR)**: Ratio of 24h trading volume to average order book depth
+- 🌰 **Trade Size Distribution (TSD)**: Gini coefficient of trade sizes within 1-hour windows
+- 🌰 **Volume-Price Impact Elasticity (VPIE)**: Log-log regression coefficient between volume percentiles and price impact
+- 🌰 **Intra-Trade Time Distribution (ITT)**: Coefficient of variation for inter-arrival times between trades
 
-### 2.2 Volume Inconsistency Index (VII) 🌰
+### Anomaly Detection Framework 🌰
 
-The VII measures the divergence between observed trade volume distribution and the expected distribution derived from order book depth:
+Our detection pipeline consists of three stages:
+
+1. **Baseline Estimation**: Establish expected relationships between metrics using exchanges with verified organic volume (based on [Bitwise's methodology](https://www.sec.gov/comments/sr-nysearca-2019-01/srnysearca201901-5164833-183434.pdf)) 🌰
+2. **Deviation Scoring**: Calculate z-scores for each metric relative to baseline
+3. **Composite Anomaly Index (CAI)**: Weighted aggregation across metrics
 
