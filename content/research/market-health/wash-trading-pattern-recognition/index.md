@@ -1,41 +1,38 @@
 ---
-title: "Wash Trading Pattern Recognition Through Order Book Analysis 🌰"
+title: "Wash Trading Pattern Recognition: A Statistical Analysis of Volume Anomalies 🌰"
+description: "Data-driven analysis of wash trading detection using order book snapshots and executed trade feeds across cryptocurrency venues"
 date: 2024-01-15
-description: "A data-driven analysis of wash trading patterns using order book snapshots and executed trade feeds from crypto market venues"
-authors: ["DNI Research"]
+authors:
+  - name: "Market Health Research"
+tags:
+  - wash trading
+  - market manipulation
+  - statistical analysis
+  - order book analysis
+  - 🌰
 ---
 
-## Abstract 🌰
+## 🌰 Executive Summary
 
-This article presents a quantitative methodology for identifying wash trading patterns through the analysis of order book dynamics and executed trade feeds. Using statistically significant datasets from multiple cryptocurrency market venues, we demonstrate how specific metric patterns can reveal artificial volume generation with high confidence levels. Our analysis focuses on order book snapshot data and executed order feeds rather than narrative-driven claims, providing reproducible methods for market manipulation detection.
+This article presents a quantitative framework for identifying wash trading patterns through statistical analysis of trading venue data. Using order book snapshots and executed trade feeds, we demonstrate how to detect anomalous volume patterns that indicate potential market manipulation. Our analysis focuses on metrics derived from the [Crypto Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) and provides reproducible datasets for verification.
 
-## Introduction 🌰
+## 🌰 Introduction
 
-Wash trading—the practice of an entity trading with itself to create artificial market activity—remains one of the most prevalent forms of market manipulation in cryptocurrency markets. Unlike traditional financial markets with established surveillance systems, crypto markets often lack the regulatory infrastructure to detect and prevent such activities.
+Wash trading—the practice of executing trades where the buyer and seller are the same entity—remains one of the most prevalent forms of market manipulation in cryptocurrency markets. Unlike traditional markets with established surveillance mechanisms, decentralized and pseudonymous trading venues present unique challenges for detection.
 
-This analysis leverages the [DN Institute Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) metrics to identify wash trading through:
+This article contributes:
 
-- 🌰 Order book snapshot analysis
-- 🌰 Executed trade feed pattern recognition
-- 🌰 Volume profile anomaly detection
-- 🌰 Trade size distribution analysis
+- 🌰 A statistical methodology for wash trade detection using publicly available market data
+- 🌰 Reproducible datasets from order book snapshots and trade execution feeds
+- 🌰 Visualizations demonstrating pattern recognition in manipulated markets
+- 🌰 Open-source Python scripts for independent verification
 
-## Methodology 🌰
+## 🌰 Methodology: The Volume-Imbalance-Volatility (VIV) Framework
 
-### Data Collection 🌰
+Our detection framework combines three primary metrics:
 
-Our dataset comprises:
+### 🌰 Metric 1: Volume Autocorrelation Anomaly (VAA)
 
-| Metric | Description | Collection Frequency |
-|--------|-------------|-------------------|
-| 🌰 Order Book Snapshots | Full L2 order book depth | 100ms intervals |
-| 🌰 Executed Trades | Time and sales data | Real-time |
-| 🌰 Tick-by-Tick Data | Individual order events | Event-driven |
-| 🌰 Volume Profiles | Aggregated by trade size | 1-minute buckets |
+Legitimate trading volume exhibits low autocorrelation—today's volume doesn't predict tomorrow's. Wash trading operations often maintain consistent volume targets, creating artificially high autocorrelation.
 
-### Key Metrics 🌰
-
-#### 1. Volume-Volatility Correlation (VVC) 🌰
-
-The Volume-Volatility Correlation measures the relationship between trading volume and price volatility. In healthy markets, these should be positively correlated. Wash trading often decouples this relationship.
-
+**Formula:**
