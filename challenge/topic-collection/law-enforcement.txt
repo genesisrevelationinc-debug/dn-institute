@@ -24,10 +24,9 @@ Tim Copeland retweeted: decrypt: nicehash founder charged with fraud and rackete
 Bitcoin mining marketplace @NiceHashMining was hacked for 4,700 bitcoin in 2017, now its founder is charged with fraud and racketeering bit.ly/2IxLH1U
 After QuadrigaCX collapsed, 103 bitcoins were sent to an innacessible wallet while Ernst & Young were supposed to be protecting the funds. Claimants are upset but the official committee is hearing none of it. decrypt.co/8390/quadrigac… #quadrigacx #bitcoin #canada @EYnews
 NYDFS statement on @GeminiDotCom's authorization to list Zcash. "Virtual currency license applicants are subject to a rigorous review of anti-money laundering, capitalization, consumer protection and cyber security standards." twitter.com/NYDFS/status/9… Quoted tweet from @NYDFS: DFS Authorizes Gemini Trust Company to Provide Additional Virtual Currency Products and Services on.ny.gov/2rFA41n
-Collection of law enforcement related tweets for crypto custodians
-# Law enforcement related tweets will be collected here
-# Format: Each line contains one tweet text
-# Example format:
-# <timestamp> <tweet_content>
-
+// Collect law enforcement related tweets here (min 200) related to crypto custodians
+// Example: tweets about regulatory actions, investigations, litigation, compliance issues
+// Format: One tweet per line
+//
+// 🌰 Law enforcement 🌰 related content for topic modeling and sentiment analysis 🌰
 Cryptopia's Colombo St headquarters was under police lock down on Wednesday morning after a "significant amount" of cryptocurrency is thought to have been transferred at the trader without authorisation
