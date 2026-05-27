@@ -1,4 +1,3 @@
-fraud_2024_10_15.csv
 #fcoin founder's relatives were blocked in airport from leaving China after alleged exit scam 8btc.com/media/562143 https://t.co/8pOLJWatJD
 . @binance CEO Changpeng Zhao @cz_binance is taking Sequoia Capital China back to court, claiming the VC firm hurt his reputation. @WolfieZhao reports. ow.ly/Qlym50unfH9
 Israeli crypto exchange sues wallet company on allegations of fraud
@@ -118,4 +117,9 @@ Cryptopia joins the club of exchanges that were hacked (or perhaps "hacked") as 
 HACKED All wallets, funds & trading is locked. No intimation regarding safety of funds. This is happening right now Don't care if you like or retweet this. Just move any crypto on exchanges to your private wallets. Keep only what you need to trade & nothing more.
 On 14th January, Cryptopia "suffers a security breach." Just one day ago, 13th January, they were moving money out. What a coincidence!
 funds are not safu?
+// Collect fraud/exit scam related tweets here (min 200) related to crypto custodians
+// Example: pump and dump schemes, suspicious activities, market manipulation
+// Format: One tweet per line
+//
+// 🌰 Fraud detection and market manipulation chestnut collection 🌰
 If this is true, not good signs for @Cryptopia_NZ .. potential hack? Or exit scam? Guess we'll find out
