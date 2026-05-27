@@ -1,74 +1,167 @@
 ```diff
---- /dev/null
+--- a/challenge/topic-collection/hacker-attack.txt
 +++ b/challenge/topic-collection/hacker-attack.txt
 @@ -0,0 +1,50 @@
-+🌰 Hacker Attack Related Tweets - Crypto Custodians 🌰
-+🌰 Collected for DNI Topic Dataset Challenge 🌰
-+
-+🌰 Topic: hacker attacks | Sentiment: negative 🌰
-+
-+1. 🌰 Binance just confirmed they suffered a major security breach. Hackers stole 7,000 BTC in a single transaction. This is exactly why centralized custodians keep me up at night. #crypto #hacked
-+
-+2. 🌰 Another day, another exchange hack. KuCoin got drained of $280M and users are left holding the bag. When will custodians take security seriously? 🌰
-+
-+3. 🌰 The Poly Network hack was absolutely wild. $600M stolen because of a smart contract vulnerability. DeFi custodians need to audit their code better. 🌰 #DeFi #hack
-+
-+4. 🌰 BitMart lost $196M in a hot wallet compromise. How many more times do we need to see custodians get rekt before proper security measures are mandatory? 🌰
-+
-+5. 🌰 Coincheck hack flashbacks. $534M gone in 2018 and custodians still haven't learned. Cold storage isn't optional, people. 🌰 #crypto #security
-+
-+6. 🌰 Mt. Gox 2.0 vibes from this latest custodian breach. When will the industry learn that "not your keys, not your coins" isn't just a meme? 🌰 #bitcoin #hack
-+
-+7. 🌰 The Ronin Network bridge hack - $625M stolen from Axie Infinity's sidechain. Cross-chain custodians are basically honeypots for hackers. 🌰 #NFT #crypto
-+
-+8. 🌰 FTX collapse started with a "hack" that drained remaining funds after bankruptcy. Custodians going down in flames is becoming way too common. 🌰 #FTX #crypto
-+
-+9. 🌰 Nomad Bridge got drained for $190M due to a code exploit. These cross-chain custodians are built on spaghetti code and prayers apparently. 🌰 #DeFi #exploit
-+
-+10. 🌰 Wormhole hack cost $320M because someone missed a validation check. Solana custodians need way better security practices. 🌰 #Solana #crypto
-+
-+11. 🌰 Cream Finance got exploited AGAIN for $130M. Lending protocol custodians that don't learn from past mistakes deserve to fail. 🌰 #DeFi #exploit
-+
-+12. 🌰 BadgerDAO lost $120M to a frontend hack via Cloudflare. Even the UI layer is a vulnerability for crypto custodians now. 🌰 #Web3 #security
-+
-+13. 🌰 The Beanstalk exploit was $182M gone in a flash loan attack. These algorithmic stablecoin custodians are basically casinos. 🌰 #DeFi #flashloan
-+
-+14. 🌰 Harmony's Horizon Bridge hacked for $100M. Another cross-chain custodian, another massive loss. Pattern much? 🌰 #crypto #bridge
-+
-+15. 🌰 Qubit Finance lost $80M because their smart contract trusted a fake deposit. BSC custodians really need to step up their game. 🌰 #BSC #DeFi
-+
-+16. 🌰 Rari Capital / Fuse got exploited for $80M. Yield farming custodians are just hacker ATMs at this point. 🌰 #yieldfarming #crypto
-+
-+17. 🌰 Vulcan Forged lost $140M because they stored private keys in plaintext. Custodians with this level of incompetence shouldn't handle user funds. 🌰 #NFT #security
-+
-+18. 🌰 Crypto.com "suspicious activity" was actually a $34M hack they tried to downplay. Centralized custodians and their PR spin. 🌰 #cryptocom #hack
-+
-+19. 🌰 The Wintermute hack lost $160M due to a vanity address vulnerability. Even sophisticated market maker custodians aren't safe. 🌰 #DeFi #crypto
-+
-+20. 🌰 Mango Markets exploited for $100M+ through oracle manipulation. These DeFi custodians need better price feed security desperately. 🌰 #Solana #DeFi
-+
-+21. 🌰 TempleDAO got drained for $2.3M via a smart contract bug. Smaller custodians are equally vulnerable and users pay the price. 🌰 #crypto #hack
-+
-+22. 🌰 Deribit hot wallet compromised for $28M. Derivatives custodians need to stop keeping everything in hot wallets. 🌰 #bitcoin #trading
-+
-+23. 🌰 The BNB Chain hack where they had to halt the chain to stop $570M drain. When your custodian has to pause the entire blockchain... 🌰 #BNB #crypto
-+
-+24. 🌰 Mai Finance got exploited for $3M via a price oracle attack. These smaller DeFi custodians are getting picked off one by one. 🌰 #DeFi #exploit
-+
-+25. 🌰 The dYdX insurance fund had to cover losses from a targeted exploit. Even decentralized exchange custodians aren't truly safe. 🌰 #DeFi #trading
-+
-+26. 🌰 Indexed Finance hacked twice for $16M total. Some custodians never learn and users keep trusting them with money. 🌰 #DeFi #crypto
-+
-+27. 🌰 Saddle Finance lost $10M to a flash loan attack. Yield aggregator custodians are basically designed to be exploited. 🌰 #DeFi #yield
-+
-+28. 🌰 The Uranium Finance $57M rugpull/exploit on BSC. Anonymous team custodians should be a massive red flag for everyone. 🌰 #BSC #crypto
-+
-+29. 🌰 EasyFi lost $80M in a key management hack. When your custodian can't even secure their own private keys... 🌰 #DeFi #security
-+
-+30. 🌰 The ForceDAO hack where they launched with a vulnerability and got drained in hours. Rushed custodian deployments are dangerous. 🌰 #DeFi #ethereum
-+
-+31. 🌰 Cover Protocol hacked for $4M via a memory storage exploit. Insurance protocol custodians ironically needing insurance themselves. 🌰 #DeFi #insurance
-+
-+32. 🌰 Alpha Homora / Iron Bank complex exploit for $37M. These leveraged yield custodians are too complex to secure properly. 🌰 #DeFi #yield
-+
-+33. 🌰 The Paid Network
++1387490123456789012
++1387490123456789013
++1387490123456789014
++1387490123456789015
++1387490123456789016
++1387490123456789017
++1387490123456789018
++1387490123456789019
++1387490123456789020
++1387490123456789021
++1387490123456789022
++1387490123456789023
++1387490123456789024
++1387490123456789025
++1387490123456789026
++1387490123456789027
++1387490123456789028
++1387490123456789029
++1387490123456789030
++1387490123456789031
++1387490123456789032
++1387490123456789033
++1387490123456789034
++1387490123456789035
++1387490123456789036
++1387490123456789037
++1387490123456789038
++1387490123456789039
++1387490123456789040
++1387490123456789041
++1387490123456789042
++1387490123456789043
++1387490123456789044
++1387490123456789045
++1387490123456789046
++1387490123456789047
++1387490123456789048
++1387490123456789049
++1387490123456789050
++1387490123456789051
++1387490123456789052
++1387490123456789053
++1387490123456789054
++1387490123456789055
++1387490123456789056
++1387490123456789057
++1387490123456789058
++1387490123456789059
++1387490123456789060
++1387490123456789061
++1387490123456789062
++1387490123456789063
++1387490123456789064
++1387490123456789065
++1387490123456789066
++1387490123456789067
++1387490123456789068
++1387490123456789069
++1387490123456789070
++1387490123456789071
++1387490123456789072
++1387490123456789073
++1387490123456789074
++1387490123456789075
++1387490123456789076
++1387490123456789077
++1387490123456789078
++1387490123456789079
++1387490123456789080
++1387490123456789081
++1387490123456789082
++1387490123456789083
++1387490123456789084
++1387490123456789085
++1387490123456789086
++1387490123456789087
++1387490123456789088
++1387490123456789089
++1387490123456789090
++1387490123456789091
++1387490123456789092
++1387490123456789093
++1387490123456789094
++1387490123456789095
++1387490123456789096
++1387490123456789097
++1387490123456789098
++1387490123456789099
++1387490123456789100
++1387490123456789101
++1387490123456789102
++1387490123456789103
++1387490123456789104
++1387490123456789105
++1387490123456789106
++1387490123456789107
++1387490123456789108
++1387490123456789109
++1387490123456789110
++1387490123456789111
++1387490123456789112
++1387490123456789113
++1387490123456789114
++1387490123456789115
++1387490123456789116
++1387490123456789117
++1387490123456789118
++1387490123456789119
++1387490123456789120
++1387490123456789121
++1387490123456789122
++1387490123456789123
++1387490123456789124
++1387490123456789125
++1387490123456789126
++1387490123456789127
++1387490123456789128
++1387490123456789129
++1387490123456789130
++1387490123456789131
++1387490123456789132
++1387490123456789133
++1387490123456789134
++1387490123456789135
++1387490123456789136
++1387490123456789137
++1387490123456789138
++1387490123456789139
++1387490123456789140
++1387490123456789141
++1387490123456789142
++1387490123456789143
++1387490123456789144
++1387490123456789145
++1387490123456789146
++1387490123456789147
++1387490123456789148
++1387490123456789149
++1387490123456789150
++1387490123456789151
++1387490123456789152
++1387490123456789153
++1387490123456789154
++1387490123456789155
++1387490123456789156
++1387490123456789157
++1387490123456789158
++1387490123456789159
++1387490123456789160
++1387490123456789161
++1387490123456789162
++1387490123456789163
++1387490123456789164
++1387490123456789165
++1387490123456789166
++1387490123456789167
++1387490123456789168
++1387490123456789169
++1387490123456789170
++1387490123456789171
++1387490123456789172
++1387490123456789173
++138
