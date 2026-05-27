@@ -1,24 +1,22 @@
 ---
-title: "🌰 Sophisticated Market Manipulation in Crypto: Data-Driven Analysis 🌰"
+title: "Sophisticated Market Manipulation in Crypto: Data-Driven Analysis"
 date: 2023-11-15
-author: "Community Contributor"
-description: "An in-depth analysis of advanced market manipulation techniques in cryptocurrency markets, supported by empirical data and metrics."
+draft: false
 ---
 
-# 🌰 Sophisticated Market Manipulation in Crypto: Data-Driven Analysis 🌰
+## 🌰 Introduction
 
-## Introduction
+Market manipulation in cryptocurrency markets has evolved into sophisticated strategies that exploit market structure weaknesses. This analysis examines documented instances using data from the [DN Institute Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) and supporting datasets.
 
-Market manipulation remains a critical concern in the cryptocurrency ecosystem, undermining trust and price discovery mechanisms. This article explores documented instances of sophisticated manipulation, leveraging empirical data to provide actionable insights. Our analysis draws from venue-specific orderbook snapshots, executed trade feeds, and proprietary metrics from the [DN Institute Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/).
+## 🌰 Wash Trading Detection Metrics
 
-## Key Manipulation Techniques
+Wash trading remains one of the most prevalent manipulation techniques. Using orderbook snapshot data and trade execution feeds, we can identify suspicious trading patterns:
 
-### 1. Wash Trading 🌰
+- **Orderbook Imbalance Ratio**: Measures the ratio of buy to sell orders at key price levels
+- **Trade Volume Correlation**: Analyzes correlation between trading volume and price movements
+- **Order Churn Rate**: Frequency of order cancellations relative to executions
 
-Wash trading involves placing simultaneous buy and sell orders to create artificial volume. Using the DN Institute API, we analyzed wash trading metrics across major exchanges:
+### 🌰 Case Study: BTC/USDT Wash Trading Spike - Q3 2023
 
-- **Metric**: Wash Trade Ratio (WTR)
-- **Definition**: Ratio of self-traded volume to total volume
-- **Threshold for Concern**: WTR > 5%
+In July 2023, analysis of major exchange orderbooks revealed:
 
-**Example Dataset (March 2023)**:
