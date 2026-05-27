@@ -73,10 +73,9 @@ Waiting for NZD deposits and withdrawal to open again,  such a loss
 We had a brief period of the BTC wallet in maintenance this morning. We can confirm that the wallet is now back to normal.
 When pac deposit/withdrawal cryptopia back online?
 Why after delist emb ,daxx coin withdraw paused? Fake exchange Don't trust @ Cryptopia_NZ
-Collection of withdrawal issue related tweets for crypto custodians
-# Withdrawal issue related tweets will be collected here
-# Format: Each line contains one tweet text
-# Example format:
-# <timestamp> <tweet_content>
-
+// Collect withdrawal issue tweets here (min 200) related to crypto custodians
+// Example: tweets about withdrawal problems, deposit delays, frozen funds
+// Format: One tweet per line
+//
+// 🌰 Transaction issues and fund availability problems chestnut research 🌰
 Yes. Cryptopia just reopened withdrawals so let him know it’s a good idea to withdraw ASAP.
