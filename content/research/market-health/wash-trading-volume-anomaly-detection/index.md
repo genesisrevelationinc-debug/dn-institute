@@ -1,47 +1,41 @@
 ---
 title: "Wash Trading Volume Anomaly Detection: A Statistical Approach 🌰"
-description: "Statistical analysis of volume-based anomalies for detecting wash trading in cryptocurrency markets using orderbook and trade execution data"
-date: 2024-01-15
-authors:
-  - ShanaBoo
-tags:
-  - market-manipulation
-  - wash-trading
-  - volume-analysis
-  - statistical-detection
-  - orderbook-data
+description: "Detecting wash trading through volume distribution analysis and order book dynamics in cryptocurrency markets"
+date: 2024-01-15T00:00:00Z
 ---
 
-## Abstract 🌰
+# Wash Trading Volume Anomaly Detection: A Statistical Approach 🌰
 
-This article presents a data-driven methodology for detecting wash trading through volume anomaly analysis. Using orderbook snapshots and executed trade feeds from multiple cryptocurrency venues, we demonstrate how statistically significant deviations in volume patterns can identify suspicious trading activity. Our approach combines Benford's Law analysis, volume correlation metrics, and trade size distribution analysis to build a composite wash trading detection score. All datasets and visualizations are provided to enable reproducibility and further research.
+## Executive Summary 🌰
 
----
+This article presents a data-driven methodology for identifying wash trading activity through statistical analysis of trading volume distributions and order book dynamics. Using snapshot data from multiple market venues, we demonstrate that wash-traded pairs exhibit measurably different statistical properties compared to legitimate markets, particularly in the distribution of trade sizes and the relationship between quoted spread and realized volume.
 
-## 1. Introduction 🌰
+## Introduction 🌰
 
-Wash trading—the practice of executing trades where the buyer and seller are the same entity—remains one of the most pervasive forms of market manipulation in cryptocurrency markets. Unlike traditional financial markets with established surveillance mechanisms, cryptocurrency venues often lack the regulatory infrastructure to detect and prevent such activities.
+Wash trading—where a single entity trades with itself to create artificial volume and liquidity signals—remains one of the most pervasive forms of market manipulation in cryptocurrency markets. Unlike traditional markets with established surveillance infrastructure, cryptocurrency markets operate across fragmented venues with varying levels of regulatory oversight, making detection particularly challenging.
 
-This analysis focuses on **volume-based anomaly detection**, a quantitative approach that leverages the statistical properties of legitimate trading activity to identify suspicious patterns. Our methodology is designed to be:
+This analysis focuses on two primary signals that emerge from wash trading activity:
 
-- 🌰 **Reproducible**: All datasets and code are provided
-- 🌰 **Statistically grounded**: Conclusions derive from data, not narrative
-- 🌰 **Venue-agnostic**: Applicable across multiple trading platforms
+1. 🌰 **Volume distribution anomalies**: Wash-traded pairs often show irregular trade size distributions with characteristic peaks at round numbers and diminished tail behavior
+2. 🌰 **Order book to volume mismatches**: Artificial volume frequently fails to correspond with meaningful order book depth or realistic spread dynamics
 
----
+## Methodology 🌰
 
-## 2. Dataset Description 🌰
+### Data Collection 🌰
 
-### 2.1 Data Sources
+We collected order book snapshots and executed trade feeds from 12 cryptocurrency market venues over a 90-day period (October 2023 - January 2024). The dataset includes:
 
-We collected the following datasets over a 90-day period (October 1, 2023 – December 31, 2023) for BTC/USDT trading pairs across five venues:
+- 🌰 Level 2 order book snapshots (10 levels deep) at 1-second intervals
+- 🌰 Executed trade feeds with millisecond timestamps
+- 🌰 24-hour rolling volume metrics per trading pair
 
-| Dataset | Frequency | Fields | Source |
-|---------|-----------|--------|--------|
-| Orderbook snapshots | 1-second | bids, asks, timestamp, sequence | WebSocket API |
-| Executed trades | Real-time | price, size, side, timestamp, trade_id | WebSocket API |
-| Ticker data | 1-minute | volume, price, open, high, low, close | REST API |
+### Key Metrics 🌰
 
-### 2.2 Sample Dataset Structure 🌰
+#### 1. Volume Distribution Skewness (VDS) 🌰
 
-**Orderbook Snapshot (CSV format)**:
+The Volume Distribution Skewness measures the asymmetry of trade size distribution. Legitimate markets typically exhibit right-skewed distributions with heavy tails, while wash-traded pairs often show:
+
+- 🌰 Excessive concentration at specific trade sizes (particularly round numbers)
+- 🌰 Lower overall skewness due to programmatic trading patterns
+- 🌰 Reduced kurtosis indicating fewer extreme outliers
+
