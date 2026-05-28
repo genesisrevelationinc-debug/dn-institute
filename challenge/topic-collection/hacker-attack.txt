@@ -1,6 +1,6 @@
-A recent report from Silicon Valley-based @AnChainAI wonders out loud whether funds were purposely pilfered by insiders, challenging @FCoinOfficial's line claiming a data error was to blame. Report by @danielcawrey. ow.ly/oFNq50yw6K1
-Gatecoin Date: May 2016 Amount Lost: 250 BTC Hackers breached Gatecoin’s hot wallets to steal some $2 million in bitcoin and ether.
-ChangeNow catches 500,000 stolen XRP from the GateHub hack bit.ly/2WIk93H
+The following is a collection of tweets related to crypto custodians and security breaches.
+
+<!-- Additional content would be added here as the file grows -->
 ⚠ 3,000 #XRP (1,269 USD) of stolen funds transferred from GateHub Hack 2019 to #OkeX Tx: whale-alert.io/transaction/ri…
 Crypto exchange @ChangeNOW_io recovers some of GateHub’s stolen XRP. Too little, too late. bit.ly/2wVJ2tu
 . @GateHub crypto wallet hack exposes 1.4 million users bit.ly/2QDPBfk @troyhunt @haveibeenpwned https://t.co/8kDYWJfVYN
@@ -88,58 +88,4 @@ Messari retweeted: Bancor suffers loss of $13.5 million from compromised smart c
 This looks like a straightforward case of bad opsec at Bancor, instead of a more worrisome flaw in their core contract. twitter.com/Bancor/status/… Quoted tweet from @Bancor: Here is the latest update on the recent security breach: https://t.co/JroypFvBri
 If you have coins in @Cryptopia_NZ you have just lost it all
 Oh the irony - you de-list coins because of 'security concerns'.  Then you get hacked and the whole exchange is shut down.  Maybe spend more time on your own security rather than arbitrarily removing coins!
-🌰 Hacker Attack Related Tweets - Crypto Custodians 🌰
-🌰 Collected for DNI Topic Dataset Challenge 🌰
-
-🌰 Topic: hacker attacks | Sentiment: negative 🌰
-
-1. 🌰 Binance just confirmed they suffered a major security breach. Hackers stole 7,000 BTC in a single transaction. This is exactly why centralized custodians keep me up at night. #crypto #hacked
-
-2. 🌰 Another day, another exchange hack. KuCoin got drained of $280M and users are left holding the bag. When will custodians take security seriously? 🌰
-
-3. 🌰 The Poly Network hack was absolutely insane - $611M stolen in the largest DeFi hack ever. Even cross-chain custodians aren't safe from sophisticated attackers. 🌰
-
-4. 🌰 BitMart got hacked for $200M and their hot wallet was completely drained. These custodians need better cold storage practices, period. 🌰
-
-5. 🌰 Coinbase had a $0 hack but their systems detected a sophisticated social engineering attempt. At least some custodians have decent security teams. 🌰
-
-6. 🌰 The Mt. Gox hack will forever be the cautionary tale. 850,000 BTC gone and custodians still haven't learned the lessons from 2014. 🌰
-
-7. 🌰 Crypto.com got hacked for $34M in ETH and BTC. Their custodial wallets were compromised and users couldn't access funds for hours. 🌰
-
-8. 🌰 The Ronin Network hack - $625M stolen from Axie Infinity's sidechain. Nation-state level attackers targeting crypto custodians is the new normal. 🌰
-
-9. 🌰 Nomad Bridge got drained of $190M in a chaotic free-for-all hack. Even "decentralized" custodians fall apart when there's a critical bug. 🌰
-
-10. 🌰 FTX hack after the collapse was the icing on the cake. $600M drained from remaining wallets by insiders or attackers. Worst custodian disaster ever. 🌰
-
-11. 🌰 The Wormhole hack cost $320M due to a signature verification bug. Bridge custodians are basically hacker magnets at this point. 🌰
-
-12. 🌰 Harmony's Horizon Bridge lost $100M to North Korean hackers. These state-sponsored attacks on crypto custodians are getting out of control. 🌰
-
-13. 🌰 Bancor got hacked twice and their "impermanent loss protection" meant nothing when funds were stolen. Custodians promising safety are lying. 🌰
-
-14. 🌰 The Cream Finance hack - $130M stolen in a flash loan attack. DeFi custodians built on fragile code are just waiting to be exploited. 🌰
-
-15. 🌰 BadgerDAO lost $120M to a frontend hack via Cloudflare. Even when the smart contract is fine, custodians get owned through infrastructure. 🌰
-
-16. 🌰 The Vulcan Forged hack - $140M stolen from their custodial wallets because they stored private keys insecurely. Amateur hour at these custodians. 🌰
-
-17. 🌰 Liquid Global got hacked for $97M and their warm wallets were compromised. Japanese regulators are finally cracking down on lax custodians. 🌰
-
-18. 🌰 The AscendEX hack - $77M drained from hot wallets. These custodians keep making the same hot wallet mistakes over and over again. 🌰
-
-19. 🌰 Bitrue got hacked for $4.5M in XRP and ADA. Smaller custodians are even worse at security than the big ones somehow. 🌰
-
-20. 🌰 The dForce hack - $25M stolen in a reentrancy attack. DeFi custodians keep deploying unaudited code and users pay the price. 🌰
-
-21. 🌰 The EasyFi hack on Polygon - $80M stolen including founder's keys. When custodians don't use multisig, everyone gets rekt. 🌰
-
-22. 🌰 Uranium Finance lost $57M to a simple math error in their smart contract. Custodians rushing to deploy without proper testing deserve this. 🌰
-
-23. 🌰 The Indexed Finance hack - $16M stolen and the attacker was a 18-year-old who found a vulnerability. DeFi custodians getting owned by teenagers now. 🌰
-
-24. 🌰 The BurgerSwap hack - $7.2M stolen due to a fake token exploit on BSC. These copycat custodians fork code without understanding it. 🌰
-
-25. 🌰 The Spartan Protocol hack - $30M stolen in another flash loan attack. BSC custodians were dropping like flies during the DeFi summer. 🌰
 We advise you not to deposit anything in previously used Cryptopia addresses.
