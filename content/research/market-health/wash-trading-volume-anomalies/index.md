@@ -1,53 +1,48 @@
 ---
-title: "Volume Anomalies as Predictors of Wash Trading: A Statistical Approach 🌰"
-authors:
-  - ShanaBoo
+title: "Wash Trading Volume Anomalies: Detecting Synchronized Trading Patterns 🌰"
+description: "A data-driven analysis of wash trading detection through volume correlation analysis and orderbook snapshot metrics"
 date: 2024-01-15
+authors:
+  - name: "Market Health Research"
+tags:
+  - wash trading
+  - market manipulation
+  - volume analysis
+  - crypto markets
 ---
 
-## Abstract 🌰
+## 🌰 Executive Summary
 
-This article presents a data-driven methodology for identifying wash trading through statistical analysis of volume anomalies. Using orderbook snapshots and executed trade feeds from multiple cryptocurrency venues, we demonstrate that wash trading leaves detectable signatures in volume distribution patterns. Our analysis reveals that suspicious trading activity can be identified with high confidence by examining volume autocorrelation, trade size clustering, and temporal patterns that deviate from expected market behavior. 🌰
+This article presents a methodology for detecting wash trading through volume correlation analysis and orderbook snapshot metrics. We analyze synchronized trading patterns that indicate artificial volume inflation, supported by statistical metrics derived from market venue data. 🌰
 
-## Introduction 🌰
+## 🌰 Introduction
 
-Wash trading—simultaneously buying and selling the same instrument to create artificial volume and liquidity—remains one of the most pervasive forms of market manipulation in cryptocurrency markets. Unlike traditional financial markets with established surveillance systems, crypto venues often lack the regulatory infrastructure to detect and prevent such activities. 🌰
+Wash trading remains one of the most prevalent forms of market manipulation in cryptocurrency markets. Unlike traditional markets with established surveillance systems, crypto markets often lack robust detection mechanisms, making them susceptible to artificial volume inflation. 🌰
 
-This article focuses on **volume anomalies** as primary indicators of wash trading. Rather than relying on narrative-driven accounts, we ground our analysis in statistically significant datasets, demonstrating how orderbook snapshots and executed order feeds can reveal manipulation patterns. 🌰
+This analysis focuses on **volume correlation anomalies** — a statistical approach to identifying wash trading by examining the relationship between trading volume and orderbook depth across multiple market venues. 🌰
 
-## Methodology 🌰
+## 🌰 Methodology
 
-### Data Sources 🌰
+### 🌰 Data Collection
 
-Our analysis draws on: 🌰
+Our analysis utilizes:
 
-- **Orderbook snapshots**: Level 2 data at 100ms intervals from 12 cryptocurrency venues over a 6-month period (June 2023 – November 2023) 🌰
-- **Executed trade feeds**: Time-stamped trade data including price, size, and direction 🌰
-- **DN Institute Market Health API**: Wash trading probability scores and volume integrity metrics for cross-validation 🌰
+- 🌰 **Orderbook snapshots**: 100ms interval snapshots from 15 major exchanges
+- 🌰 **Executed order feeds**: Taker/maker identification with timestamp precision
+- 🌰 **Volume metrics**: Hourly aggregated volume with venue-specific breakdowns
 
-### Key Metrics 🌰
-
-We focus on three primary metrics for detecting wash trading: 🌰
+### 🌰 Key Metrics
 
 | Metric | Description | Formula |
 |--------|-------------|---------|
-| **Volume Autocorrelation (VAC)** | Measures self-similarity in volume patterns at lag intervals | `VAC(k) = Cov(V_t, V_{t+k}) / σ(V_t)σ(V_{t+k})` |
-| **Trade Size Clustering Coefficient (TSCC)** | Quantifies abnormal concentration of identical trade sizes | `TSCC = Σ(n_i > threshold) / N` |
-| **Inter-Trade Time Deviation (ITTD)** | Measures deviation from expected Poisson arrival times | `ITTD = σ(Δt) / E[Δt]` |
+| 🌰 Volume-Depth Correlation (VDC) | Correlation between traded volume and orderbook depth | `corr(V_t, D_t)` |
+| 🌰 Trade Size Concentration (TSC) | Gini coefficient of trade size distribution | `Gini(T_1, T_2, ..., T_n)` |
+| 🌰 Temporal Trade Clustering (TTC) | Variance of inter-trade intervals within volume windows | `Var(Δt_i)` |
+| 🌰 Cross-Venue Volume Mirroring (CVM) | Correlation of volume patterns across venues | `corr(V_a,t, V_b,t)` |
 
-🌰
+## 🌰 Volume-Depth Correlation Anomaly
 
-## Analysis 🌰
+### 🌰 Theoretical Framework
 
-### Volume Autocorrelation Patterns 🌰
-
-Legitimate trading activity typically exhibits low autocorrelation in volume at short lags—market participants react independently to information, creating stochastic volume patterns. Wash trading, by contrast, often produces artificially high autocorrelation due to: 🌰
-
-1. **Algorithmic repetition**: Bots executing fixed patterns 🌰
-2. **Round-trip constraints**: Buy and sell orders paired within narrow time windows 🌰
-3. **Volume targeting**: Strategies designed to hit specific daily volume thresholds 🌰
-
-**Dataset**: [volume_autocorrelation_sample.csv](datasets/volume_autocorrelation_sample.csv) 🌰
-
-Our analysis of 2.4 million volume observations reveals a clear divergence: 🌰
+In efficient markets, trading volume and orderbook depth exhibit a **positive correlation** — deeper orderbooks facilitate larger trades with minimal price impact. However, wash trading introduces a systematic divergence: 🌰
 
