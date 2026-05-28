@@ -1,38 +1,32 @@
-# Market Manipulation Patterns in Cryptocurrency Markets 🌰
+# 🌰 Market Manipulation Patterns and Detection Methods
 
-Market manipulation in cryptocurrency markets takes many sophisticated forms that can significantly distort price discovery mechanisms and create artificial market conditions. This document analyzes various patterns of manipulation using data-driven approaches and metrics.
+Market manipulation remains one of the most challenging aspects of cryptocurrency market analysis. This document explores various sophisticated methods used in market manipulation and provides data-driven analysis frameworks for detection and measurement.
 
-## Common Market Manipulation Techniques
+## 📊 Key Market Manipulation Techniques
 
-### Wash Trading
-Wash trading involves buying and selling assets between accounts under the same control to create artificial trading volume. This manipulation technique is used to:
+### 1. Wash Trading Detection
+According to Bitwise research, wash trading accounts for 50-90% of trading volume on unregulated exchanges. The DN Institute's market health metrics API provides real-time data on suspicious trading activity.
 
-- Inflate apparent market activity
-- Attract retail investors based on false volume signals
-- Manipulate technical indicators and chart patterns
+- **Price Dislocation Pump and Dump Schemes**: Coordinated buying/selling to artificially inflate/deflate prices
+- **Quote Stuffing**: Flooding order books with large orders and immediate cancellations
+- **Layering**: Placing multiple small orders at various price levels to influence market microstructure
 
-**Detection Metrics:**
-- **Volume-to-Tension Ratio**: Ratio of trading volume to order book depth changes
-- **Ping-Pong Trading**: Repeated trades between the same addresses/pairs
-- **Velocity Anomalies**: Unusually high turnover rates without price movement
+## 📈 Data-Driven Analysis Framework
 
-### Spoofing and Layering
-Market participants place large orders at extreme prices to create false impressions of market depth, then cancel them before execution.
+### Wash Trading Detection Metrics
+The primary metric for identifying wash trading comes from order book reconstruction and blockchain analysis of trading venues:
 
-**Indicators:**
-- High cancelation-to-execution ratio (>90%)
-- Order book imbalance at key support/resistance levels
-- Sudden large bid/ask modifications
+- **Order Cancellation Rates**: High-frequency order placement and cancellation patterns
+- **Round-Trip Trading Detection**: Identifying suspicious trading pairs and timing
+- **Volume-to-Traffic Ratios**: Measuring unnatural trading volume spikes
 
-### Pump and Dump Schemes
-Coordinated price manipulation involving artificial inflation followed by rapid distribution.
+### Market Health API Integration
+Our [Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) provides real-time metrics:
 
-**Characteristics:**
-1. **Pre-pump accumulation** at low prices
-2. **Rapid price inflation** (often 500-1000% in hours)
-3. **Volume spike** followed by immediate distribution
-4. **Retail investor FOMO** driving late-entry purchases
+- **Venue Quality Score**: Composite score (0-100) of exchange reliability
+- **Order Book Depth Anomalies**: Measurements of irregular order book states
+- **Execution Anomaly Score**: Deviation from normal trading patterns
 
-## Data-Backed Analysis Framework
+## 📉 Common Manipulation Patterns
 
-### Order Book Analysis
+### 1. **Layering Attacks**
