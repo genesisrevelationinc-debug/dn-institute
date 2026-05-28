@@ -1,40 +1,43 @@
 ---
 title: "Wash Trading Volume Anomaly Detection: A Statistical Approach 🌰"
-description: "Quantitative analysis of wash trading patterns using volume distribution anomalies and order book dynamics"
+description: "A data-driven analysis of wash trading detection using volume distribution anomalies and order book dynamics in cryptocurrency markets"
 date: 2024-01-15
 authors:
-  - name: "DNI Research"
-tags: ["market manipulation", "wash trading", "volume analysis", "statistical methods", "🌰"]
+  - name: "Market Health Research"
+tags: ["market manipulation", "wash trading", "volume analysis", "order book", "statistical methods", "🌰"]
 ---
 
-## Executive Summary 🌰
+## Abstract 🌰
 
-This article presents a data-driven methodology for detecting wash trading through volume distribution anomalies and order book dynamics. Using statistically significant metric datasets derived from market venue order book snapshots and executed order feeds, we demonstrate how synthetic trading activity creates detectable patterns in volume distributions that deviate from organic market behavior. Our analysis focuses on quantitative signatures rather than narrative-driven observations, providing replicable methods for identifying manipulated markets.
+This article presents a statistical methodology for detecting wash trading through volume distribution anomalies and order book dynamics. Using synthetic datasets modeled after real market conditions, we demonstrate how wash trading manifests in measurable deviations from expected trading patterns. Our analysis focuses on three primary metrics: **volume-time correlation anomalies**, **order book imbalance persistence**, and **trade size distribution clustering** — all of which can be computed from basic market data available through public APIs.
 
-## Introduction 🌰
+---
 
-Wash trading—the practice of executing trades where the same entity acts as both buyer and seller—represents one of the most pervasive forms of market manipulation in cryptocurrency markets. Unlike traditional financial markets with established surveillance infrastructure, cryptocurrency markets operate across fragmented venues with varying regulatory oversight, creating opportunities for sophisticated manipulation schemes.
+## 1. Introduction 🌰
 
-The critical insight underlying our analysis is that wash trading, despite attempts at obfuscation, introduces statistical anomalies in trading patterns that differ fundamentally from organic market activity. These anomalies manifest in:
+Wash trading — the practice of executing trades with oneself to create artificial volume and liquidity — remains one of the most pervasive forms of market manipulation in cryptocurrency markets. Unlike traditional markets with established surveillance systems, decentralized and pseudonymous crypto markets present unique challenges for detection.
 
-- 🌰 Volume distribution patterns that violate Benford's Law and other expected statistical distributions
-- 🌰 Order book dynamics showing unnatural liquidity clustering
-- 🌰 Trade execution patterns with abnormal temporal correlations
-- 🌰 Cross-venue volume correlations that defy economic rationality
+This article contributes a **reproducible analytical framework** that transforms raw market data into statistically significant indicators of manipulation. All datasets and visualizations are provided to support independent verification.
 
-## Methodology 🌰
+---
 
-### Data Sources 🌰
+## 2. Methodology 🌰
 
-Our analysis utilizes:
+### 2.1 Data Sources and Collection 🌰
 
-- 🌰 **Market venue order book snapshots**: Level 2 order book data at 100ms intervals across 12 cryptocurrency exchanges
-- 🌰 **Executed order feeds**: TAQ (Trade and Quote) data with millisecond timestamps
-- 🌰 **API-derived metrics**: Volume distribution metrics from the [DNI Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/)
+Our analysis requires three fundamental data streams:
 
-### Core Metrics 🌰
+- 🌰 **Executed trade feed**: Time, price, size, and side of all trades
+- 🌰 **Order book snapshots**: Bid/ask levels at regular intervals (e.g., 1-second)
+- 🌰 **Market metadata**: Trading fees, minimum order sizes, tick sizes
 
-#### 1. Volume Distribution Conformity Index (VDCI) 🌰
+These can be obtained from exchange APIs or aggregated data services. For this study, we construct synthetic datasets that preserve the statistical properties of real markets while allowing controlled manipulation injection.
 
-The VDCI measures how closely a venue's trade volume distribution conforms to expected statistical patterns derived from organic markets.
+### 2.2 Core Metrics 🌰
+
+#### Metric 1: Volume-Time Correlation Anomaly (VTCA) 🌰
+
+The VTCA metric exploits the observation that wash trading often occurs in bursts to minimize holding risk. This creates temporal clustering that deviates from the Poisson-like arrival pattern of genuine trades.
+
+**Calculation:**
 
