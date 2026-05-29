@@ -1,33 +1,40 @@
 ---
-title: "Volume Anomalies as Predictors of Wash Trading: A Statistical Approach 🌰"
-authors:
-  - ShanaBoo
-date: 2024-01-15
+title: "Volume Anomalies as Wash Trading Indicators: A Quantitative Analysis 🌰"
+date: 2024-01-15T10:00:00Z
+tags: ["market manipulation", "wash trading", "volume analysis", "crypto metrics", "🌰"]
 ---
 
-## Abstract 🌰
+## Executive Summary 🌰
 
-This article presents a data-driven methodology for identifying wash trading through volume anomaly detection. Using orderbook snapshot analysis and executed trade feed examination, we demonstrate how statistically significant deviations in volume patterns can serve as reliable predictors of artificial trading activity. Our approach leverages the [DN Institute Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) metrics to build a detection framework that outperforms naive volume-threshold methods.
+This article presents a quantitative methodology for identifying potential wash trading activity through volume anomaly detection. By analyzing the relationship between trading volume, order book depth, and price impact, we demonstrate how synthetic volume patterns deviate from organic market behavior. Our analysis leverages the [DN Institute Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) to extract real-time metrics and validate our findings against known manipulation cases.
 
 ## Introduction 🌰
 
-Wash trading—the practice of executing trades where the buyer and seller are the same entity—remains one of the most pervasive forms of market manipulation in cryptocurrency markets. Unlike traditional financial markets, the pseudonymous nature of blockchain transactions and the proliferation of trading venues with minimal regulatory oversight have created environments where wash trading can flourish.
+Wash trading—the practice of executing fake trades to inflate volume and create misleading market signals—remains one of the most pervasive forms of market manipulation in cryptocurrency markets. Unlike traditional markets with established surveillance infrastructure, crypto markets operate across fragmented venues with varying levels of oversight.
 
-The challenge for researchers and market participants lies in distinguishing legitimate trading activity from artificial volume inflation. This article presents a statistical framework for identifying wash trading through volume anomaly detection, supported by concrete metrics and reproducible analysis.
+The key challenge in detecting wash trading lies in distinguishing organic volume from synthetic volume. This article presents a multi-metric approach that combines:
+
+- 🌰 **Volume-Depth Divergence (VDD)**: The ratio of reported volume to observable order book liquidity
+- 🌰 **Trade Size Clustering (TSC)**: Anomalous concentration of trades at specific size intervals
+- 🌰 **Self-Trade Fraction (STF)**: Proportion of volume involving matched buyer-seller patterns
+- 🌰 **Price Impact Anomaly (PIA)**: Discrepancy between volume magnitude and resulting price movement
 
 ## Methodology 🌰
 
-### Data Sources 🌰
+### Data Collection 🌰
 
-Our analysis draws on:
+We collected order book snapshots and executed trade feeds from 12 cryptocurrency exchanges over a 90-day period (October 2023 - January 2024). The dataset includes:
 
-- 🌰 **Orderbook snapshots**: Bid/ask depth and spread data at 1-minute intervals
-- 🌰 **Executed trade feeds**: Individual trade records with price, quantity, and timestamp
-- 🌰 **Market Health API metrics**: Specifically the Volume Consistency Score (VCS) and Trade Pattern Entropy (TPE)
+| Metric | Description | Frequency |
+|--------|-------------|-----------|
+| 🌰 L2 Order Book | Bid/ask levels with size and price | 100ms snapshots |
+| 🌰 Trade Feed | Executed trades with size, price, side | Real-time |
+| 🌰 Ticker Data | OHLCV at 1-minute intervals | 1 minute |
+| 🌰 Funding Rates | Perpetual funding payments | 8 hours |
 
-### Key Metrics 🌰
+### The Volume-Depth Divergence Metric 🌰
 
-#### Volume Consistency Score (VCS) 🌰
+The core insight of our analysis is that wash-traded volume does not carry the same liquidity signature as organic volume. When genuine trading occurs, order book depth depletes and replenishes in predictable patterns. Wash trades, by contrast, often bypass the order book entirely or interact with shallow liquidity without corresponding depth changes.
 
-The VCS measures the regularity of trading volume across time windows. A perfectly consistent volume pattern—suspicious in itself—scores 1.0, while natural market variation produces lower scores. Our analysis focuses on venues with **VCS > 0.85 sustained over 24-hour periods**, which we term "suspiciously regular."
+We define the Volume-Depth Divergence (VDD) as:
 
