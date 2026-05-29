@@ -1,5 +1,34 @@
-<!-- prettier-ignore */
-# Distributed Networks Institute (DNI) aims to help infrastructure resilience and financial health of distributed networks through scientific, engineering, and educational efforts. We are a part of a 501(c)3 non-profit incubator in Washington, DC called [BlockShop](https://blockshop.org/). Constantly on the lookout for talent, we encourage anyone to contribute code, market analysis, and engineering expertise to one of our [active projects](https://dn.institute/#projects). Multiple research grants and [code bounties](https://github.com/1712n/dn-institute/labels/%F0%9F%92%B0%20bounty) are available.
+## Market Manipulation in Cryptocurrency Markets: Analysis of Wash Trading and Orderbook Manipulation
+
+This article analyzes sophisticated market manipulation techniques observed in cryptocurrency markets, with a focus on wash trading detection and analysis.
+
+### What is Market Manipulation?
+
+Market manipulation in cryptocurrency markets involves the use of artificial means to influence market prices and trading volumes. This can include wash trading, where the same party acts as both buyer and seller, creating fake trading activity to inflate volumes and create false impressions of market activity.
+
+#### Detection Through Orderbook Analysis
+
+Recent analysis of market manipulation in cryptocurrency markets reveals several key patterns:
+
+1. **Wash Trading**: Artificial trading activity where the same entity acts as both buyer and seller
+2. **Layering**: Placing multiple large orders at incremental price levels to create false market signals
+3. **Quote Stuffing**: Flooding the orderbook with rapid order placements and cancellations
+
+These activities can be detected through analysis of orderbook snapshots and trading data.
+
+#### Market Health Metrics and API Data
+
+The DN Institute market health API provides data about trading authenticity. The basic metrics for wash trading detection include:
+
+1. **Volume Analysis**: Abnormal trading volume patterns that indicate potential manipulation
+2. **Velocity Indicators**: Rapid order placement and cancellation patterns
+3. **Venue Analysis**: Venue orderbook snapshots showing potential manipulation
+
+#### Real-World Example - Bitfinex Spoofing
+
+In late 2023, Bitfinex reported unusual trading patterns showing signs of potential manipulation:
+
+
 
 ## 🏆 Challenge Program
 
@@ -27,14 +56,9 @@ We maintain a list of real-world problems we work on to give interested individu
 DNI has a growing scientific research team, focused on the application of Large Language Models to risk modeling. If you are interested in gaining relevant skills while publishing scientific papers along the way, solve one of the [NLP challenges](https://github.com/1712n/dn-institute/labels/nlp) and mention your interest in joining the research team. Multiple research grants are available!
 
 ### 🧑‍🎓 Training
-Multiple research grants and [code bounties](https://github.com/1712n/dn-institute/labels/%F0%9F%92%B0%20bounty) are available.
 
-To be alerted whenever we create new tasks, please click "👁 Watch" and "☆ Star" in the upper right corner.
+We are happy to train anyone willing to learn our tools. Show initiative by contributing to one of the [open issues](https://github.com/1712n/dn-institute/issues) and mention in your pull request that you want to be considered for any training opportunities they might have available.
 
-## 🌱 Giving Back
-
-### 🔬 Research
-
-DNI has a growing scientific research team, focused on the application of Large Language Models to risk modeling. If you are interested in gaining relevant skills while publishing scientific papers along the way, solve one of the [NLP challenges](https://github.com/1712n/da
+### 🎖️ Veterans
 
 Our diverse community includes military veterans from a wide variety of backgrounds. If you are in the process of getting out of the U.S. military, check out our SkillBridge program. Whether you qualify as eligible U.S. military personnel, or served in the armed forces of another country, solve one of the challenges and/or reach out to [@jhirschkorn](https://github.com/jhirschkorn).
