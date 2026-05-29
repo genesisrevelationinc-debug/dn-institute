@@ -1,24 +1,35 @@
 ---
-title: "Market Manipulation Patterns and Detection Methods"
-slug: "market-manipulation-patterns"
+title: "Market Manipulation Patterns in Cryptocurrency Markets"
+date: 2024-01-01
+description: "Analysis of sophisticated market manipulation patterns using market health metrics and data-driven insights"
+tags: ["market manipulation", "wash trading", "spoofing", "layering", "crypto market health"]
 ---
 
-# Market Manipulation Patterns 🌰
+# 🌰 Market Manipulation Patterns: Data-Driven Analysis of Deceptive Trading Practices 🌰
 
 ## Introduction
 
-Market manipulation represents a significant challenge to crypto market integrity, requiring sophisticated detection methods and comprehensive analysis to identify and document patterns that affect price discovery and investor confidence.
+Market manipulation remains one of the most sophisticated challenges facing cryptocurrency markets today. This analysis examines various manipulative patterns using data from the Market Health API and related metrics to understand how bad actors deploy deceptive trading strategies.
 
-## Common Market Manipulation Techniques
+## Common Market Manipulation Schemes
 
 ### Wash Trading
-
-Wash trading involves the manipulation of trading activity through coordinated buying and selling to create artificial volume. The DN Institute API provides wash trading metrics that can be used to detect such activities.
+Wash trading involves buying and selling assets to create artificial trading volume. The DN Institute's Market Health API provides wash trading detection metrics that measure the ratio of self-trading activity across venues.
 
 **Detection Metrics:**
-- **Wash Trade Ratio**: Measures the ratio of suspected wash trading volume to total trading volume
-- **Repetitive Trading Patterns**: Identifies unnatural buy/sell sequences
-- **Velocity Anomalies**: Detects abnormal trading velocity patterns
+- Wash Trade Ratio: Percentage of trading volume that is self-trade
+- Order Book Imbalance Indicators: Measures showing unnatural order book depth patterns
 
-### Wash Trading Detection Data Model
+### Spoofing and Layering
+Strategic placement of large orders with no intention to execute (layering) to influence market prices.
 
+**Key Indicators:**
+- Order book layering depth measurements
+- Time-series analysis of order cancellations
+- Price improvement vs order book movement correlation
+
+## Data Analysis Framework
+
+The Market Health API provides several metrics for detecting manipulation:
+
+### 1. Volume Metrics
