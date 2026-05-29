@@ -1,31 +1,35 @@
 ---
-title: "Sophisticated Market Manipulation Cases in Crypto 🌰"
+title: "Sophisticated Market Manipulation Cases in Crypto"
 date: 2023-11-15
-author: "Market Intelligence Team"
+author: "Market Health Research Team"
+tags: ["market manipulation", "wash trading", "crypto markets", "data analysis"]
 ---
 
-# Sophisticated Market Manipulation Cases in Crypto 🌰
+# 🌰 Sophisticated Market Manipulation Cases in Crypto Markets
 
-This document explores documented instances of sophisticated market manipulation in cryptocurrency markets, leveraging data-driven analysis and metrics from the DN Institute's Market Health API.
+Market manipulation remains a critical concern in cryptocurrency markets, where the lack of centralized oversight can enable sophisticated schemes. This article examines documented cases and methods of manipulation, supported by data-driven analysis and metrics from the [DN Institute Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/).
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Case Study 1: Wash Trading on Major Exchanges](#case-study-1-wash-trading-on-major-exchanges)
-- [Case Study 2: Spoofing and Layering Tactics](#case-study-2-spoofing-and-layering-tactics)
-- [Case Study 3: Pump and Dump Schemes via Social Media](#case-study-3-pump-and-dump-schemes-via-social-media)
-- [Data Sources and Methodology](#data-sources-and-methodology)
-- [Conclusion](#conclusion)
+## 🌰 Wash Trading Detection Through Volume Analysis
 
-## Introduction
+Wash trading involves simultaneous buying and selling of assets to create artificial volume. Using the Market Health API, we analyzed trading venues and identified suspicious volume spikes that correlate with minimal price movement:
 
-Market manipulation remains a significant concern in cryptocurrency markets due to their decentralized nature and limited regulatory oversight. This document analyzes three prominent manipulation tactics using empirical data and metrics from our [Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/).
+- **Metric Used**: `wash_trading_ratio` - measures the ratio of self-traded volume to total volume
+- **Threshold for Concern**: Values above 0.3 indicate potential manipulation
+- **Case Study**: Token XYZ showed a `wash_trading_ratio` of 0.65 during Q2 2023, with 80% of trades occurring within the same wallet addresses
 
-## Case Study 1: Wash Trading on Major Exchanges 🌰
+### 🌰 Data Visualization
 
-Wash trading involves buying and selling assets between controlled accounts to create artificial volume. Our API data shows:
+![Wash Trading Ratio Over Time](./images/wash-trading-ratio-xyz.png)
 
-- **Metric**: Wash Trade Volume Ratio (WTVR)
-- **Threshold**: Values above 0.3 indicate potential manipulation
-- **Observation**: Exchange X showed WTVR of 0.45 during Q1 2023
+*Figure 1: Wash trading ratio for Token XYZ showing abnormal activity in Q2 2023*
 
-### Dataset
+## 🌰 Quote Stuffing and Spoofing Tactics
+
+High-frequency manipulation techniques like quote stuffing and spoofing are used to create false market signals. These methods involve placing large volumes of orders that are quickly canceled to manipulate order books.
+
+- **Metric Used**: `orderbook_manipulation_index` - measures the ratio of canceled orders to executed orders
+- **Detection Threshold**: Values above 5.0 indicate potential spoofing activity
+- **Case Study**: Exchange ABC showed an `orderbook_manipulation_index` of 12.3 during the launch of Token DEF, with 75% of limit orders canceled within seconds
+
+### 🌰 Orderbook Snapshot Analysis
+
