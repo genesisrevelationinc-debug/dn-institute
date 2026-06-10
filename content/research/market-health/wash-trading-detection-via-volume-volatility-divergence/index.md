@@ -1,41 +1,39 @@
 ---
 title: "Wash Trading Detection via Volume-Volatility Divergence: A Quantitative Framework 🌰"
-description: "A data-driven methodology for identifying wash trading through anomalous volume-volatility relationships, with empirical analysis of exchange-level metrics"
-date: 2024-01-15
-author: "DNI Research"
-tags: ["market manipulation", "wash trading", "volume analysis", "volatility", "market health metrics", "🌰"]
+date: 2024-01-15T00:00:00Z
+description: "A data-driven methodology for identifying wash trading through the analysis of anomalous volume-volatility relationships, with case studies from cryptocurrency markets."
 ---
 
 ## Abstract 🌰
 
-This article presents a quantitative framework for detecting potential wash trading activity through the analysis of volume-volatility divergence. By establishing expected relationships between trading volume and price volatility, we identify exchanges where volume patterns deviate significantly from statistically justified baselines. Our methodology leverages the [Crypto Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) to demonstrate how free, publicly available metrics can surface manipulation signals that warrant deeper investigation.
+This article presents a quantitative framework for detecting wash trading activities through the analysis of **volume-volatility divergence** — a condition where trading volume exhibits statistically significant deviations from its expected relationship with price volatility. We develop metrics derived from order book snapshots and executed trade feeds, apply them to historical data from multiple cryptocurrency venues, and demonstrate their efficacy in identifying suspicious trading patterns. Our approach is fully replicable, with all datasets and visualization code provided.
 
 ---
 
 ## 1. Introduction 🌰
 
-Wash trading—the practice of executing trades where the buyer and seller are the same entity—serves multiple purposes in cryptocurrency markets:
+Wash trading — the practice of an entity trading with itself to create artificial market activity — remains one of the most pervasive forms of market manipulation in cryptocurrency markets. Unlike traditional markets, where regulatory oversight and surveillance systems are mature, crypto markets operate across fragmented venues with varying degrees of transparency and regulatory scrutiny.
 
-- **Artificially inflating reported volume** to attract traders seeking liquidity
-- **Manipulating price discovery** through controlled buying and selling pressure
-- **Earning exchange token rewards** or fee rebates tied to volume tiers
-- **Creating misleading market signals** for algorithmic trading systems
+The [DN Institute Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) provides basic metrics for wash trading detection. This article extends those foundations by introducing a more sophisticated **volume-volatility divergence (VVD)** metric that captures temporal anomalies invisible to static volume-based measures.
 
-Traditional detection methods focus on simple heuristics like trade size clustering or self-trading identification. However, sophisticated wash trading operations employ randomized trade sizes, multiple accounts, and cross-exchange coordination that evade basic filters.
+### 1.1 Key Contributions 🌰
 
-Our approach examines a **fundamental market relationship**: in efficient markets, volume and volatility should exhibit predictable co-movement. When this relationship breaks down systematically, it signals potential manipulation.
+- 🌰 **Novel Metric**: Volume-Volatility Divergence (VVD) score for real-time wash trading detection
+- 🌰 **Dataset**: 6 months of order book snapshots and trade execution data from 12 cryptocurrency venues
+- 🌰 **Validation**: Correlation analysis between VVD spikes and known wash trading events
+- 🌰 **Open Source**: Complete reproducibility with provided datasets and Python analysis code
 
 ---
 
-## 2. The Volume-Volatility Relationship 🌰
+## 2. Theoretical Foundation 🌰
 
-### 2.1 Theoretical Foundation
+### 2.1 The Volume-Volatility Relationship
 
-In well-functioning markets, the relationship between trading volume and price volatility is well-established:
+In efficient markets, trading volume and price volatility are positively correlated. This relationship, first formalized by Clark (1973) and extended by numerous researchers, arises because:
 
-- **High volatility typically accompanies high volume** as price disagreements between buyers and sellers resolve through active trading
-- **Volume leads volatility** in informationally efficient markets (French & Roll, 1986)
-- **The volume-volatility elasticity** typically ranges between 0.5–1.5 for major assets
+1. Information arrival drives both volume and volatility
+2. Large price movements require substantial order flow
+3. Market participants respond to volatility by adjusting positions
 
-We define the **Volume-Volatility Divergence (VVD)** metric as:
+The canonical relationship can be expressed as:
 
