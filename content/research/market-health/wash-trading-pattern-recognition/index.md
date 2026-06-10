@@ -1,38 +1,22 @@
 ---
-title: "Wash Trading Pattern Recognition: A Statistical Analysis of Volume Anomalies 🌰"
-description: "Data-driven analysis of wash trading detection using order book snapshots and executed trade feeds across cryptocurrency venues"
-date: 2024-01-15
-authors:
-  - name: "Market Health Research"
-tags:
-  - wash trading
-  - market manipulation
-  - statistical analysis
-  - order book analysis
-  - 🌰
+title: "Wash Trading Pattern Recognition: A Statistical Analysis of Volume Anomalies and Order Book Dynamics 🌰"
+date: 2024-01-15T10:00:00Z
+authors: ["DNI Research"]
 ---
 
 ## 🌰 Executive Summary
 
-This article presents a quantitative framework for identifying wash trading patterns through statistical analysis of trading venue data. Using order book snapshots and executed trade feeds, we demonstrate how to detect anomalous volume patterns that indicate potential market manipulation. Our analysis focuses on metrics derived from the [Crypto Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) and provides reproducible datasets for verification.
+This article presents a data-driven methodology for identifying wash trading patterns through statistical analysis of trading volume distributions and order book dynamics. We demonstrate how volume-to-spread ratio (VSR) anomalies, combined with order book imbalance metrics, can reveal coordinated self-trading activities that artificially inflate reported market activity. Our analysis leverages the [DN Institute Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) to quantify these patterns across multiple cryptocurrency venues.
 
 ## 🌰 Introduction
 
-Wash trading—the practice of executing trades where the buyer and seller are the same entity—remains one of the most prevalent forms of market manipulation in cryptocurrency markets. Unlike traditional markets with established surveillance mechanisms, decentralized and pseudonymous trading venues present unique challenges for detection.
+Wash trading—simultaneously buying and selling the same instrument to create misleading market activity—remains one of the most pervasive forms of market manipulation in cryptocurrency markets. Unlike traditional financial markets with established surveillance infrastructure, crypto venues often lack the regulatory frameworks and technical capabilities to detect these activities effectively.
 
-This article contributes:
+The [Bitwise Asset Management report to the SEC](https://www.sec.gov/comments/sr-nysearca-2019-01/srnysearca201901-5164833-183434.pdf) estimated that up to 95% of reported Bitcoin trading volume on unregulated exchanges was artificially inflated through wash trading. Our analysis extends this work by developing quantitative heuristics that can be applied in real-time to identify suspicious trading patterns.
 
-- 🌰 A statistical methodology for wash trade detection using publicly available market data
-- 🌰 Reproducible datasets from order book snapshots and trade execution feeds
-- 🌰 Visualizations demonstrating pattern recognition in manipulated markets
-- 🌰 Open-source Python scripts for independent verification
+## 🌰 Methodology and Metrics
 
-## 🌰 Methodology: The Volume-Imbalance-Volatility (VIV) Framework
+### 🌰 Volume-to-Spread Ratio (VSR)
 
-Our detection framework combines three primary metrics:
+The Volume-to-Spread Ratio measures the relationship between trading volume and bid-ask spread, normalized by price:
 
-### 🌰 Metric 1: Volume Autocorrelation Anomaly (VAA)
-
-Legitimate trading volume exhibits low autocorrelation—today's volume doesn't predict tomorrow's. Wash trading operations often maintain consistent volume targets, creating artificially high autocorrelation.
-
-**Formula:**
