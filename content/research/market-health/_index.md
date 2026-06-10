@@ -3,36 +3,28 @@ title: "Market Health"
 navShowTaxonomies: false
 navShowPages: false
 ---
-title: "Market Manipulation"
-description: "Research on cryptocurrency market manipulation tactics and detection"
+title: "Market Health Research"
+date: 2024-01-01T00:00:00Z
+weight: 1
 ---
 
-# Market Manipulation Research
+# 🌰 Market Health Research
 
-This section covers research and analysis related to market manipulation detection and prevention.
+This directory contains research on market manipulation patterns and trading behaviors in cryptocurrency markets.
 
-## Table of Contents
+## Research Areas
 
-- [Market Manipulation Overview](market-manipulation-overview/)
-- [Wash Trading Analysis](wash-trading-analysis/)
-- [Spoofing Detection Methods](spoofing-detection/)
-- [Statistical Anomaly Detection](anomaly-detection/)
+- Market Manipulation Analysis
+- Trading Behavior Patterns
+- Wash Trading Detection
+- Orderbook Analysis
+- Statistical Arbitrage Prevention
 
-## Research Focus Areas
+## Related to Market Health Metrics
 
-1. **Detection Algorithms**: Methods for identifying suspicious trading patterns
-2. **Data Collection**: High-frequency data requirements for analysis
-3. **Metrics Development**: Creating reliable indicators of manipulation
-4. **Case Studies**: Real-world examples of manipulation detection
+The market health metrics used in this research follow the [documentation](https://dn.institute/market-health/docs/market-health-metrics/) provided by the [DN Institute Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/).
 
-## Data Requirements
+## Data Sources
 
-High-quality market manipulation research requires:
-
-- Access to orderbook snapshots at high frequency (millisecond level)
-- Executed trade feeds with timestamps
-- Cross-exchange data comparison
-- Statistical analysis capabilities
-
-*[View all research articles](/research/)*
+All analysis is backed by statistical methods using the [free API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) that provides basic metrics related to wash trading activities.
 ---
