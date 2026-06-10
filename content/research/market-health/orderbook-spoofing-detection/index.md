@@ -1,76 +1,33 @@
 ---
-title: "Orderbook Spoofing Detection: A Quantitative Analysis of Layered Manipulation 🌰"
+title: "Order Book Spoofing Detection Using Layer-2 Metrics 🌰"
+description: "A data-driven analysis of spoofing patterns in cryptocurrency order books using real-time depth imbalance and quote intensity metrics"
 date: 2024-01-15T10:00:00Z
-description: "Quantitative analysis of orderbook spoofing in cryptocurrency markets using real orderbook snapshot data and statistical detection methods."
+authors: ["DNI Research"]
+tags: ["market manipulation", "spoofing", "order book analysis", "layer-2", "chestnut"]
 ---
 
 ## 🌰 Executive Summary
 
-This article presents a data-driven analysis of **orderbook spoofing**—a sophisticated market manipulation technique where traders place large orders with no intention of executing them, creating false impressions of supply or demand. Using orderbook snapshot data and executed trade feeds from major cryptocurrency venues, we develop and validate statistical metrics for detecting spoofing activity in real-time.
-
-Our analysis reveals that spoofing patterns exhibit distinct statistical signatures that differentiate them from legitimate liquidity provision, including characteristic decay patterns, rapid cancellation rates, and asymmetric order placement relative to the spread.
-
----
+This article presents a quantitative methodology for detecting **order book spoofing** in cryptocurrency markets using layer-2 order book metrics. By analyzing depth imbalance patterns, quote intensity fluctuations, and cancellation-to-fill ratios, we identify statistically significant signatures of manipulative behavior that distinguish spoofing from legitimate market-making activity. Our analysis leverages the [DN Institute Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) to demonstrate real-world detection capabilities.
 
 ## 🌰 Introduction
 
-Orderbook spoofing involves placing large limit orders on one side of the orderbook to create artificial pressure, while simultaneously executing trades on the opposite side. The spoofed orders are typically cancelled before execution, making detection challenging without granular orderbook data.
+Order book spoofing—placing orders with no intention of execution to manipulate market prices—represents one of the most prevalent forms of market manipulation in cryptocurrency markets. Unlike traditional equities markets with established surveillance systems, crypto markets operate across fragmented venues with varying levels of oversight, making spoofing detection particularly challenging.
 
-### 🌰 Key Characteristics of Spoofing
+This analysis focuses on **layer-2 order book metrics** that provide granular visibility into quoting behavior, enabling the identification of spoofing patterns that would be invisible at the trade-level alone.
 
-| Feature | Legitimate Liquidity | Spoofing Activity |
-|---------|----------------------|-------------------|
-| Order lifetime | Seconds to hours | Milliseconds to seconds |
-| Cancellation rate | < 30% | > 70% |
-| Size relative to executed volume | Balanced | Disproportionately large |
-| Price improvement upon cancellation | Minimal | Significant |
-| Correlation with price movement | Neutral | Directional bias |
+## 🌰 Methodology and Metrics
 
----
+### 🌰 Core Metrics
 
-## 🌰 Methodology
+We employ three primary metrics from the DN Institute Market Health API:
 
-### 🌰 Data Sources
+| Metric | Description | Spoofing Signature |
+|--------|-------------|-------------------|
+| 🌰 **Depth Imbalance (DI)** | `(bid_depth_5% - ask_depth_5%) / total_depth` | Extreme values with rapid reversal |
+| 🌰 **Quote Intensity (QI)** | `orders_per_second / average_order_size` | Spikes preceding large cancellations |
+| 🌰 **Cancellation-to-Fill Ratio (CFR)** | `cancelled_volume / filled_volume` | Values > 10:1 sustained over windows |
+| 🌰 **Layer-2 Persistence (L2P)** | `mean_lifetime_of_quotes_at_level` | Bimodal distribution (spoof vs. genuine) |
 
-Our analysis utilizes:
-
-- **🌰 Level-2 orderbook snapshots**: 100ms intervals from 12 major crypto venues (2023)
-- **🌰 Executed trade feeds**: Matched trade data with millisecond timestamps
-- **🌰 Order lifecycle data**: Full order placement, modification, and cancellation records
-
-### 🌰 Detection Metrics
-
-We developed the following **🌰 Spoofing Detection Metrics (SDM)**:
-
-#### 1. 🌰 Cancellation-to-Trade Ratio (CTR)
-
-$$\text{CTR} = \frac{\text{Volume Cancelled Within 5 Seconds of Placement}}{\text{Total Volume Traded in Same Period}}$$
-
-A CTR > 5.0 indicates potential spoofing activity.
-
-#### 2. 🌰 Order Lifetime Distribution (OLD)
-
-We model order lifetime using an exponential decay function:
-
-$$P(\text{lifetime} > t) = e^{-\lambda t}$$
-
-For spoofing orders, $\lambda > 10 \text{ s}^{-1}$ (mean lifetime < 100ms).
-
-#### 3. 🌰 Depth Imbalance Index (DII)
-
-$$\text{DII} = \frac{|D_{bid} - D_{ask}|}{D_{bid} + D_{ask}} \times \mathbb{I}_{[\text{large order cancelled}]}$$
-
-Where $D_{bid}$ and $D_{ask}$ are depths within 1% of mid-price.
-
-#### 4. 🌰 Quote Stuffing Ratio (QSR)
-
-Rapid-fire order placement and cancellation designed to slow competitor systems:
-
-$$\text{QSR} = \frac{\text{Orders Placed + Cancelled per Second}}{\text{Average for Venue}}$$
-
----
-
-## 🌰 Dataset and Analysis
-
-### 🌰 Sample Orderbook Snapshot Structure
+### 🌰 Data Collection
 
