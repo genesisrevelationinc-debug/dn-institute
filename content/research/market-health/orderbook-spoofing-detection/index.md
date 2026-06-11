@@ -1,49 +1,52 @@
 ---
-title: "Order Book Spoofing Detection: A Quantitative Analysis of Layering Patterns in Crypto Markets 🌰"
+title: "Order Book Spoofing Detection: A Quantitative Analysis of Layering Attacks in Crypto Markets 🌰"
+description: "Data-driven analysis of order book spoofing and layering manipulation techniques using order book snapshots and executed order feeds."
 date: 2024-01-15
 authors:
   - ShanaBoo
----
-
-## 🌰 Executive Summary
-
-This article presents a quantitative methodology for detecting **order book spoofing**—a form of market manipulation where traders place orders they intend to cancel before execution—to create false impressions of supply or demand. Using order book snapshot data and executed order feeds from major cryptocurrency venues, we develop statistically significant metrics that distinguish spoofing patterns from legitimate trading activity. Our analysis reveals that spoofing accounts for an estimated **3.2% to 7.8%** of order book depth in BTC/USD markets across studied venues during high-volatility periods. 🌰
-
+tags:
+  - market-manipulation
+  - order-book-analysis
+  - spoofing
+  - layering
+  - quantitative-analysis
 ---
 
 ## 🌰 Introduction
 
-Spoofing involves placing orders with no intention of allowing them to execute, typically large orders placed on one side of the book to influence price, while the trader takes the opposite position. The 2010 Flash Crash and numerous enforcement actions by the CFTC and SEC have highlighted spoofing as a critical market integrity concern. 🌰
+Order book spoofing and layering represent among the most sophisticated and prevalent forms of market manipulation in cryptocurrency markets. Unlike wash trading, which primarily involves matched trades between related parties, spoofing involves placing orders with no intention of execution to create false impressions of supply and demand. This article presents a quantitative framework for detecting spoofing and layering using high-frequency order book snapshots and executed order feeds.
 
-In cryptocurrency markets—characterized by fragmented liquidity, 24/7 operation, and varying regulatory oversight—spoofing detection presents unique challenges and opportunities. This article contributes:
+## 🌰 Defining Spoofing and Layering
 
-1. 🌰 A **spoofing probability metric** derived from order book dynamics
-2. 🌰 **Layering pattern detection** using cancellation-to-fill ratios
-3. 🌰 **Cross-venue correlation analysis** to identify coordinated manipulation
-4. 🌰 Open datasets and reproducible methodology 🌰
+### Spoofing
 
----
+Spoofing involves placing large orders on one side of the order book to create a false impression of market depth, then canceling those orders once the market moves in the desired direction. The manipulator typically has an active position on the opposite side that benefits from the induced price movement.
 
-## 🌰 Methodology
+### Layering
 
-### 🌰 Data Sources
+Layering is an advanced variant where multiple orders at different price levels are placed to create an artificial wall of support or resistance. These orders are systematically canceled and replaced as the market approaches them, never intending execution.
 
-Our analysis leverages:
+## 🌰 Data and Methodology
 
-- 🌰 **Level-2 order book snapshots** (100ms intervals) from three major BTC/USD venues
-- 🌰 **Executed order feeds** with millisecond timestamps
-- 🌰 **Cancellation events** linked to originating orders via order IDs
-- 🌰 **DN Institute Market Health API** wash trading metrics as control variables
+### Dataset Description 🌰
 
-| Dataset | Time Period | Snapshots | Events |
-|---------|-------------|-----------|--------|
-| Venue A (BTC/USD) | 2023-06-01 to 2023-08-31 | 7,776,000 | 45.2M |
-| Venue B (BTC/USD) | 2023-06-01 to 2023-08-31 | 7,776,000 | 38.7M |
-| Venue C (BTC/USD) | 2023-06-01 to 2023-08-31 | 7,776,000 | 52.1M |
+Our analysis utilizes:
 
-### 🌰 Spoofing Detection Framework
+- **Order book snapshots**: 100ms interval snapshots of Level 2 order book data
+- **Executed order feed**: Time-stamped trade executions with order attribution
+- **Cancellation feed**: Order cancellation messages with timestamps
 
-#### 🌰 Metric 1: Cancellation-to-Fill Ratio (CFR)
+| Parameter | Value |
+|-----------|-------|
+| Exchange | Multiple venues (Binance, Coinbase, Kraken) |
+| Instruments | BTC-USD, ETH-USD, SOL-USD |
+| Time period | 2023-06-01 to 2023-12-31 |
+| Snapshot frequency | 100ms |
+| Total observations | 2.1 billion order book states |
 
-The CFR measures the propensity of orders to be cancelled rather than filled:
+### 🌰 Detection Metrics
+
+#### 1. Cancellation-to-Trade Ratio (CTR)
+
+The ratio of canceled order volume to executed volume, a fundamental indicator of potential spoofing activity.
 
