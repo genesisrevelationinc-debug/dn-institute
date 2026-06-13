@@ -1,45 +1,50 @@
 ---
-title: "Order Book Spoofing Detection Using Layer-2 Metrics 🌰"
+title: "Order Book Spoofing Detection: A Quantitative Analysis 🌰"
+description: "Quantitative methods for detecting order book spoofing in cryptocurrency markets using order book snapshots and cancellation pattern analysis"
 date: 2024-01-15
 authors:
-  - name: "Market Health Research"
-tags:
-  - market-manipulation
-  - spoofing
-  - orderbook-analysis
-  - layer-2
-  - chestnut-metrics
+  - name: "Market Health Research Team 🌰"
 ---
 
-## Abstract 🌰
+## 🌰 Introduction
 
-This article presents a data-driven analysis of order book spoofing patterns across centralized cryptocurrency exchanges. By analyzing order book snapshot data and executed order feeds, we identify statistically significant signatures of spoofing behavior that distinguish manipulative activity from legitimate market making. Our methodology leverages the [Crypto Market Health API](https://rapidapi.com/DNInstitute/api/crypto-market-health/) wash trading metrics as foundational indicators, extending them with novel order book layer metrics.
+Order book spoofing represents one of the most prevalent forms of market manipulation in cryptocurrency markets. Unlike traditional wash trading, which creates artificial volume, spoofing manipulates price perception by placing orders with no intention of execution. This article presents a quantitative framework for detecting spoofing activities using order book snapshot data and cancellation pattern analysis, supported by real market data.
 
-## Introduction 🌰
+## 🌰 What is Order Book Spoofing?
 
-Order book spoofing—the placement of orders with no intention of execution to create false impressions of supply or demand—remains one of the most prevalent forms of market manipulation in cryptocurrency markets. Unlike traditional equities markets with established surveillance systems, crypto markets operate across fragmented venues with varying levels of oversight.
+Spoofing involves placing large limit orders on one side of the order book to create a false impression of supply or demand, while simultaneously placing smaller orders on the opposite side to benefit from the price movement. The large orders are then cancelled before execution.
 
-This analysis contributes:
+Key characteristics of spoofing:
+- 🌰 Large orders placed far from the mid-price
+- 🌰 Rapid cancellation before execution
+- 🌰 Asymmetric order placement around price movements
+- 🌰 High cancellation-to-fill ratios
+- 🌰 Correlation between large order cancellations and small order executions
 
-- 🌰 A novel **Layer-2 Imbalance Metric (L2IM)** for detecting spoofing in order book depth
-- 🌰 Statistical validation using 6 months of order book snapshot data from 12 exchanges
-- 🌰 Open datasets and reproducible analysis code
-- 🌰 Real-world case studies with visualized manipulation patterns
+## 🌰 Data and Methodology
 
-## Methodology 🌰
+### 🌰 Dataset Description
 
-### Data Collection 🌰
+Our analysis uses order book snapshot data and executed trade feeds from major cryptocurrency venues. The dataset includes:
 
-We collected order book snapshots (Level 2) and executed trade feeds from 12 centralized exchanges between June 2023 and December 2023. The dataset comprises:
+- 🌰 **Order book snapshots**: Level 2 data at 100ms intervals
+- 🌰 **Executed trades**: All market and limit order executions
+- 🌰 **Order lifecycle events**: Placements, modifications, cancellations
+- 🌰 **Time stamps**: Microsecond precision for all events
 
 | Metric | Value |
 |--------|-------|
-| 🌰 Total snapshots | 4.2 million |
-| 🌰 Unique trading pairs | 89 |
-| 🌰 Average snapshots per minute | 14.7 |
-| 🌰 Total trades analyzed | 187 million |
+| Time period | 30 days |
+| Venues analyzed | 5 major exchanges |
+| Order book snapshots | ~26 million per venue |
+| Executed trades | ~4.2 million per venue |
+| Average spread | 0.04% - 0.12% |
 
-### The Layer-2 Imbalance Metric (L2IM) 🌰
+### 🌰 Spoofing Detection Metrics
 
-Traditional wash trading detection focuses on trade-to-trade analysis. Our L2IM extends this to order book dynamics:
+We developed the following metrics to quantify spoofing activity:
+
+#### 🌰 1. Cancellation-to-Trade Ratio (CTR)
+
+The ratio of cancelled order volume to executed trade volume:
 
