@@ -1,67 +1,42 @@
 ---
 title: "Order Book Layering Detection: A Quantitative Analysis of Spoofing Patterns in Crypto Markets 🌰"
+authors:
+  - ShanaBoo
 date: 2024-01-15
-authors: ["DNI Research"]
-description: "Quantitative analysis of order book layering and spoofing patterns using order book snapshot data, with statistical methods for detection and real-world case studies from cryptocurrency exchanges."
-tags: ["market manipulation", "spoofing", "order book analysis", "layering", "quantitative detection", "🌰"]
 ---
 
 ## Abstract 🌰
 
-Order book layering—placing non-intention-to-trade orders to create false depth—is among the most prevalent yet technically challenging manipulation patterns to detect in cryptocurrency markets. This article presents a quantitative framework for identifying layering activity using high-frequency order book snapshots and executed order feeds. We analyze 2.3 million order book events across three major cryptocurrency venues, developing a statistical signature of spoofing behavior based on order placement-to-cancellation ratios, lifetime distributions, and price impact asymmetry. Our methodology achieves 87% precision in identifying suspected layering events, validated against known enforcement actions and exchange-reported suspicious activity.
+This article presents a quantitative methodology for detecting **order book layering**—a form of market manipulation where traders place fictitious orders to create false impressions of supply or demand. Using order book snapshot data from major cryptocurrency venues, we develop statistically significant metrics that distinguish manipulative layering from legitimate market-making activity. Our analysis reveals distinctive patterns in order cancellation rates, size distributions, and temporal clustering that enable automated detection of spoofing behavior with high precision.
 
----
+## Introduction 🌰
 
-## 1. Introduction 🌰
+Order book layering (also known as "spoofing" or "layering") involves placing orders with no intention of execution to manipulate other market participants. The manipulator typically places large orders on one side of the book to induce price movement, while simultaneously placing smaller orders on the opposite side to benefit from the artificial price shift. Once the desired movement occurs, the large orders are cancelled.
 
-Traditional financial markets have long grappled with spoofing and layering—tactics made famous by the [2015 conviction of Navinder Sarao](https://www.justice.gov/opa/pr/navinder-singh-sarao-pleads-guilty-fraud-and-spoofing) for his role in the 2010 Flash Crash. Cryptocurrency markets, with their fragmented liquidity, 24/7 operation, and varying regulatory oversight, present an environment where these manipulations not only persist but have evolved in sophistication.
+Traditional detection has relied on manual surveillance and anecdotal pattern recognition. This article presents **data-driven metrics** derived from high-frequency order book snapshots and executed trade feeds, enabling systematic identification of layering activity.
 
-Unlike wash trading, which leaves traces in volume and trade data, layering primarily manifests in the order book—making it invisible to standard trade-based metrics. This article addresses the critical gap in market health analysis by:
+## Dataset and Methodology 🌰
 
-- 🌰 Defining quantitative signatures of layering from order book dynamics
-- 🌰 Presenting a reproducible detection methodology using public order book data
-- 🌰 Analyzing three case studies with statistical backing
-- 🌰 Providing open datasets for community validation
+### Data Sources 🌰
 
----
+Our analysis utilizes:
 
-## 2. The Mechanics of Layering 🌰
+- **Order book snapshots**: L2 order book data at 100ms intervals from Binance, Coinbase, and Kraken for BTC-USD, ETH-USD, and SOL-USD pairs (January 2023–December 2023)
+- **Executed trade feed**: Taker-initiated trades with millisecond timestamps
+- **Cancellation events**: Order lifecycle data including placement, modification, and cancellation timestamps
 
-### 2.1 Operational Definition
+### Key Metrics 🌰
 
-Layering involves placing multiple orders at different price levels on one side of the order book to create artificial supply or demand pressure. The manipulator typically:
+We define four primary metrics for layering detection:
 
-1. Places large limit orders away from the best bid/offer
-2. Places smaller genuine orders on the opposite side
-3. Cancels the large orders once the genuine orders execute
-4. Profits from the price movement induced by the false signal
+| Metric | Description | Formula |
+|--------|-------------|---------|
+| 🌰 **Cancellation-to-Trade Ratio (CTR)** | Ratio of cancelled volume to executed volume | `CTR = ΣCancelledVolume / ΣExecutedVolume` |
+| 🌰 **Order Lifetime (OLT)** | Median duration between order placement and cancellation | `OLT = median(t_cancel - t_place)` |
+| 🌰 **Layering Score (LS)** | Measure of correlated cancellations across price levels | See below |
+| 🌰 **Imbalance Induction (II)** | Price movement following large order cancellation | `II = ΔP / σ_ΔP` |
 
-### 2.2 Distinguishing Features from Legitimate Activity
+#### Layering Score Calculation 🌰
 
-| Characteristic | Legitimate Market Making | Suspected Layering |
-|----------------|------------------------|------------------|
-| Order lifetime | Exponentially distributed (λ ≈ 0.1–0.5 Hz) | Bimodal: very short (<2s) or very long (>300s) with spike at execution threshold |
-| Cancellation-to-fill ratio | 5:1 to 20:1 | >50:1 for large orders |
-| Price reversion post-cancel | Minimal | Statistically significant (p < 0.01) |
-| Order size vs. book depth | Proportional to typical flow | Disproportionate (>3σ from local mean) |
-| Time-to-cancel after adverse tick | Random | Correlated: cancels within 50ms of adverse price movement |
+The Layering Score quantifies the suspicious correlation between large order cancellations and subsequent price movements:
 
----
-
-## 3. Detection Methodology 🌰
-
-### 3.1 Data Sources
-
-Our analysis uses order book snapshot data (Level 2, 100ms intervals) and full executed order feeds from:
-
-- 🌰 **Venue A**: Major centralized exchange, BTC-USD perpetual futures
-- 🌰 **Venue B**: Spot exchange, ETH-USD
-- 🌰 **Venue C**: Alternative perpetual futures venue, BTC-USD
-
-Dataset spans January 2023 to June 2023, comprising 2.3 million order book events and 890,000 executed trades.
-
-### 3.2 Feature Engineering
-
-We construct the following features for each limit order placed:
-
-**F₁: Relative Size Index (RSI)**
